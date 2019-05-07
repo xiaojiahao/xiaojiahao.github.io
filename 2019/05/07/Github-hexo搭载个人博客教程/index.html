@@ -8,18 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Github+hexo搭载个人博客教程 | 骁の博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="搭载个人博客教程在GitHub中新建GitHub项目， 点击new repository创建新项目，Repository name填 &amp;lt;Github账号名称&amp;gt;.github.io 。点击 Create Repository 确认.   点击导航栏的Settings，往下滚动, 找到 Github Pages 选项, 将 Source 改为 master branch, 最后点击 Sav">
-<meta name="keywords" content="教程">
+  <meta name="keywords" content="教程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Github+hexo搭载个人博客教程">
 <meta property="og:url" content="http://yoursite.com/2019/05/07/Github-hexo搭载个人博客教程/index.html">
 <meta property="og:site_name" content="骁の博客">
-<meta property="og:description" content="搭载个人博客教程在GitHub中新建GitHub项目， 点击new repository创建新项目，Repository name填 &amp;lt;Github账号名称&amp;gt;.github.io 。点击 Create Repository 确认.   点击导航栏的Settings，往下滚动, 找到 Github Pages 选项, 将 Source 改为 master branch, 最后点击 Sav">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-07T05:04:54.467Z">
+<meta property="og:updated_time" content="2019-05-07T10:35:14.852Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github+hexo搭载个人博客教程">
-<meta name="twitter:description" content="搭载个人博客教程在GitHub中新建GitHub项目， 点击new repository创建新项目，Repository name填 &amp;lt;Github账号名称&amp;gt;.github.io 。点击 Create Repository 确认.   点击导航栏的Settings，往下滚动, 找到 Github Pages 选项, 将 Source 改为 master branch, 最后点击 Sav">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -48,7 +45,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src class="js-avatar">
+			<img src="/public/img/icon1.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">萧佳豪</a></h1>
@@ -100,7 +97,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src class="js-avatar">
+				<img src="/public/img/icon1.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">萧佳豪</h1>
@@ -163,7 +160,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="搭载个人博客教程"><a href="#搭载个人博客教程" class="headerlink" title="搭载个人博客教程"></a>搭载个人博客教程</h1><h2 id="在GitHub中新建GitHub项目，"><a href="#在GitHub中新建GitHub项目，" class="headerlink" title="在GitHub中新建GitHub项目，"></a>在GitHub中新建GitHub项目，</h2><ul>
+        <h1 id><a href="#" class="headerlink" title></a><a id="more"></a></h1><h2 id="在GitHub中新建GitHub项目"><a href="#在GitHub中新建GitHub项目" class="headerlink" title="在GitHub中新建GitHub项目"></a>在GitHub中新建GitHub项目</h2><ul>
 <li><p>点击<code>new repository</code>创建新项目，<code>Repository name</code>填 &lt;Github账号名称&gt;.github.io 。点击 <code>Create Repository</code> 确认. </p>
 </li>
 <li><p>点击导航栏的Settings，往下滚动, 找到 <em>Github Pages</em> 选项, 将 <em>Source</em> 改为 <code>master branch</code>, 最后点击 <code>Save</code> 按钮 </p>
@@ -195,12 +192,9 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">缩写</span><br><span class="line">hexo n == hexo <span class="keyword">new</span></span><br><span class="line">hexo g == hexo generate</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo d == hexo deploy</span><br></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">组合命令</span><br><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br></pre></td></tr></table></figure>
 <h2 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h2><ul>
-<li>定位到hexo根目录 执行<code>hexo new &#39;my-first-blog&#39;</code>，打开目录新建的文件，里面一般如下</li>
-</ul>
-<p>  title: postName #文章页面上的显示名称，一般是中文<br>  date: 2013-12-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改<br>  categories: 默认分类 #分类<br>  tags: [tag1,tag2,tag3] #文章标签，可空，多标签请用格式，注意:后面有个空格</p>
-<p>  description: 附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-<ul>
+<li><p>定位到hexo根目录 执行<code>hexo new &#39;my-first-blog&#39;</code>，打开目录新建的文件，里面一般如下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: postName #文章页面上的显示名称，一般是中文</span><br><span class="line">date: 2013-12-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改</span><br><span class="line">categories: 默认分类 #分类</span><br><span class="line">tags: [tag1,tag2,tag3] #文章标签，可空，多标签请用格式，注意:后面有个空格</span><br><span class="line">description: 附加一段文章摘要，字数最好在<span class="number">140</span>字以内，会出现在meta的description里面</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>在目录中打开这个文件编辑</p>
 </li>
 <li><p>编辑完生成上传即可 <code>hexo d -g</code></p>
