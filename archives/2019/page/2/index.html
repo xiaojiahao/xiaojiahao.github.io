@@ -6,20 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>CSSの文本样式 | 骁の博客</title>
+  <title>Archives: 2019 | 骁の博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="干巴爹">
-<meta name="keywords" content="css">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CSSの文本样式">
-<meta property="og:url" content="http://yoursite.com/2019/05/09/CSSの文本样式/index.html">
+  <meta name="description" content="前端开发">
+<meta property="og:type" content="website">
+<meta property="og:title" content="骁の博客">
+<meta property="og:url" content="http://yoursite.com/archives/2019/page/2/index.html">
 <meta property="og:site_name" content="骁の博客">
-<meta property="og:description" content="干巴爹">
+<meta property="og:description" content="前端开发">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-09T13:58:39.467Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSSの文本样式">
-<meta name="twitter:description" content="干巴爹">
+<meta name="twitter:title" content="骁の博客">
+<meta name="twitter:description" content="前端开发">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -143,260 +141,53 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-CSSの文本样式" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      CSSの文本样式
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/05/04/hello-world/" class="archive-article-date">
+  	<time datetime="2019-05-03T16:23:40.342Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-04</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/05/04/hello-world/">Hello World</a>
     </h1>
   
 
-        
-        <a href="/2019/05/09/CSSの文本样式/" class="archive-article-date">
-  	<time datetime="2019-05-09T06:11:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>干巴爹</p>
-<a id="more"></a>
-<h1 id="CSS文本外观属性"><a href="#CSS文本外观属性" class="headerlink" title="CSS文本外观属性"></a>CSS文本外观属性</h1><h2 id="color-文本颜色"><a href="#color-文本颜色" class="headerlink" title="color:文本颜色"></a>color:文本颜色</h2><p>color属性用于定义文本的颜色，其取值方式有如下3种：</p>
-<p>1.预定义的颜色值，如red，green，blue等。</p>
-<p>2.十六进制，如#FF0000，#FF6600，#29D794等。实际工作中，十六进制是最常用的定义颜色的方式。可以用取色软件取色</p>
-<p>3.RGB代码，如红色可以表示为rgb(255,0,0)或rgb(100%,0%,0%)。</p>
-<p>需要注意的是，如果使用RGB代码的百分比颜色值，取值为0时也不能省略百分号，必须写为0%。line-height:行间距</p>
-<p>ine-height属性用于设置行间距，就是行与行之间的距离，即字符的垂直间距，一般称为行高。line-height常用的属性值单位有三种，分别为像素px，相对值em和百分比%，实际工作中使用最多的是像素px</p>
-<p>一般情况下，行距比字号大7.8像素左右就可以了。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;<span class="attribute">color</span>:red;&#125;</span><br><span class="line"><span class="selector-tag">h1</span> &#123;<span class="attribute">color</span>:<span class="number">#00ff00</span>;&#125;</span><br><span class="line"><span class="selector-tag">h2</span> &#123;<span class="attribute">color</span>:<span class="built_in">rgb</span>(255,0,0);&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="text-align-水平对齐方式"><a href="#text-align-水平对齐方式" class="headerlink" title="text-align:水平对齐方式"></a>text-align:水平对齐方式</h2><p>text-align属性用于设置文本内容的水平对齐，相当于html中的align对齐属性。其可用属性值如下：</p>
-<p>left：左对齐（默认值）<br>right：右对齐<br>当text-align设置为”justify”，每一行被展开为宽度相等，左，右外边距是对齐（如杂志和报纸）。<br>center：居中对齐<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &#123;<span class="attribute">text-align</span>:center;&#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-class">.date</span> &#123;<span class="attribute">text-align</span>:right;&#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-class">.main</span> &#123;<span class="attribute">text-align</span>:justify;&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="text-indent-首行缩进"><a href="#text-indent-首行缩进" class="headerlink" title="text-indent:首行缩进"></a>text-indent:首行缩进</h2><p>text-indent属性用于设置首行文本的缩进，其属性值可为不同单位的数值、em字符宽度的倍数、或相对于浏览器窗口宽度的百分比%，允许使用负值, 建议使用em作为设置单位。</p>
-<p>1em 就是一个字的宽度   如果是汉字的段落， 1em 就是一个汉字的宽度</p>
-<p>一般为2em</p>
-<h2 id="text-decoration-文本的装饰"><a href="#text-decoration-文本的装饰" class="headerlink" title="text-decoration 文本的装饰"></a>text-decoration 文本的装饰</h2><p>text-decoration   通常我们用于给链接修改装饰效果</p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>none</td>
-<td>默认。定义标准的文本。</td>
-</tr>
-<tr>
-<td>underline</td>
-<td>定义文本下的一条线。下划线 也是我们链接自带的</td>
-</tr>
-<tr>
-<td>overline</td>
-<td>定义文本上的一条线。</td>
-</tr>
-<tr>
-<td>line-through</td>
-<td>定义穿过文本下的一条线。</td>
-</tr>
-</tbody>
-</table>
-<h2 id="文本转换"><a href="#文本转换" class="headerlink" title="文本转换"></a>文本转换</h2><p>文本转换属性是用来指定在一个文本中的大写和小写字母。<br>可用于所有字句变成大写或小写字母，或每个单词的首字母大写。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-class">.uppercase</span> &#123;<span class="attribute">text-transform</span>:uppercase;&#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-class">.lowercase</span> &#123;<span class="attribute">text-transform</span>:lowercase;&#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-class">.capitalize</span> &#123;<span class="attribute">text-transform</span>:capitalize;&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="所有属性"><a href="#所有属性" class="headerlink" title="所有属性"></a>所有属性</h2><table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>color</td>
-<td>设置文本颜色。</td>
-</tr>
-<tr>
-<td>direction</td>
-<td>设置文本方向</td>
-</tr>
-<tr>
-<td>letter-spacing</td>
-<td>设置字符间距</td>
-</tr>
-<tr>
-<td>line-height</td>
-<td>设置行高</td>
-</tr>
-<tr>
-<td>text-align</td>
-<td>对齐元素中的文本</td>
-</tr>
-<tr>
-<td>text-decoration</td>
-<td>向文本添加修饰</td>
-</tr>
-<tr>
-<td>text-indent</td>
-<td>缩进元素中文本的首行</td>
-</tr>
-<tr>
-<td>text-shadow</td>
-<td>设置文本阴影</td>
-</tr>
-<tr>
-<td>text-transform</td>
-<td>控制元素中的字母</td>
-</tr>
-<tr>
-<td>unicode-bidi</td>
-<td>设置或返回文本是否被重写</td>
-</tr>
-<tr>
-<td>vertical-align</td>
-<td>设置元素的垂直对齐</td>
-</tr>
-<tr>
-<td>white-space</td>
-<td>设置元素中空白的处理方式</td>
-</tr>
-<tr>
-<td>word-spacing</td>
-<td>设置字间距，单词也可用</td>
-</tr>
-</tbody>
-</table>
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/09/CSSの文本样式/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/05/09/CSSの一个普通导航栏/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          CSSの一个普通导航栏
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/05/09/搭建博客遇到的一些问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">搭建博客遇到的一些问题</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2019/">&laquo; Prev</a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span>
+    </nav>
   
-
-  
-
-  
-
 
 
           </div>
@@ -419,8 +210,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
