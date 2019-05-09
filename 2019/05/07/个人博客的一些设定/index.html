@@ -18,7 +18,9 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/post-img2/20190509-1.png">
 <meta property="og:image" content="http://yoursite.com/post-img2/20190509-2.png">
-<meta property="og:updated_time" content="2019-05-09T04:31:15.625Z">
+<meta property="og:image" content="http://yoursite.com/post-img2/20190509-4.png">
+<meta property="og:image" content="http://yoursite.com/post-img2/20190509-5.png">
+<meta property="og:updated_time" content="2019-05-09T15:14:30.084Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人博客的一些设定(陆续更新)">
 <meta name="twitter:description" content="美化主题是一件开心的事~">
@@ -194,6 +196,17 @@
 <p><img src="/post-img2/20190509-2.png" alt="修改后"></p>
 </li>
 </ul>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>先购买域名，去</p>
+<p>[腾讯云]: <a href="https://dnspod.cloud.tencent.com/" target="_blank" rel="noopener">https://dnspod.cloud.tencent.com/</a> 购买，我买了xiaojiahao.club。</p>
+<p>实名认证审核，要等一会儿才ok。</p>
+<p>在博客项目目录的source文件夹（D:\xiao\Documents\Hexo\source）中，创建一个文本文档，在里面输入你的域名</p>
+<p>比如我的<code>xiaojiahao.club</code> ，退出保存为文件名为CNAME，无后缀名字的格式</p>
+<p>打开命令提示符（cmd），ping 你的github博客网站（xiaojiahao.github.io），</p>
+<p><img src="/post-img2/20190509-4.png" alt="ip获取"> 185.199.109.153</p>
+<p>回腾讯云点自己域名（解析），看看你域名的<code>DNS</code>地址是不是为 <code>f1g1ns1.dnspod.net</code>和<code>f1g1ns2.dnspod.net</code>不是就改改</p>
+<p>添加记录</p>
+<p><img src="/post-img2/20190509-5.png" alt="ip获取"></p>
+<h5 id="域名配置最常见有2种方式，CNAME和A记录，CNAME填写域名，A记录填写IP，由于不带www方式只能采用A记录，将A记录指向你ping出来的IP，将CNAME指向你的用户名-github-io，这样可以保证无论是否添加www都可以访问"><a href="#域名配置最常见有2种方式，CNAME和A记录，CNAME填写域名，A记录填写IP，由于不带www方式只能采用A记录，将A记录指向你ping出来的IP，将CNAME指向你的用户名-github-io，这样可以保证无论是否添加www都可以访问" class="headerlink" title="域名配置最常见有2种方式，CNAME和A记录，CNAME填写域名，A记录填写IP，由于不带www方式只能采用A记录，将A记录指向你ping出来的IP，将CNAME指向你的用户名.github.io，这样可以保证无论是否添加www都可以访问"></a>域名配置最常见有2种方式，CNAME和A记录，CNAME填写域名，A记录填写IP，由于不带www方式只能采用A记录，将A记录指向你ping出来的IP，将CNAME指向你的用户名.github.io，这样可以保证无论是否添加www都可以访问</h5><p>参考：</p>
 
       
 
