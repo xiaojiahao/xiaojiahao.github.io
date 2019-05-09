@@ -8,18 +8,21 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>个人博客的一些设定(陆续更新) | 骁の博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="网站icon 去比特虫只做icon图标 把图片放到hexo/source/img文件夹下面，在下列ejs文件中用/img/图片名引用就可 找到hexo\themes\你的主题\layout_partial\head.ejs，设置为  123&amp;lt;% if (theme.favicon)&amp;#123; %&amp;gt;    &amp;lt;link rel=&amp;quot;icon&amp;quot; href=&amp;quo">
+  <meta name="description" content="美化主题是一件开心的事~">
 <meta name="keywords" content="博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="个人博客的一些设定(陆续更新)">
 <meta property="og:url" content="http://yoursite.com/2019/05/07/个人博客的一些设定/index.html">
 <meta property="og:site_name" content="骁の博客">
-<meta property="og:description" content="网站icon 去比特虫只做icon图标 把图片放到hexo/source/img文件夹下面，在下列ejs文件中用/img/图片名引用就可 找到hexo\themes\你的主题\layout_partial\head.ejs，设置为  123&amp;lt;% if (theme.favicon)&amp;#123; %&amp;gt;    &amp;lt;link rel=&amp;quot;icon&amp;quot; href=&amp;quo">
+<meta property="og:description" content="美化主题是一件开心的事~">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-09T03:24:25.042Z">
+<meta property="og:image" content="http://yoursite.com/post-img2/20190509-1.png">
+<meta property="og:image" content="http://yoursite.com/post-img2/20190509-2.png">
+<meta property="og:updated_time" content="2019-05-09T04:31:15.625Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人博客的一些设定(陆续更新)">
-<meta name="twitter:description" content="网站icon 去比特虫只做icon图标 把图片放到hexo/source/img文件夹下面，在下列ejs文件中用/img/图片名引用就可 找到hexo\themes\你的主题\layout_partial\head.ejs，设置为  123&amp;lt;% if (theme.favicon)&amp;#123; %&amp;gt;    &amp;lt;link rel=&amp;quot;icon&amp;quot; href=&amp;quo">
+<meta name="twitter:description" content="美化主题是一件开心的事~">
+<meta name="twitter:image" content="http://yoursite.com/post-img2/20190509-1.png">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -163,7 +166,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
+        <p>美化主题是一件开心的事~</p>
+<a id="more"></a>
 <h2 id="网站icon"><a href="#网站icon" class="headerlink" title="网站icon"></a>网站icon</h2><ul>
 <li>去<a href="https://link.jianshu.com?t=http://www.bitbug.net/" target="_blank" rel="noopener">比特虫</a>只做icon图标</li>
 <li>把图片放到hexo/source/img文件夹下面，在下列ejs文件中用/img/图片名引用就可</li>
@@ -173,10 +177,21 @@
 <h2 id="头像"><a href="#头像" class="headerlink" title="头像"></a>头像</h2><ul>
 <li><p>把图片放到hexo/source/img文件夹下面</p>
 </li>
-<li><p>在hexo/themes/主题文件夹中的<code>_config.yml</code>文件,我是yilia主题，在第70行代码</p>
+<li><p>在hexo/themes/主题文件夹(yilia)中的<code>_config.yml</code>文件的第70行代码</p>
 </li>
 <li><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#你的头像url</span><br><span class="line">avatar: <span class="regexp">/img/</span>touxiang1.jpg</span><br></pre></td></tr></table></figure>
 <p>用/img/图片名引用就可</p>
+</li>
+</ul>
+<h2 id="删掉截断字段more"><a href="#删掉截断字段more" class="headerlink" title="删掉截断字段more"></a>删掉截断字段more</h2><ul>
+<li><p>在hexo/themes/主题文件夹(yilia)中的<code>_config.yml</code>文件的第36行代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 文章太长，截断按钮文字</span><br><span class="line"><span class="selector-tag">excerpt_link</span>: <span class="selector-tag">more</span></span><br></pre></td></tr></table></figure>
+<p>more 换成两空格</p>
+</li>
+<li><p>文章(md)文件依然用<code>&lt;!--more--&gt;</code>来截断，而且截断文段前必须有文字，否则无效</p>
+<p>效果：</p>
+<p><img src="/post-img2/20190509-1.png" alt="修改前"></p>
+<p><img src="/post-img2/20190509-2.png" alt="修改后"></p>
 </li>
 </ul>
 
