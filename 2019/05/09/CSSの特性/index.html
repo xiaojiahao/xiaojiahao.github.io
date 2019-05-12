@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>CSSの书写规范和特性 | 骁の博客</title>
+  <title>CSSの特性 | 骁の博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="要掌握下来~">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSSの书写规范和特性">
+<meta property="og:title" content="CSSの特性">
 <meta property="og:url" content="http://yoursite.com/2019/05/09/CSSの特性/index.html">
 <meta property="og:site_name" content="骁の博客">
 <meta property="og:description" content="要掌握下来~">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-09T11:21:16.789Z">
+<meta property="og:image" content="http://yoursite.com/post-img2/20190512-2.png">
+<meta property="og:updated_time" content="2019-05-12T15:39:51.343Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSSの书写规范和特性">
+<meta name="twitter:title" content="CSSの特性">
 <meta name="twitter:description" content="要掌握下来~">
+<meta name="twitter:image" content="http://yoursite.com/post-img2/20190512-2.png">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -150,7 +152,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      CSSの书写规范和特性
+      CSSの特性
     </h1>
   
 
@@ -165,24 +167,6 @@
       
         <p>要掌握下来~</p>
 <a id="more"></a>
-<h1 id="CSS书写规范"><a href="#CSS书写规范" class="headerlink" title="CSS书写规范"></a>CSS书写规范</h1><p>开始就形成良好的书写规范，是你专业化的开始。</p>
-<h2 id="空格规范"><a href="#空格规范" class="headerlink" title="空格规范"></a>空格规范</h2><p>【强制】 选择器 与 { 之间必须包含空格。</p>
-<p>示例： .selector { }</p>
-<p>【强制】 属性名 与之后的 : 之间不允许包含空格， : 与 属性值 之间必须包含空格。</p>
-<p>示例：</p>
-<p>font-size: 12px;</p>
-<h2 id="选择器规范"><a href="#选择器规范" class="headerlink" title="选择器规范"></a>选择器规范</h2><p>【强制】 当一个 rule 包含多个 selector 时，每个选择器声明必须独占一行。</p>
-<p>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/* good */</span><br><span class="line">.post,</span><br><span class="line">.page,</span><br><span class="line">.comment &#123;</span><br><span class="line">    line-height: 1.5;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/* bad */</span><br><span class="line">.post, .page, .comment &#123;</span><br><span class="line">    line-height: 1.5;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>【建议】 选择器的嵌套层级应不大于 3 级，位置靠后的限定条件应尽可能精确。</p>
-<p>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/* good */</span><br><span class="line">#username input &#123;&#125;</span><br><span class="line">.comment .avatar &#123;&#125;</span><br><span class="line"></span><br><span class="line">/* bad */</span><br><span class="line">.page .header .login #username input &#123;&#125;</span><br><span class="line">.comment div * &#123;&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="属性规范"><a href="#属性规范" class="headerlink" title="属性规范"></a>属性规范</h2><p>【强制】 属性定义必须另起一行。</p>
-<p>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/* good */</span><br><span class="line">.selector &#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* bad */</span><br><span class="line">.selector &#123; margin: 0; padding: 0; &#125;</span><br></pre></td></tr></table></figure>
-<p>【强制】 属性定义后必须以分号结尾。</p>
-<p>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/* good */</span><br><span class="line">.selector &#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* bad */</span><br><span class="line">.selector &#123;</span><br><span class="line">    margin: 0</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="CSS-三大特性"><a href="#CSS-三大特性" class="headerlink" title="CSS 三大特性"></a>CSS 三大特性</h1><p>层叠 继承  优先级 是我们学习CSS 必须掌握的三个特性。</p>
 <h2 id="CSS层叠性"><a href="#CSS层叠性" class="headerlink" title="CSS层叠性"></a>CSS层叠性</h2><p>所谓层叠性是指多种CSS样式的叠加。</p>
 <p>是浏览器处理冲突的一个能力,如果一个属性通过两个相同选择器设置到同一个元素上，那么这个时候一个属性就会将另一个属性层叠掉</p>
@@ -239,9 +223,8 @@
 <p>​      </p>
 <p> 注意： </p>
 <p>1.数位之间没有进制 比如说： 0,0,0,5 + 0,0,0,5 =0,0,0,10 而不是 0,0, 1, 0， 所以不会存在10个div能赶上一个类选择器的情况。</p>
-<ol>
-<li>继承的 权重是 0</li>
-</ol>
+<p>2.<strong>有指定的看指定的，其他任何继承权重都化成0，多重指定则看权重，权重一样看就近。</strong></p>
+<p><img src="/post-img2/20190512-2.png" alt="继承权重为0的情况"></p>
 <p>总结优先级：</p>
 <ol>
 <li>使用了 !important声明的规则。</li>
