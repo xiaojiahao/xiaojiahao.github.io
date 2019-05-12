@@ -16,10 +16,12 @@
 <meta property="og:site_name" content="骁の博客">
 <meta property="og:description" content="多看看，养习惯~">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-11T06:34:17.576Z">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/e2dWNvMTo3Y7DuMRLwfYTonVNWLZwUflPHY6Vu17NUacHs6iaKdaWBnvibUW1VjyfAS6Uzob0MACzpGibknoaBwRQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:updated_time" content="2019-05-12T07:49:15.118Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSSの书写规范">
 <meta name="twitter:description" content="多看看，养习惯~">
+<meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz_png/e2dWNvMTo3Y7DuMRLwfYTonVNWLZwUflPHY6Vu17NUacHs6iaKdaWBnvibUW1VjyfAS6Uzob0MACzpGibknoaBwRQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -165,12 +167,64 @@
       
         <p>多看看，养习惯~</p>
 <a id="more"></a>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h2 id="前端规范のCSS"><a href="#前端规范のCSS" class="headerlink" title="前端规范のCSS"></a>前端规范のCSS</h2><p><strong>1.tab键用四个空格代替</strong></p>
+<p><strong>2.每个样式属性后（必须）加 “;”</strong>  方便压缩工具”断句”。</p>
+<p><strong>3. Class命名中（禁止）出现大写字母，（必须）采用” - “对class中的字母分隔，如：</strong></p>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 正确的写法 */</span></span><br><span class="line"><span class="selector-class">.hotel-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="comment">/* 不推荐的写法 */</span></span><br><span class="line"><span class="selector-class">.hotelTitle</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>用”-“隔开比使用驼峰是更加清晰。</li>
+<li>产品线-产品-模块-子模块，命名的时候也可以使用这种方式（@Artwl）</li>
+</ul>
+<p><strong>4. 空格的使用，以下规则（必须）执行：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">.hotel-content &#123;</span><br><span class="line">    font-weight: bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li></li>
+<li>选择器与 <code>{</code>之前（<code>必须）</code>要有空格</li>
+<li>属性名的 <code>:</code>后（<code>必须）</code>要有空格</li>
+<li>属性名的 <code>:</code>前（<code>禁止）</code>加空格</li>
+</ul>
+<p>一个原因是美观，其次IE 6存在一个bug， 戳bug</p>
+<p><strong>5.多选择器规则之间（**</strong>必须）<strong>**换行</strong></p>
+<p>当样式针对多个选择器时每个选择器占一行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/* 推荐的写法 */</span><br><span class="line"> a.btn,</span><br><span class="line"> input.btn,</span><br><span class="line"> input[type=&quot;button&quot;] &#123;</span><br><span class="line">     ......</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p><strong>6. （**</strong>禁止）<strong>**将样式写为单行, 如</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">.hotel-content &#123;margin: 10px; background-color: #efefef;&#125;</span><br></pre></td></tr></table></figure>
+<p>单行显示不好注释，不好备注，这应该是压缩工具的活儿~</p>
+<p><strong>7. （**</strong>禁止）<strong>**向 0</strong> <strong>后添加单位, 如：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">.obj &#123;</span><br><span class="line">    left: 0px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>只是为了统一。记住，绿色字表强调，不表强制！</p>
+<p><strong>8. （**</strong>禁止）<strong><strong>使用css原生</strong></strong>import**</p>
+<p>使用css原生import有很多弊端，比如会增加请求数等….</p>
+<p><strong>推荐文章</strong>：Don’t use @import</p>
+<p><strong>9. （**</strong>推荐）<strong>**属性的书写顺序, 举个例子:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">.hotel-content &#123;</span><br><span class="line">     /* 定位 */</span><br><span class="line">     display: block;</span><br><span class="line">     position: absolute;</span><br><span class="line">     left: 0;</span><br><span class="line">     top: 0;</span><br><span class="line">     /* 盒模型 */</span><br><span class="line">     width: 50px;</span><br><span class="line">     height: 50px;</span><br><span class="line">     margin: 10px;</span><br><span class="line">     border: 1px solid black;</span><br><span class="line">     / *其他* /</span><br><span class="line">     color: #efefef;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>定位相关, 常见的有：<code>display</code> <code>position</code> <code>left</code> <code>top</code> <code>float</code> 等</p>
+<p>盒模型相关, 常见的有：<code>width</code> <code>height</code> <code>margin</code> <code>padding</code> <code>border</code> 等其他属性</p>
+<p>按照这样的顺序书写可见提升浏览器渲染dom的性能</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/e2dWNvMTo3Y7DuMRLwfYTonVNWLZwUflPHY6Vu17NUacHs6iaKdaWBnvibUW1VjyfAS6Uzob0MACzpGibknoaBwRQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"> </p>
+<p><strong>10. 小图片（必须）sprite 合并</strong></p>
+<p><strong>推荐文章</strong>：NodeJs智能合并CSS精灵图工具iSpriter</p>
+<p><strong>11. （**</strong>推荐）<strong>**当编写针对特定html结构的样式时，使用元素名</strong> <strong>+ 类名</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/* 所有的nav都是针对ul编写的 */</span><br><span class="line">ul.nav &#123;</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>“.a div”和”.a div.b”，为什么后者好？如果需求有所变化，在”.a”下有多加了一个div，试问，开始的样式是不是会影响后来的div啊~</p>
+<p><strong>12. （推荐）IE Hack List</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/* 针对ie的hack */</span><br><span class="line">selector &#123;</span><br><span class="line">    property: value;     /* 所有浏览器 */ </span><br><span class="line">    property: value\9;   /* 所有IE浏览器 */ </span><br><span class="line">    property: value\0;   /* IE8 */</span><br><span class="line">    +property: value;    /* IE7 */</span><br><span class="line">    _property: value;    /* IE6 */</span><br><span class="line">    *property: value;    /* IE6-7 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当使用hack的时候想想能不能用更好的样式代替</p>
+<p><strong>13. （**</strong>不推荐）<strong><strong>ie使用filter</strong></strong>,（ 禁止）<strong>**使用expression</strong></p>
+<p>这里主要是效率问题，应该当格外注意，咱们要少用烧CPU的东西~ </p>
+<p><strong>14. （禁止）使用行内（inline）样式</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;p style=&quot;font-size: 12px; color: #FFFFFF&quot;&gt;靖鸣君&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>像这样的行内样式，最好用一个class代替。又如要隐藏某个元素，可以给他加一个class</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">.hide &#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>尽量做到样式和结构分离~</p>
+<p><strong>15. （推荐）reset.css样式</strong></p>
+<p><strong>推荐网站：**</strong><a href="http://www.cssreset.com/*" target="_blank" rel="noopener">http://www.cssreset.com/*</a>*</p>
+<p><strong>16.（禁止）使用”*“来选择元素</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/*别这样写*/</span><br><span class="line">* &#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样写是没有必要的，一些元素在浏览器中默认有margin或padding值，但是只是部分元素，没有必要将所有元素的margin、padding值都置为0。</p>
+<p><strong>17. 链接的样式，（务必）按照这个顺序来书写</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a:link -&gt; a:visited -&gt; a:hover -&gt; a:active</span><br></pre></td></tr></table></figure>
+<p><strong>18. 等你补充…</strong></p>
 
       
 
