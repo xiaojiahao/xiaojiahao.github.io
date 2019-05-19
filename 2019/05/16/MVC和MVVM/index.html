@@ -17,8 +17,8 @@
 <meta property="og:description" content="Model、View、ViewModel、Controller">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/post-img2/20190516-02.png">
-<meta property="og:image" content="http://yoursite.com/2019/05/16/MVC和MVVM/post-img2/20190516-01.png">
-<meta property="og:updated_time" content="2019-05-16T04:09:59.941Z">
+<meta property="og:image" content="http://yoursite.com/post-img2/20190516-01.png">
+<meta property="og:updated_time" content="2019-05-19T13:34:04.397Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MVC和MVVM">
 <meta name="twitter:description" content="Model、View、ViewModel、Controller">
@@ -213,7 +213,7 @@
 <p>我之所以说这里有争议，是因为block的出现。Block的出现完美的解决了一些回调实现起来很麻烦的问题，block的回调相当方便简单。这里完全可以由C向M传一个block，M在网络请求结束后调用block。但是呢，这样做我个人认为有些违背M的设计思想和面向对象的思想。M在网络请求获取数据后应该只负责更新自己的数据，它不应该去调用某个block，它不知道自己被一个C持有了，所以对它来讲，它不能主动调用任何东西，只能被动地，毫不知情地告诉C我的数据发生变化了。而KVO对于被观察的对象来讲恰好就是被动的：M根本不知道自己被观察了，M还是按部就班地把新数据赋值给自己的属性，而不用再额外做其他它不应该做的事。</p>
 <p>这是我个人的理解，当然使用block从代码的实现上来讲会方便的多，效率也比KVO在运行时稍高，毕竟KVO的实现原理是在运行时动态创建类。但是我个人还是倾向于在MVC中使用KVO而不是block，仁者见仁智者见智，能解决问题的方法就是好方法，这里就不再讨论了。</p>
 <h3 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h3><p>记住一句话：Controller要什么，VM就给什么（和Model相关的）。</p>
-<p><img src="post-img2/20190516-01.png" alt="mvvm"></p>
+<p><img src="/post-img2/20190516-01.png" alt="mvvm"></p>
 <h6 id="MVVM的诞生"><a href="#MVVM的诞生" class="headerlink" title="MVVM的诞生"></a>MVVM的诞生</h6><p>就像我们之前分析MVC是如何合理分配工作的一样，我们需要数据所以有了M，我们需要界面所以有了V，而我们需要找一个地方把M赋值给V来显示，所以有了C，然而我们忽略了一个很重要的操作：数据解析。在MVC出生的年代，手机APP的数据往往都比较简单，没有现在那么复杂，所以那时的数据解析很可能一步就解决了，所以既然有这样一个问题要处理，而面向对象的思想就是用类和对象来解决问题，显然V和M早就被定义死了，它们都不应该处理“解析数据”的问题，理所应当的，“解析数据”这个问题就交给C来完成了。而现在的手机App功能越来越复杂，数据结构也越来越复杂，所以数据解析也就没那么简单了。如果我们继续按照MVC的设计思路，将数据解析的部分放到了Controller里面，那么Controller就将变得相当臃肿。还有相当重要的一点：Controller被设计出来并不是处理数据解析的。1、管理自己的生命周期；2、处理Controller之间的跳转；3、实现Controller容器。这里面根本没有“数据解析”这一项，所以显然，数据解析也不应该由Controller来完成。那么我们的MVC中，M、V、C都不应该处理数据解析，那么由谁来呢？这个问题实际上在面向对象的时候相当好回答：既然目前没有类能够处理这个问题，那么就创建一个新的类出来解决不就好了？所以我们聪明的开发者们就专门为数据解析创建出了一个新的类：ViewModel。这就是MVVM的诞生。</p>
 <hr>
 <h6 id="如何实现MVVM"><a href="#如何实现MVVM" class="headerlink" title="如何实现MVVM"></a>如何实现MVVM</h6><p>搞清楚了MVVM为什么会出现，将对于你理解如何实现MVVM有极大的帮助。在我们开始着手实现MVVM之前，我先简单提一下之前遗留的一个问题：为什么MVVM这个名字里面，没有Controller的出现（为什么不叫MVCVM，C去哪了）。本来这个问题应该在实现后再来解释，但是我们这里是教学，为了让大家更好的明白我们接下来的思想，所以这里要提前解释一下这个结论：Controller的存在感被完全的降低了。我们在待会实现MVVM的时候你就能体会到了，这里请先把这个结论印在脑海当中：Controller的存在感被完全的降低了、Controller的存在感被完全的降低了、Controller的存在感被完全的降低了。</p>
