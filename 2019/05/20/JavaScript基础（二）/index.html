@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>CSSの标签显示模式 | 骁の博客</title>
+  <title>JavaScript基础（二） | 骁の博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这个很重要~">
-<meta name="keywords" content="css">
+  <meta name="description" content="数据类型Number、String、Boolean、Undefined、Null、Object">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSSの标签显示模式">
-<meta property="og:url" content="http://yoursite.com/2019/05/09/CSSの标签显示模式/index.html">
+<meta property="og:title" content="JavaScript基础（二）">
+<meta property="og:url" content="http://yoursite.com/2019/05/20/JavaScript基础（二）/index.html">
 <meta property="og:site_name" content="骁の博客">
-<meta property="og:description" content="这个很重要~">
+<meta property="og:description" content="数据类型Number、String、Boolean、Undefined、Null、Object">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-15T15:43:40.163Z">
+<meta property="og:updated_time" content="2019-05-20T05:28:32.909Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSSの标签显示模式">
-<meta name="twitter:description" content="这个很重要~">
+<meta name="twitter:title" content="JavaScript基础（二）">
+<meta name="twitter:description" content="数据类型Number、String、Boolean、Undefined、Null、Object">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -143,54 +143,115 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-CSSの标签显示模式" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavaScript基础（二）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      CSSの标签显示模式
+      JavaScript基础（二）
     </h1>
   
 
         
-        <a href="/2019/05/09/CSSの标签显示模式/" class="archive-article-date">
-  	<time datetime="2019-05-09T10:56:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
+        <a href="/2019/05/20/JavaScript基础（二）/" class="archive-article-date">
+  	<time datetime="2019-05-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这个很重要~</p>
+        <p>数据类型Number、String、Boolean、Undefined、Null、Object</p>
 <a id="more"></a>
-<p>HTML标签一般分为块标签和行内标签两种类型，它们也称块元素和行内元素。具体如下：</p>
-<h2 id="块级元素-block-level"><a href="#块级元素-block-level" class="headerlink" title="块级元素(block-level)"></a>块级元素(block-level)</h2><p>每个块元素通常都会独自占据一整行或多整行，可以对其设置宽度、高度、对齐等属性，常用于网页布局和网页结构的搭建。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">常见的块元素有&lt;h1&gt;~&lt;h6&gt;、&lt;p&gt;、&lt;div&gt;、&lt;ul&gt;、&lt;ol&gt;、&lt;li&gt;等，其中&lt;div&gt;标签是最典型的块元素。</span><br></pre></td></tr></table></figure>
-<p>块级元素的特点：</p>
-<p>（1）总是从新行开始</p>
-<p>（2）高度，行高、外边距以及内边距都可以控制。</p>
-<p>（3）宽度默认是容器的100%</p>
-<p>（4）可以容纳内联元素和其他块元素。</p>
-<h2 id="行内元素-inline-level"><a href="#行内元素-inline-level" class="headerlink" title="行内元素(inline-level)"></a>行内元素(inline-level)</h2><p>行内元素（内联元素）不占有独立的区域，仅仅靠自身的字体大小和图像尺寸来支撑结构，一般不可以设置宽度、高度、对齐等属性，常用于控制页面中文本的样式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">常见的行内元素有&lt;a&gt;、&lt;strong&gt;、&lt;b&gt;、&lt;em&gt;、&lt;i&gt;、&lt;del&gt;、&lt;s&gt;、&lt;ins&gt;、&lt;u&gt;、&lt;span&gt;等，其中&lt;span&gt;标签最典型的行内元素。</span><br></pre></td></tr></table></figure>
-<p>行内元素的特点：</p>
-<p>（1）和相邻行内元素在一行上。</p>
-<p>（2）高、宽无效，但水平方向的padding和margin可以设置，垂直方向的无效。</p>
-<p>（3）默认宽度就是它本身内容的宽度。</p>
-<p>（4）行内元素只能容纳文本或则其他行内元素。（a特殊）</p>
-<p>​    注意：</p>
+<p><strong>var box = 12/0;  //Infinity </strong></p>
+<p><strong>var box = =0/0;(12/0 * 0) //NaN </strong></p>
+<p><strong>var num = num+10;/ /NaN  </strong></p>
+<p>null == undefined;  //true</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num;</span><br><span class="line"></span><br><span class="line">    alert(num+<span class="number">10</span> == <span class="literal">NaN</span>);	<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="简单数据类型"><a href="#简单数据类型" class="headerlink" title="简单数据类型"></a>简单数据类型</h3><p>Number、String、Boolean、Undefined、Null</p>
+<h4 id="Number类型"><a href="#Number类型" class="headerlink" title="Number类型"></a>Number类型</h4><ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">十进制</span><br><span class="line">	var num = 9;</span><br><span class="line">	进行算数计算时，八进制和十六进制表示的数值最终都将被转换成十进制数值。</span><br><span class="line">十六进制</span><br><span class="line">	var num = 0xA;</span><br><span class="line">	数字序列范围：0~9以及A~F</span><br><span class="line">八进制</span><br><span class="line">    var num1 = 07;   // 对应十进制的7</span><br><span class="line">    var num2 = 019;  // 对应十进制的19</span><br><span class="line">    var num3 = 08;   // 对应十进制的8</span><br><span class="line">    数字序列范围：0~7</span><br><span class="line">    如果字面值中的数值超出了范围，那么前导零将被忽略，后面的数值将被当作十进制数值解析</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>浮点数</p>
+<ul>
+<li>浮点数的精度问题</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">浮点数</span><br><span class="line">	var n = 5e-324;   // 科学计数法  5乘以10的-324次方  </span><br><span class="line">浮点数值的最高精度是 17 位小数，但在进行算术计算时其精确度远远不如整数</span><br><span class="line">   var result = 0.1 + 0.2;    // 结果不是 0.3，而是：0.30000000000000004</span><br><span class="line">   console.log(0.07 * 100);</span><br><span class="line">   不要判断两个浮点数是否相等</span><br></pre></td></tr></table></figure>
+<ul>
+<li>数值范围</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">最小值：Number.MIN_VALUE，这个值为： 5e-324</span><br><span class="line">最大值：Number.MAX_VALUE，这个值为： 1.7976931348623157e+308</span><br><span class="line">无穷大：Infinity</span><br><span class="line">无穷小：-Infinity</span><br></pre></td></tr></table></figure>
+<ul>
+<li>数值判断<ul>
+<li>NaN：not a number<ul>
+<li>NaN 与任何值都不相等，包括他本身</li>
+</ul>
+</li>
+<li>isNaN: is not a number</li>
+</ul>
+</li>
+</ul>
+<h4 id="String类型"><a href="#String类型" class="headerlink" title="String类型"></a>String类型</h4><ul>
+<li><p>字符串长度</p>
+<p>length属性用来获取字符串的长度</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'黑马程序猿 Hello World'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.length);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串拼接</p>
+<p>字符串拼接使用 + 连接</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">11</span> + <span class="number">11</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'hello'</span> + <span class="string">' world'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'100'</span> + <span class="string">'100'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'11'</span> + <span class="number">11</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'male:'</span> + <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
 <ol>
-<li>只有 文字才 能组成段落  因此 p  里面不能放块级元素，同理还有这些标签h1,h2,h3,h4,h5,h6,dt，他们都是文字类块级标签，里面不能放其他块级元素。</li>
-<li>链接里面不能再放链接。</li>
+<li>两边只要有一个是字符串，那么+就是字符串拼接功能</li>
+<li>两边如果都是数字，那么就是算术功能。</li>
 </ol>
-<h2 id="块级元素和行内元素区别"><a href="#块级元素和行内元素区别" class="headerlink" title="块级元素和行内元素区别"></a>块级元素和行内元素区别</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">块级元素的特点：</span><br><span class="line">（1）总是从新行开始</span><br><span class="line">（2）高度，行高、外边距以及内边距都可以控制。</span><br><span class="line">（3）宽度默认是容器的100%</span><br><span class="line">（4）可以容纳内联元素和其他块元素。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">行内元素的特点：</span><br><span class="line">（1）和相邻行内元素在一行上。</span><br><span class="line">（2）高、宽无效，但水平方向的padding和margin可以设置，垂直方向的无效。</span><br><span class="line">（3）默认宽度就是它本身内容的宽度。</span><br><span class="line">（4）行内元素只能容纳文本或则其他行内元素。</span><br></pre></td></tr></table></figure>
-<h2 id="行内块元素（inline-block）"><a href="#行内块元素（inline-block）" class="headerlink" title="行内块元素（inline-block）"></a>行内块元素（inline-block）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">在行内元素中有几个特殊的标签——&lt;img /&gt;、&lt;input /&gt;、&lt;td&gt;，可以对它们设置宽高和对齐属性，有些资料可能会称它们为行内块元素。</span><br><span class="line"></span><br><span class="line">行内块元素的特点：</span><br><span class="line">（1）和相邻行内元素（行内块）在一行上,但是之间会有空白缝隙。</span><br><span class="line">（2）默认宽度就是它本身内容的宽度。</span><br><span class="line">（3）高度，行高、外边距以及内边距都可以控制。</span><br></pre></td></tr></table></figure>
-<h2 id="标签显示模式转换-display"><a href="#标签显示模式转换-display" class="headerlink" title="标签显示模式转换 display"></a>标签显示模式转换 display</h2><p>块转行内：display:inline;</p>
-<p>行内转块：display:block;</p>
-<p>块、行内元素转换为行内块： display: inline-block;</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1= <span class="string">"10"</span>;</span><br><span class="line"><span class="keyword">var</span> s2 = <span class="number">5</span>;</span><br><span class="line"><span class="built_in">console</span>.log(s1+s2);<span class="comment">//105</span></span><br><span class="line"><span class="built_in">console</span>.log(s1-s2);<span class="comment">//5  隐式转换</span></span><br><span class="line"><span class="built_in">console</span>.log(s1+s2);<span class="comment">//50 同上</span></span><br></pre></td></tr></table></figure>
+<h4 id="Boolean类型"><a href="#Boolean类型" class="headerlink" title="Boolean类型"></a>Boolean类型</h4><ul>
+<li>Boolean字面量：  true和false，区分大小写</li>
+<li>计算机内部存储：true为1，false为0</li>
+</ul>
+<h4 id="Undefined和Null"><a href="#Undefined和Null" class="headerlink" title="Undefined和Null"></a>Undefined和Null</h4><ol>
+<li>undefined表示一个声明了没有赋值的变量，变量只声明的时候值默认是undefined</li>
+<li>null表示一个空，变量的值如果想为null，必须手动设置</li>
+</ol>
+<h3 id="复杂数据类型"><a href="#复杂数据类型" class="headerlink" title="复杂数据类型"></a>复杂数据类型</h3><pre><code>Object
+</code></pre><h3 id="获取变量的类型"><a href="#获取变量的类型" class="headerlink" title="获取变量的类型"></a>获取变量的类型</h3><p>typeof</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> age);  <span class="comment">// 'number'</span></span><br></pre></td></tr></table></figure>
+<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><p>如何使用谷歌浏览器，快速的查看数据类型？</p>
+<p>字符串的颜色是黑色的，数值类型是蓝色的，布尔类型也是蓝色的，undefined和null是灰色的</p>
+<h3 id="转换成字符串类型"><a href="#转换成字符串类型" class="headerlink" title="转换成字符串类型"></a>转换成字符串类型</h3><ul>
+<li><p>toString()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">转不了null和undefined</span><br><span class="line">var num = 5;</span><br><span class="line">console.log(num.toString());</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>String()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String()函数存在的意义：有些值没有toString()，这个时候可以使用String()。比如：undefined和null</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>拼接字符串方式</p>
+<p>num  +  “”，当 + 两边一个操作符是字符串类型，一个操作符是其它类型的时候，会先把其它类型转换成字符串再进行字符串拼接，返回字符串</p>
+</li>
+</ul>
+<h3 id="转换成数值类型"><a href="#转换成数值类型" class="headerlink" title="转换成数值类型"></a>转换成数值类型</h3><ul>
+<li><p>Number()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Number()可以把任意值转换成数值，如果要转换的字符串中有一个不是数值的字符，返回NaN,比较严格</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>parseInt()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="built_in">parseInt</span>(<span class="string">"12.3abc"</span>);  <span class="comment">// 返回12，如果第一个字符是数字会解析知道遇到非数字结束</span></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="built_in">parseInt</span>(<span class="string">"abc123"</span>);   <span class="comment">// 返回NaN，如果第一个字符不是数字或者符号就返回NaN</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>parseFloat()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">parseFloat()把字符串转换成浮点数</span><br><span class="line">parseFloat()和parseInt非常相似，不同之处在与</span><br><span class="line">	parseFloat会解析第一个. 遇到第二个.或者非数字结束</span><br><span class="line">	如果解析的内容里只有整数，解析成整数</span><br><span class="line">	123.4.5  -》123.4</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>+，-0等运算</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'500'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(+str);		<span class="comment">// 取正</span></span><br><span class="line"><span class="built_in">console</span>.log(-str);		<span class="comment">// 取负</span></span><br><span class="line"><span class="built_in">console</span>.log(str - <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="转换成布尔类型"><a href="#转换成布尔类型" class="headerlink" title="转换成布尔类型"></a>转换成布尔类型</h3><ul>
+<li>Boolean()</li>
+</ul>
+<p><strong>0  空字符串 null undefined NaN 会转换成false </strong> 其它都会转换成true</p>
 
       
 
@@ -204,7 +265,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -216,7 +277,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
+        			<a href="/categories/基础语法//" class="article-tag-list-link color5">基础语法</a>
         		</li>
       		
 		</ul>
@@ -271,7 +332,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/09/CSSの标签显示模式/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/20/JavaScript基础（二）/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -285,18 +346,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/09/CSSの特性/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/20/JavaScript基础（一）/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          CSSの特性
+          JavaScript基础（一）
         
       </div>
     </a>
   
   
-    <a href="/2019/05/09/CSSの文本样式/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CSSの文本样式</div>
+    <a href="/2019/05/16/JavaのUDP编程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaのUDP编程</div>
       <i class="icon-circle-right"></i>
     </a>
   

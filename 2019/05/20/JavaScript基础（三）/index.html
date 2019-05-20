@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>CSSの标签显示模式 | 骁の博客</title>
+  <title>JavaScript基础（三） | 骁の博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这个很重要~">
-<meta name="keywords" content="css">
+  <meta name="description" content="windows快捷键、引用script注意点、变量定义和数值交换方法、注释规范">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSSの标签显示模式">
-<meta property="og:url" content="http://yoursite.com/2019/05/09/CSSの标签显示模式/index.html">
+<meta property="og:title" content="JavaScript基础（三）">
+<meta property="og:url" content="http://yoursite.com/2019/05/20/JavaScript基础（三）/index.html">
 <meta property="og:site_name" content="骁の博客">
-<meta property="og:description" content="这个很重要~">
+<meta property="og:description" content="windows快捷键、引用script注意点、变量定义和数值交换方法、注释规范">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-15T15:43:40.163Z">
+<meta property="og:updated_time" content="2019-05-20T15:50:41.303Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSSの标签显示模式">
-<meta name="twitter:description" content="这个很重要~">
+<meta name="twitter:title" content="JavaScript基础（三）">
+<meta name="twitter:description" content="windows快捷键、引用script注意点、变量定义和数值交换方法、注释规范">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -143,54 +143,58 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-CSSの标签显示模式" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavaScript基础（三）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      CSSの标签显示模式
+      JavaScript基础（三）
     </h1>
   
 
         
-        <a href="/2019/05/09/CSSの标签显示模式/" class="archive-article-date">
-  	<time datetime="2019-05-09T10:56:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
+        <a href="/2019/05/20/JavaScript基础（三）/" class="archive-article-date">
+  	<time datetime="2019-05-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这个很重要~</p>
+        <p>windows快捷键、引用script注意点、变量定义和数值交换方法、注释规范</p>
 <a id="more"></a>
-<p>HTML标签一般分为块标签和行内标签两种类型，它们也称块元素和行内元素。具体如下：</p>
-<h2 id="块级元素-block-level"><a href="#块级元素-block-level" class="headerlink" title="块级元素(block-level)"></a>块级元素(block-level)</h2><p>每个块元素通常都会独自占据一整行或多整行，可以对其设置宽度、高度、对齐等属性，常用于网页布局和网页结构的搭建。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">常见的块元素有&lt;h1&gt;~&lt;h6&gt;、&lt;p&gt;、&lt;div&gt;、&lt;ul&gt;、&lt;ol&gt;、&lt;li&gt;等，其中&lt;div&gt;标签是最典型的块元素。</span><br></pre></td></tr></table></figure>
-<p>块级元素的特点：</p>
-<p>（1）总是从新行开始</p>
-<p>（2）高度，行高、外边距以及内边距都可以控制。</p>
-<p>（3）宽度默认是容器的100%</p>
-<p>（4）可以容纳内联元素和其他块元素。</p>
-<h2 id="行内元素-inline-level"><a href="#行内元素-inline-level" class="headerlink" title="行内元素(inline-level)"></a>行内元素(inline-level)</h2><p>行内元素（内联元素）不占有独立的区域，仅仅靠自身的字体大小和图像尺寸来支撑结构，一般不可以设置宽度、高度、对齐等属性，常用于控制页面中文本的样式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">常见的行内元素有&lt;a&gt;、&lt;strong&gt;、&lt;b&gt;、&lt;em&gt;、&lt;i&gt;、&lt;del&gt;、&lt;s&gt;、&lt;ins&gt;、&lt;u&gt;、&lt;span&gt;等，其中&lt;span&gt;标签最典型的行内元素。</span><br></pre></td></tr></table></figure>
-<p>行内元素的特点：</p>
-<p>（1）和相邻行内元素在一行上。</p>
-<p>（2）高、宽无效，但水平方向的padding和margin可以设置，垂直方向的无效。</p>
-<p>（3）默认宽度就是它本身内容的宽度。</p>
-<p>（4）行内元素只能容纳文本或则其他行内元素。（a特殊）</p>
-<p>​    注意：</p>
-<ol>
-<li>只有 文字才 能组成段落  因此 p  里面不能放块级元素，同理还有这些标签h1,h2,h3,h4,h5,h6,dt，他们都是文字类块级标签，里面不能放其他块级元素。</li>
-<li>链接里面不能再放链接。</li>
-</ol>
-<h2 id="块级元素和行内元素区别"><a href="#块级元素和行内元素区别" class="headerlink" title="块级元素和行内元素区别"></a>块级元素和行内元素区别</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">块级元素的特点：</span><br><span class="line">（1）总是从新行开始</span><br><span class="line">（2）高度，行高、外边距以及内边距都可以控制。</span><br><span class="line">（3）宽度默认是容器的100%</span><br><span class="line">（4）可以容纳内联元素和其他块元素。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">行内元素的特点：</span><br><span class="line">（1）和相邻行内元素在一行上。</span><br><span class="line">（2）高、宽无效，但水平方向的padding和margin可以设置，垂直方向的无效。</span><br><span class="line">（3）默认宽度就是它本身内容的宽度。</span><br><span class="line">（4）行内元素只能容纳文本或则其他行内元素。</span><br></pre></td></tr></table></figure>
-<h2 id="行内块元素（inline-block）"><a href="#行内块元素（inline-block）" class="headerlink" title="行内块元素（inline-block）"></a>行内块元素（inline-block）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">在行内元素中有几个特殊的标签——&lt;img /&gt;、&lt;input /&gt;、&lt;td&gt;，可以对它们设置宽高和对齐属性，有些资料可能会称它们为行内块元素。</span><br><span class="line"></span><br><span class="line">行内块元素的特点：</span><br><span class="line">（1）和相邻行内元素（行内块）在一行上,但是之间会有空白缝隙。</span><br><span class="line">（2）默认宽度就是它本身内容的宽度。</span><br><span class="line">（3）高度，行高、外边距以及内边距都可以控制。</span><br></pre></td></tr></table></figure>
-<h2 id="标签显示模式转换-display"><a href="#标签显示模式转换-display" class="headerlink" title="标签显示模式转换 display"></a>标签显示模式转换 display</h2><p>块转行内：display:inline;</p>
-<p>行内转块：display:block;</p>
-<p>块、行内元素转换为行内块： display: inline-block;</p>
+<p><strong>“5”==5  -》true 不检查类型 </strong></p>
+<p><strong>“5”===5  -》false  严格的，检查类型</strong></p>
+<h2 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h2><p>运算符  operator </p>
+<p>5 + 6   </p>
+<p>表达式  组成 操作数和操作符，会有一个结果</p>
+<h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ - * / %</span><br></pre></td></tr></table></figure>
+<h3 id="一元运算符"><a href="#一元运算符" class="headerlink" title="一元运算符"></a>一元运算符</h3><p>一元运算符：只有一个操作数的运算符</p>
+<p>5 + 6  两个操作数的运算符 二元运算符</p>
+<p>++  自身加1</p>
+<p>– 自身减1</p>
+<ul>
+<li><p>前置++</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</span><br><span class="line">++ num1; </span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">6</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num1 + ++ num2);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>后置++</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</span><br><span class="line">num1 ++;    </span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">6</span> </span><br><span class="line"><span class="built_in">console</span>.log(num1 + num2 ++);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>猜猜看</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="keyword">var</span> b = ++a + ++a; <span class="built_in">console</span>.log(b);    </span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="keyword">var</span> b = a++ + ++a; <span class="built_in">console</span>.log(b);    </span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="keyword">var</span> b = a++ + a++; <span class="built_in">console</span>.log(b);    </span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="keyword">var</span> b = ++a + a++; <span class="built_in">console</span>.log(b);</span><br></pre></td></tr></table></figure>
+<p><strong>总结</strong><br><strong>前置++：先加1，后参与运算</strong><br><strong>后置++：先参与运算，后加1</strong><br><strong>上面两个理解后，下面两个自通</strong><br><strong>前置–  ：先减1，后参与运算</strong><br><strong>后置–  ：先参与运算，后减1</strong><br>​</p>
+</li>
+</ul>
+<h3 id="逻辑运算符-布尔运算符"><a href="#逻辑运算符-布尔运算符" class="headerlink" title="逻辑运算符(布尔运算符)"></a>逻辑运算符(布尔运算符)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&amp;&amp; 与 两个操作数同时为true，结果为true，否则都是false</span><br><span class="line">|| 或 两个操作数有一个为true，结果为true，否则为false</span><br><span class="line">!  非  取反</span><br></pre></td></tr></table></figure>
+<h3 id="关系运算符-比较运算符"><a href="#关系运算符-比较运算符" class="headerlink" title="关系运算符(比较运算符)"></a>关系运算符(比较运算符)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;  &gt;  &gt;=  &lt;= == != === !==</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">==与===的区别：==只进行值得比较，===类型和值同时相等，则相等</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result = <span class="string">'55'</span> == <span class="number">55</span>;  	<span class="comment">// true</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="string">'55'</span> === <span class="number">55</span>; 	<span class="comment">// false 值相等，类型不相等</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="number">55</span> === <span class="number">55</span>; 	<span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><p>=   +=   -=   *=   /=   %=</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">例如：</span><br><span class="line"><span class="keyword">var</span> num = <span class="number">0</span>;</span><br><span class="line">num += <span class="number">5</span>;	<span class="comment">//相当于  num = num + 5;</span></span><br></pre></td></tr></table></figure>
+<h3 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">优先级从高到底</span><br><span class="line">	1. ()  优先级最高</span><br><span class="line">	2. 一元运算符  ++   --   !</span><br><span class="line">	3. 算数运算符  先*  /  %   后 +   -</span><br><span class="line">	4. 关系运算符  &gt;   &gt;=   &lt;   &lt;=</span><br><span class="line">	5. 相等运算符   ==   !=    ===    !==</span><br><span class="line">	6. 逻辑运算符 先&amp;&amp;   后||</span><br><span class="line">	7. 赋值运算符</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">4</span> &gt;= <span class="number">6</span> || <span class="string">'人'</span> != <span class="string">'阿凡达'</span> &amp;&amp; !(<span class="number">12</span> * <span class="number">2</span> == <span class="number">144</span>) &amp;&amp; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="number">5</span> == num / <span class="number">2</span> &amp;&amp; (<span class="number">2</span> + <span class="number">2</span> * num).toString() === <span class="string">'22'</span></span><br></pre></td></tr></table></figure>
+<p>## </p>
 
       
 
@@ -204,7 +208,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -216,7 +220,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
+        			<a href="/categories/基础语法//" class="article-tag-list-link color5">基础语法</a>
         		</li>
       		
 		</ul>
@@ -271,7 +275,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/09/CSSの标签显示模式/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/20/JavaScript基础（三）/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -285,18 +289,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/09/CSSの特性/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/20/Nginx/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          CSSの特性
+          Nginx
         
       </div>
     </a>
   
   
-    <a href="/2019/05/09/CSSの文本样式/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CSSの文本样式</div>
+    <a href="/2019/05/20/JavaScript基础（一）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript基础（一）</div>
       <i class="icon-circle-right"></i>
     </a>
   
