@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="骁の博客">
 <meta property="og:description" content="值类型Number、String、Boolean、Undefined、Null、ES6的Symbol*  引用数据类型：对象(Object)、数组(Array)、函数(Function)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-21T14:29:54.910Z">
+<meta property="og:updated_time" content="2019-05-24T15:25:59.161Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript基础（二）">
 <meta name="twitter:description" content="值类型Number、String、Boolean、Undefined、Null、ES6的Symbol*  引用数据类型：对象(Object)、数组(Array)、函数(Function)">
@@ -169,6 +169,7 @@
 <p><strong>var box = 12/0;  //Infinity </strong></p>
 <p><strong>var box = =0/0;(12/0 * 0) //NaN </strong></p>
 <p><strong>var num = num+10;/ /NaN  </strong></p>
+<p>arguments ,伪数组 –》存储传递的所有的实参</p>
 <p>null == undefined;  //true</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num;</span><br><span class="line"></span><br><span class="line">    alert(num+<span class="number">10</span> == <span class="literal">NaN</span>);	<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
 <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="简单数据类型"><a href="#简单数据类型" class="headerlink" title="简单数据类型"></a>简单数据类型</h3><p>Number、String、Boolean、Undefined、Null</p>
@@ -222,16 +223,47 @@
 </ol>
 <h2 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h2><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cars=<span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">//也可以加参数给定长度</span></span><br><span class="line"><span class="comment">// 创建一个空数组</span></span><br><span class="line"><span class="keyword">var</span> arr1 = []; </span><br><span class="line">cars[<span class="number">0</span>]=<span class="string">"Saab"</span>;</span><br><span class="line">cars[<span class="number">1</span>]=<span class="string">"Volvo"</span>;</span><br><span class="line">cars[<span class="number">2</span>]=<span class="string">"BMW"</span>;</span><br><span class="line"><span class="number">2.</span>(condensed array):--&gt;<span class="keyword">var</span> cars=<span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"Saab"</span>,<span class="string">"Volvo"</span>,<span class="string">"BMW"</span>);</span><br><span class="line"><span class="number">3.</span> (literal array):--&gt;<span class="keyword">var</span> cars=[<span class="string">"Saab"</span>,<span class="string">"Volvo"</span>,<span class="string">"BMW"</span>];</span><br><span class="line"><span class="number">4.</span> 数组下标是基于零的，所以第一个项目是 [<span class="number">0</span>]，第二个是 [<span class="number">1</span>]，以此类推。</span><br><span class="line"><span class="number">5</span>、如果定义数组的长度而没有定义值，则值默认为<span class="literal">undefined</span></span><br><span class="line"><span class="number">6</span>、数组可以存各种很多类型，包括对象，数组。</span><br><span class="line"><span class="number">7</span>、可以cars[cars.length] = <span class="string">'直接加元素'</span>;</span><br></pre></td></tr></table></figure>
 <h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var person=&#123;firstname:&quot;John&quot;, lastname:&quot;Doe&quot;, id:5566&#125;;</span><br><span class="line">var person=&#123;</span><br><span class="line">firstname : &quot;John&quot;,</span><br><span class="line">lastname  : &quot;Doe&quot;,</span><br><span class="line">id        :  5566</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">对象属性有两种寻址方式：</span><br><span class="line">name=person.lastname;</span><br><span class="line">name=person[&quot;lastname&quot;];</span><br></pre></td></tr></table></figure></p>
-<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>函数就是包裹在花括号中的代码块，前面使用了关键词 function：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionname</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 执行代码</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">var1,var2</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>函数就是包裹在花括号中的代码块，前面使用了关键词 function：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionname</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 执行代码</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">var1,var2</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">代码</span><br><span class="line">&#125;</span><br><span class="line">可以调用myFUnction(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)但是只会导入<span class="number">1</span>和<span class="number">2</span></span><br></pre></td></tr></table></figure></p>
 <p>当调用该函数时，会执行函数内的代码。<br>可以在某事件发生时直接调用函数（比如当用户点击按钮时），并且可由 JavaScript 在任何位置进行调用。<br>例子：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;点击这个按钮，来调用带参数的函数。&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">&lt;button onclick="myFunction('Harry Potter','Wizard')"&gt;点击这里&lt;/</span>button&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">name,job</span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">"Welcome "</span> + name + <span class="string">", the "</span> + job);</span><br><span class="line">&#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=<span class="string">"demo"</span>&gt;&lt;/p&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML=myFunction(<span class="number">4</span>,<span class="number">3</span>);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="局部-JavaScript-变量"><a href="#局部-JavaScript-变量" class="headerlink" title="局部 JavaScript 变量"></a>局部 JavaScript 变量</h4><p>在 JavaScript 函数内部声明的变量（使用 var）是局部变量，所以只能在函数内部访问它。（该变量的作用域是局部的）。<br>您可以在不同的函数中使用名称相同的局部变量，因为只有声明过该变量的函数才能识别出该变量。<br>只要函数运行完毕，本地变量就会被删除。</p>
-<h4 id="全局-JavaScript-变量"><a href="#全局-JavaScript-变量" class="headerlink" title="全局 JavaScript 变量"></a>全局 JavaScript 变量</h4><p>在函数外声明的变量是全局变量，网页上的所有脚本和函数都能访问它。</p>
-<h4 id="JavaScript-变量的生存期"><a href="#JavaScript-变量的生存期" class="headerlink" title="JavaScript 变量的生存期"></a>JavaScript 变量的生存期</h4><p>JavaScript 变量的生命期从它们被声明的时间开始。<br>局部变量会在函数运行以后被删除。<br>全局变量会在页面关闭后被删除。</p>
-<h4 id="向未声明的-JavaScript-变量分配值"><a href="#向未声明的-JavaScript-变量分配值" class="headerlink" title="向未声明的 JavaScript 变量分配值"></a>向未声明的 JavaScript 变量分配值</h4><p>如果您把值赋给尚未声明的变量，该变量将被自动作为 window 的一个属性。<br>这条语句：<br>carname=”Volvo”;<br>将声明 window 的一个属性 carname。<br>非严格模式下给未声明变量赋值创建的全局变量，是全局对象的可配置属性，可以删除。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> var1 = <span class="number">1</span>; <span class="comment">// 不可配置全局属性</span></span><br><span class="line">var2 = <span class="number">2</span>; <span class="comment">// 没有使用 var 声明，可配置全局属性</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.var1); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.var1); <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> var1; <span class="comment">// false 无法删除</span></span><br><span class="line"><span class="built_in">console</span>.log(var1); <span class="comment">//1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> var2; </span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">delete</span> var2); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(var2); <span class="comment">// 已经删除 报错变量未定义</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=<span class="string">"demo"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML=myFunction(<span class="number">4</span>,<span class="number">3</span>);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h4><blockquote>
+<p>匿名函数：没有名字的函数</p>
+</blockquote>
+<p>匿名函数如何使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">将匿名函数赋值给一个变量，这样就可以通过变量进行调用</span><br><span class="line">匿名函数自调用</span><br></pre></td></tr></table></figure>
+<p>关于自执行函数（匿名函数自调用）的作用：防止全局变量污染。</p>
+<h4 id="自调用函数"><a href="#自调用函数" class="headerlink" title="自调用函数"></a>自调用函数</h4><blockquote>
+<p>匿名函数不能通过直接调用来执行，因此可以通过匿名函数的自调用的方式来执行</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="number">123</span>);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<h4 id="函数是一种数据类型"><a href="#函数是一种数据类型" class="headerlink" title="函数是一种数据类型"></a>函数是一种数据类型</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> fn);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>函数作为参数</li>
+</ul>
+<p>因为函数也是一种类型，可以把函数作为两一个函数的参数，在两一个函数中调用</p>
+<ul>
+<li>函数做为返回值</li>
+</ul>
+<p>因为函数是一种类型，所以可以把函数可以作为返回值从函数内部返回，这种用法在后面很常见。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(a+b);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="number">15</span>)();</span><br></pre></td></tr></table></figure>
+<h4 id="一些代码"><a href="#一些代码" class="headerlink" title="一些代码"></a>一些代码</h4><p>  //<br>    //    function f1() {<br>    //      console.log(“哈哈,我又变帅了”);<br>    //    }<br>    //    f1();//函数调用<br>    //    //如果一个函数能够调用:  函数的代码();<br>    //<br>    //    //函数表达式  相当于var num =10;<br>    //    var f2 = function () {<br>    //      console.log(“哈哈,真的好帅哦”);<br>    //    };<br>    //    //匿名函数不能直接调用<br>    //    f2();<br>​            f2 = function () {  //相当于num =20；<br>​    //      console.log(“哈哈”);<br>​    //    };<br>             f2();<br>    //    var f1=function(){console.log(“阿涅哈斯诶呦”);};<br>​    //    f1();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//函数的自调用,没有名字,调用---声明的同时,直接调用</span><br><span class="line">//一次性的--------</span><br><span class="line">//    (function()&#123;console.log(&quot;阿涅哈斯诶呦&quot;);&#125;)();</span><br><span class="line">//    (function()&#123;console.log(&quot;嘎嘎&quot;)&#125;)();</span><br></pre></td></tr></table></figure>
+<p>​    </p>
+<h4 id="函数作为参数调用、返回值"><a href="#函数作为参数调用、返回值" class="headerlink" title="函数作为参数调用、返回值"></a>函数作为参数调用、返回值</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">函数作为参数调用</span><br><span class="line"><span class="comment">//    function f1(fn) &#123;</span></span><br><span class="line"><span class="comment">//      fn();//函数调用---说明fn这个变量中存储的是一个函数</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//    function f2() &#123;</span></span><br><span class="line"><span class="comment">//      console.log("哦,这也可以");</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//    f1(f2);</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//结论:函数是可以作为返回值使用的:</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"f1函数调用了"</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"这是一个函数"</span>);</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> ff=f1();<span class="comment">//调用</span></span><br><span class="line">    <span class="comment">//ff就是一个函数了</span></span><br><span class="line">    ff();</span><br></pre></td></tr></table></figure>
+<h2 id="arguments的使用"><a href="#arguments的使用" class="headerlink" title="arguments的使用"></a>arguments的使用</h2><blockquote>
+<p>JavaScript中，arguments对象是比较特别的一个对象，实际上是当前函数的一个内置属性。也就是说所有函数都内置了一个arguments对象，arguments对象中存储了传递的所有的实参。arguments是一个伪数组，因此及可以进行遍历<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">arguments</span>.length);</span><br><span class="line">&#125;</span><br><span class="line">f1(<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>)  --&gt;<span class="number">4</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
 <h2 id="声明变量类型"><a href="#声明变量类型" class="headerlink" title="声明变量类型"></a>声明变量类型</h2><p>当您声明新变量时，可以使用关键词 “new” 来声明其类型：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> carname=<span class="keyword">new</span> <span class="built_in">String</span>;</span><br><span class="line"><span class="keyword">var</span> x=      <span class="keyword">new</span> <span class="built_in">Number</span>;</span><br><span class="line"><span class="keyword">var</span> y=      <span class="keyword">new</span> <span class="built_in">Boolean</span>;</span><br><span class="line"><span class="keyword">var</span> cars=   <span class="keyword">new</span> <span class="built_in">Array</span>;</span><br><span class="line"><span class="keyword">var</span> person= <span class="keyword">new</span> <span class="built_in">Object</span>;</span><br></pre></td></tr></table></figure></p>
-<h3 id="获取变量的类型"><a href="#获取变量的类型" class="headerlink" title="获取变量的类型"></a>获取变量的类型</h3><p>typeof</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> age);  <span class="comment">// 'number'</span></span><br></pre></td></tr></table></figure>
+<h2 id="检测数据类型：typeof-与-instanceof"><a href="#检测数据类型：typeof-与-instanceof" class="headerlink" title="检测数据类型：typeof 与 instanceof"></a>检测数据类型：typeof 与 instanceof</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> age);  <span class="comment">// 'number'</span></span><br></pre></td></tr></table></figure>
+<p>typeof “John”                 // 返回 string<br>typeof 3.14                   // 返回 number<br>typeof NaN                    // 返回 number<br>typeof false                  // 返回 boolean<br>typeof [1,2,3,4]              // 返回 object<br>typeof {name:’John’, age:34}  // 返回 object<br>typeof new Date()             // 返回 object<br>typeof function () {}         // 返回 function<br>typeof myCar                  // 返回 undefined (如果 myCar 没有声明)<br>typeof null                   // 返回 object</p>
+<p>我们可以使用 typeof 来获取一个变量是否存在，如 <strong>if(typeof a!=”undefined”){}</strong>，而不要去使用 if(a) 因为如果 a 不存在（未声明）则会出错。</p>
+<p>正因为 typeof 遇到 null,数组,对象时都会返回 object 类型，所以当我们要判断一个对象是否是数组时。</p>
+<p>或者判断某个变量是否是某个对象的实例则要选择使用另一个关键语法 <strong>instanceof</strong></p>
+<p><strong>instanceof</strong></p>
+<p>可通过 instanceof 操作符来判断对象的具体类型，语法格式:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var result = objectName instanceof objectType/Object</span><br></pre></td></tr></table></figure>
+<p>返回布尔值，如果是指定类型返回 true，否则返回 false：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arr <span class="keyword">instanceof</span> <span class="built_in">Array</span></span><br><span class="line"><span class="built_in">RegExp</span>正则表达式,<span class="built_in">String</span>字符串对象</span><br></pre></td></tr></table></figure>
 <h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><p>如何使用谷歌浏览器，快速的查看数据类型？</p>
 <p>字符串的颜色是黑色的，数值类型是蓝色的，布尔类型也是蓝色的，undefined和null是灰色的</p>
 <h3 id="转换成字符串类型"><a href="#转换成字符串类型" class="headerlink" title="转换成字符串类型"></a>转换成字符串类型</h3><ul>
@@ -357,18 +389,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/20/Nginx/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/21/JavaScript基础（四）/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Nginx
+          JavaScript基础（四）
         
       </div>
     </a>
   
   
-    <a href="/2019/05/20/JavaScript基础（三）/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaScript基础（三）</div>
+    <a href="/2019/05/20/FizzBuzz面试问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">FizzBuzz面试问题</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -503,11 +535,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">软件吐槽</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -515,11 +547,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">软件安装</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">谷歌脚本</a>
+                <a href="javascript:void(0)" class="js-tag color2">web服务器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -531,19 +559,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">谷歌脚本</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">web服务器</a>
               </li>
             
             <div class="clearfix"></div>
