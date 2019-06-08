@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JavaScript基础（六） | 骁の博客</title>
+  <title>JavaScript基础（七） | 骁の博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="预解析，函数的声明和变量的声明会提升~">
+  <meta name="description" content="对象的定义">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript基础（六）">
-<meta property="og:url" content="http://yoursite.com/2019/05/23/JavaScript基础（六）/index.html">
+<meta property="og:title" content="JavaScript基础（七）">
+<meta property="og:url" content="http://yoursite.com/2019/05/28/JavaScript基础/JavaScript基础（七）/index.html">
 <meta property="og:site_name" content="骁の博客">
-<meta property="og:description" content="预解析，函数的声明和变量的声明会提升~">
+<meta property="og:description" content="对象的定义">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-28T15:28:42.571Z">
+<meta property="og:updated_time" content="2019-05-31T04:37:57.622Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript基础（六）">
-<meta name="twitter:description" content="预解析，函数的声明和变量的声明会提升~">
+<meta name="twitter:title" content="JavaScript基础（七）">
+<meta name="twitter:description" content="对象的定义">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -143,53 +143,73 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JavaScript基础（六）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavaScript基础/JavaScript基础（七）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JavaScript基础（六）
+      JavaScript基础（七）
     </h1>
   
 
         
-        <a href="/2019/05/23/JavaScript基础（六）/" class="archive-article-date">
-  	<time datetime="2019-05-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-23</time>
+        <a href="/2019/05/28/JavaScript基础/JavaScript基础（七）/" class="archive-article-date">
+  	<time datetime="2019-05-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>预解析，函数的声明和变量的声明会提升~</p>
+        <p>对象的定义</p>
 <a id="more"></a>
-<h2 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h2><p>如果程序员不能很好的理解变量提升，他们写的程序就容易出现一些问题。</p>
-<p>为了避免这些问题，通常我们在每个作用域开始前声明这些变量，这也是正常的 JavaScript 解析步骤，易于我们理解</p>
+<p>并非只有点语法，也可以用obj[“name”]  –》obj.name</p>
+<h2 id="正常创建"><a href="#正常创建" class="headerlink" title="正常创建"></a>正常创建</h2><p>人的对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person=<span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">       person.name=<span class="string">"小白"</span>;</span><br><span class="line">       person.age=<span class="number">10</span>;</span><br><span class="line">       person.sayHi=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">          在当前这个对象的方法中是可以访问当前这个对象的属性的值</span><br><span class="line">           <span class="built_in">console</span>.log(<span class="string">"您好,吃了没您,我叫:"</span>+<span class="keyword">this</span>.name);</span><br><span class="line">       &#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">工厂模式创建对象</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">createObject</span>(<span class="params">name,age</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>(); 创建对象</span><br><span class="line">     添加属性</span><br><span class="line">    obj.name = name;</span><br><span class="line">    obj.age = age;</span><br><span class="line">     添加方法</span><br><span class="line">    obj.sayHi = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"阿涅哈斯诶呦,我叫:"</span> + <span class="keyword">this</span>.name + <span class="string">"我今年:"</span> + <span class="keyword">this</span>.age);</span><br><span class="line">      <span class="comment">// 在当前的对象的方法中,可以使用this关键字代表当前的对象</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> obj;</span><br><span class="line">  &#125;</span><br><span class="line">   创建人的对象</span><br><span class="line">  <span class="keyword">var</span> per1 = createObject(<span class="string">"小芳"</span>,<span class="number">20</span>);</span><br><span class="line">  per1.sayHi();</span><br><span class="line">   创建一个人的对象</span><br><span class="line">  <span class="keyword">var</span> per2 = createObject(<span class="string">"小红"</span>,<span class="number">30</span>);</span><br><span class="line">  per2.sayHi();</span><br></pre></td></tr></table></figure>
+<h2 id="自定义构造函数创建对象"><a href="#自定义构造函数创建对象" class="headerlink" title="自定义构造函数创建对象"></a>自定义构造函数创建对象</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//自定义构造函数创建对象,我要自己定义一个构造函数,自定义构造函数,创建对象</span></span><br><span class="line">   <span class="comment">//函数和构造函数的区别；名字是不是大写(首字母是大写)</span></span><br><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">this</span>.name=name;</span><br><span class="line">     <span class="keyword">this</span>.age=age;</span><br><span class="line">     <span class="keyword">this</span>.sayHi=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">"我叫:"</span>+<span class="keyword">this</span>.name+<span class="string">",年龄是:"</span>+<span class="keyword">this</span>.age);</span><br><span class="line">     &#125;;</span><br><span class="line">   &#125;</span><br><span class="line">    <span class="comment">//自定义构造函数创建对象:先自定义一个构造函数,创建对象</span></span><br><span class="line">   <span class="keyword">var</span> obj=<span class="keyword">new</span> Person(<span class="string">"小明"</span>,<span class="number">10</span>);</span><br><span class="line">   * <span class="number">1.</span> 开辟空间,存储创建的新的对象</span><br><span class="line">   * <span class="number">2.</span> 把<span class="keyword">this</span>设置为当前的对象</span><br><span class="line">   * <span class="number">3.</span> 设置对象的属性和方法的值</span><br><span class="line">   * <span class="number">4.</span> 返回创建后新的对象</span><br></pre></td></tr></table></figure>
+<h2 id="字面量创建-重点"><a href="#字面量创建-重点" class="headerlink" title="字面量创建  重点"></a>字面量创建  重点</h2><p>  字面量创建对象的缺陷: 一次性的对象<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一种</span></span><br><span class="line">  <span class="keyword">var</span> obj=&#123;&#125;;</span><br><span class="line">    obj.name=<span class="string">"小白"</span>;</span><br><span class="line">    obj.age=<span class="number">10</span>;</span><br><span class="line">    obj.sayHi=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"我是:"</span>+<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;;</span><br><span class="line">    obj.sayHi();</span><br><span class="line"><span class="comment">//第二种（重要）</span></span><br><span class="line"><span class="keyword">var</span> obj2=&#123;</span><br><span class="line">      name:<span class="string">"小明"</span>,</span><br><span class="line">      age:<span class="number">20</span>,</span><br><span class="line">      sayHi:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"我是:"</span>+<span class="keyword">this</span>.name);</span><br><span class="line">      &#125;,</span><br><span class="line">      eat:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"吃了"</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    obj2.sayHi();</span><br></pre></td></tr></table></figure></p>
+<h2 id="删除对象属性"><a href="#删除对象属性" class="headerlink" title="删除对象属性"></a>删除对象属性</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line">  <span class="keyword">this</span>.name = <span class="string">'mm'</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> fun(); </span><br><span class="line"><span class="built_in">console</span>.log(obj.name); <span class="comment">// mm </span></span><br><span class="line"><span class="keyword">delete</span> obj.name;</span><br><span class="line"><span class="built_in">console</span>.log(obj.name); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<h2 id="遍历对象的属性"><a href="#遍历对象的属性" class="headerlink" title="遍历对象的属性"></a>遍历对象的属性</h2><blockquote>
+<p>通过for..in语法可以遍历一个对象</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  obj[i] = i * <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(key + <span class="string">"=="</span> + obj[key]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="简单类型和复杂类型的区别"><a href="#简单类型和复杂类型的区别" class="headerlink" title="简单类型和复杂类型的区别"></a>简单类型和复杂类型的区别</h2><blockquote>
+<p>基本类型又叫做值类型，复杂类型又叫做引用类型</p>
+<p>值类型：简单数据类型，基本数据类型，在存储时，变量中存储的是值本身，因此叫做值类型。</p>
+<p>引用类型：复杂数据类型，在存储是，变量中存储的仅仅是地址（引用），因此叫做引用数据类型。</p>
+</blockquote>
 <ul>
-<li><p>变量提升</p>
-<p>定义变量的时候，变量的声明会被提升到作用域的最上面，变量的赋值不会提升。</p>
+<li><p>堆和栈</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">堆栈空间分配区别：</span><br><span class="line">　　1、栈（操作系统）：由操作系统自动分配释放 ，存放函数的参数值，局部变量的值等。其操作方式类似于数据结构中的栈；</span><br><span class="line">　　2、堆（操作系统）： 存储复杂类型(对象)，一般由程序员分配释放， 若程序员不释放，由垃圾回收机制回收，分配方式倒是类似于链表。</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>函数提升</p>
-<p>JavaScript解析器首先会把当前作用域的函数声明提前到整个作用域的最前面</p>
-<ul>
-<li>预解析:就是在解析代码之前</li>
-<li>预解析做什么事?</li>
-<li>把变量的声明提前了—-提前到当前所在的作用域的最上面</li>
-<li>函数的声明也会被提前—提前到当前所在的作用域的最上面</li>
-</ul>
+<li><p>注意：JavaScript中没有堆和栈的概念，此处我们用堆和栈来讲解，目的是方便理解。</p>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(num);    <span class="comment">//underfined</span></span><br><span class="line"><span class="keyword">var</span> num=<span class="number">10</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"哈哈,助教好猥琐哦"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<pre><code>       //预解析中,变量的提升,只会在当前的作用域中提升,提前到当前的作用域的最上面
-//函数中的变量只会提前到函数的作用域中的最前面,不会出去
-//预解析会分段(多对的script标签中函数重名,预解析的时候不会冲突)
-</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(num);<span class="comment">//undefined</span></span><br><span class="line">  <span class="keyword">var</span> num=<span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line">f1();</span><br><span class="line"><span class="built_in">console</span>.log(num);<span class="comment">//</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">	f1();</span><br><span class="line"></span><br><span class="line">​    <span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">​      <span class="built_in">console</span>.log(<span class="string">"嘎嘎"</span>);</span><br><span class="line"></span><br><span class="line">​    &#125;<span class="comment">//成功调用</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> f1();<span class="comment">//-----报错</span></span><br><span class="line"><span class="keyword">var</span> f1=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(a);	</span><br><span class="line">   <span class="keyword">var</span> a=<span class="number">10</span>;</span><br><span class="line"> &#125;;</span><br></pre></td></tr></table></figure>
-<pre><code><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">25</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">abc</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="comment">//var a;</span></span><br><span class="line">  alert(a);<span class="comment">//undefined</span></span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line">abc();</span><br><span class="line"><span class="built_in">console</span>.log(a);<span class="comment">//25</span></span><br></pre></td></tr></table></figure>
-</code></pre>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age,salary</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = name;</span><br><span class="line">  <span class="keyword">this</span>.age = age;</span><br><span class="line">  <span class="keyword">this</span>.salary = salary;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params">person</span>) </span>&#123;</span><br><span class="line">  person.name = <span class="string">"ls"</span>;        <span class="comment">//   p和person同地址</span></span><br><span class="line">  person = <span class="keyword">new</span> Person(<span class="string">"aa"</span>,<span class="number">18</span>,<span class="number">10</span>); <span class="comment">//新辟地址区，个人理解</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Person(<span class="string">"zs"</span>,<span class="number">18</span>,<span class="number">1000</span>);</span><br><span class="line"><span class="built_in">console</span>.log(p.name);  <span class="comment">// zs</span></span><br><span class="line">f1(p);</span><br><span class="line"><span class="built_in">console</span>.log(p.name);  <span class="comment">//ls</span></span><br><span class="line"><span class="comment">//同样person对象在函数外会被杀掉</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">var</span> num = <span class="number">50</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">    num = <span class="number">60</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(num);</span><br><span class="line">&#125;</span><br><span class="line">f1(num);<span class="comment">//相当于fl(50)，num原变量不变的，</span></span><br><span class="line"><span class="built_in">console</span>.log(num);</span><br><span class="line"></span><br><span class="line"><span class="comment">//加强版</span></span><br><span class="line">    <span class="keyword">var</span> num3 = <span class="number">50</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params">num4</span>) </span>&#123;</span><br><span class="line">    num4 = <span class="number">60</span>;</span><br><span class="line">    num3 = <span class="number">70</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(num4);</span><br><span class="line">&#125;</span><br><span class="line">f2(num3);</span><br><span class="line"><span class="built_in">console</span>.log(num3);<span class="comment">//70</span></span><br></pre></td></tr></table></figure>
+<h2 id="json对象的创建和遍历"><a href="#json对象的创建和遍历" class="headerlink" title="json对象的创建和遍历"></a>json对象的创建和遍历</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> json=&#123;</span><br><span class="line">    <span class="string">"name"</span>:<span class="string">"x"</span>,</span><br><span class="line">    <span class="string">"age"</span>:<span class="string">"10"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> json)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(key);<span class="comment">//name，age</span></span><br><span class="line">    <span class="built_in">console</span>.log(json[key]);<span class="comment">//x，10 --》相当于json.name--》json["name"]</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//key是一个变量，存储的是json对象属性的名字</span></span><br></pre></td></tr></table></figure>
+<h2 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h2><p>详情见<a href="http://xiaojiahao.club/2019/05/30/JavaScript%E5%9F%BA%E7%A1%80%EF%BC%88%E5%85%AB%EF%BC%89/" target="_blank" rel="noopener">JavaScript基础（八）</a></p>
+<p>JavaScript 提供多个内置对象：Math/Array/Number/String/Boolean…</p>
+<p>对象只是带有<strong>属性</strong>和<strong>方法</strong>的特殊数据类型。</p>
+<p>学习一个内置对象的使用，只要学会其常用的成员的使用（通过查文档学习）</p>
+<p>可以通过MDN/W3C来查询</p>
+<p>内置对象的方法很多，我们只需要知道内置对象提供的常用方法，使用的时候查询文档。</p>
+<h3 id="属性和方法"><a href="#属性和方法" class="headerlink" title="属性和方法"></a>属性和方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果一个变量属于一个对象所有，那么该变量就可以称之为该对象的一个属性，属性一般是名词，用来描述事物的特征</span><br><span class="line">如果一个函数属于一个对象所有，那么该函数就可以称之为该对象的一个方法，方法是动词，描述事物的行为和功能</span><br></pre></td></tr></table></figure>
+<h3 id="new关键字"><a href="#new关键字" class="headerlink" title="new关键字"></a>new关键字</h3><blockquote>
+<p>构造函数 ，是一种特殊的函数。主要用来在创建对象时初始化对象， 即为对象成员变量赋初始值，总与new运算符一起使用在创建对象的语句中。</p>
+</blockquote>
+<ol>
+<li>构造函数用于创建一类对象，首字母要大写。</li>
+<li>构造函数要和new一起使用才有意义。</li>
+</ol>
+<p>new在执行时会做四件事情</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">new会在内存中创建一个新的空对象</span><br><span class="line">new 会让this指向这个新的对象</span><br><span class="line">执行构造函数  目的：给这个新对象加属性和方法</span><br><span class="line">new会返回这个新对象</span><br></pre></td></tr></table></figure>
+<h3 id="this详解"><a href="#this详解" class="headerlink" title="this详解"></a>this详解</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">JavaScript中的this指向问题，有时候会让人难以捉摸，随着学习的深入，我们可以逐渐了解</span><br><span class="line">现在我们需要掌握函数内部的this几个特点</span><br><span class="line">	1. 函数在定义的时候this是不确定的，只有在调用的时候才可以确定</span><br><span class="line">	2. 一般函数直接执行，内部this指向全局window</span><br><span class="line">	3. 函数作为一个对象的方法，被该对象所调用，那么this指向的是该对象</span><br><span class="line">	4. 构造函数中的this其实是一个隐式对象，类似一个初始化的模型，所有方法和属性都挂载到了这个隐式对象身上，后续通过new关键字来调用，从而实现实例化</span><br></pre></td></tr></table></figure>
+<p>## </p>
+
       
 
       
@@ -269,7 +289,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/23/JavaScript基础（六）/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/28/JavaScript基础/JavaScript基础（七）/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -283,18 +303,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/23/JavaScript基础（五）/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/30/JavaScript基础/JavaScript基础（八）/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          JavaScript基础（五）
+          JavaScript基础（八）
         
       </div>
     </a>
   
   
-    <a href="/2019/05/21/JavaScript基础（四）/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaScript基础（四）</div>
+    <a href="/2019/05/23/JavaScript基础/JavaScript基础（五）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript基础（五）</div>
       <i class="icon-circle-right"></i>
     </a>
   

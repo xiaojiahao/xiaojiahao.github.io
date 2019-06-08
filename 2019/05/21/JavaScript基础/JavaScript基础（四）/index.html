@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JavaScript基础（二） | 骁の博客</title>
+  <title>JavaScript基础（四） | 骁の博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="值类型Number、String、Boolean、Undefined、Null、ES6的Symbol*  引用数据类型：对象(Object)、数组(Array)、函数(Function)">
+  <meta name="description" content="一些运算符、利用谷歌浏览器调试">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript基础（二）">
-<meta property="og:url" content="http://yoursite.com/2019/05/20/JavaScript基础（二）/index.html">
+<meta property="og:title" content="JavaScript基础（四）">
+<meta property="og:url" content="http://yoursite.com/2019/05/21/JavaScript基础/JavaScript基础（四）/index.html">
 <meta property="og:site_name" content="骁の博客">
-<meta property="og:description" content="值类型Number、String、Boolean、Undefined、Null、ES6的Symbol*  引用数据类型：对象(Object)、数组(Array)、函数(Function)">
+<meta property="og:description" content="一些运算符、利用谷歌浏览器调试">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-24T15:25:59.161Z">
+<meta property="og:image" content="http://yoursite.com/post-img2/20190521-02.png">
+<meta property="og:updated_time" content="2019-05-21T12:12:31.807Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript基础（二）">
-<meta name="twitter:description" content="值类型Number、String、Boolean、Undefined、Null、ES6的Symbol*  引用数据类型：对象(Object)、数组(Array)、函数(Function)">
+<meta name="twitter:title" content="JavaScript基础（四）">
+<meta name="twitter:description" content="一些运算符、利用谷歌浏览器调试">
+<meta name="twitter:image" content="http://yoursite.com/post-img2/20190521-02.png">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -143,158 +145,80 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JavaScript基础（二）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavaScript基础/JavaScript基础（四）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JavaScript基础（二）
+      JavaScript基础（四）
     </h1>
   
 
         
-        <a href="/2019/05/20/JavaScript基础（二）/" class="archive-article-date">
-  	<time datetime="2019-05-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-20</time>
+        <a href="/2019/05/21/JavaScript基础/JavaScript基础（四）/" class="archive-article-date">
+  	<time datetime="2019-05-20T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>值类型Number、String、Boolean、Undefined、Null、ES6的Symbol* </p>
-<p>引用数据类型：对象(Object)、数组(Array)、函数(Function)</p>
+        <p>一些运算符、利用谷歌浏览器调试</p>
 <a id="more"></a>
-<p><strong>var box = 12/0;  //Infinity </strong></p>
-<p><strong>var box = =0/0;(12/0 * 0) //NaN </strong></p>
-<p><strong>var num = num+10;/ /NaN  </strong></p>
-<p>arguments ,伪数组 –》存储传递的所有的实参</p>
-<p>null == undefined;  //true</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num;</span><br><span class="line"></span><br><span class="line">    alert(num+<span class="number">10</span> == <span class="literal">NaN</span>);	<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="简单数据类型"><a href="#简单数据类型" class="headerlink" title="简单数据类型"></a>简单数据类型</h3><p>Number、String、Boolean、Undefined、Null</p>
-<h4 id="Number类型"><a href="#Number类型" class="headerlink" title="Number类型"></a>Number类型</h4><ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">十进制</span><br><span class="line">	var num = 9;</span><br><span class="line">	进行算数计算时，八进制和十六进制表示的数值最终都将被转换成十进制数值。</span><br><span class="line">十六进制</span><br><span class="line">	var num = 0xA;</span><br><span class="line">	数字序列范围：0~9以及A~F</span><br><span class="line">八进制</span><br><span class="line">    var num1 = 07;   // 对应十进制的7</span><br><span class="line">    var num2 = 019;  // 对应十进制的19</span><br><span class="line">    var num3 = 08;   // 对应十进制的8</span><br><span class="line">    数字序列范围：0~7</span><br><span class="line">    如果字面值中的数值超出了范围，那么前导零将被忽略，后面的数值将被当作十进制数值解析</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>浮点数</p>
-<ul>
-<li>浮点数的精度问题</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">浮点数</span><br><span class="line">	var n = 5e-324;   // 科学计数法  5乘以10的-324次方  </span><br><span class="line">浮点数值的最高精度是 17 位小数，但在进行算术计算时其精确度远远不如整数</span><br><span class="line">   var result = 0.1 + 0.2;    // 结果不是 0.3，而是：0.30000000000000004</span><br><span class="line">   console.log(0.07 * 100);</span><br><span class="line">   不要判断两个浮点数是否相等</span><br></pre></td></tr></table></figure>
-<ul>
-<li>数值范围</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">最小值：Number.MIN_VALUE，这个值为： 5e-324</span><br><span class="line">最大值：Number.MAX_VALUE，这个值为： 1.7976931348623157e+308</span><br><span class="line">无穷大：Infinity</span><br><span class="line">无穷小：-Infinity</span><br></pre></td></tr></table></figure>
-<ul>
-<li>数值判断<ul>
-<li>NaN：not a number<ul>
-<li>NaN 与任何值都不相等，包括他本身</li>
-</ul>
-</li>
-<li>isNaN: is not a number</li>
-</ul>
-</li>
-</ul>
-<h4 id="String类型"><a href="#String类型" class="headerlink" title="String类型"></a>String类型</h4><ul>
-<li><p>字符串长度</p>
-<p>length属性用来获取字符串的长度</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'黑马程序猿 Hello World'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.length);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>字符串拼接</p>
-<p>字符串拼接使用 + 连接</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">11</span> + <span class="number">11</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'hello'</span> + <span class="string">' world'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'100'</span> + <span class="string">'100'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'11'</span> + <span class="number">11</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'male:'</span> + <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
-<ol>
-<li>两边只要有一个是字符串，那么+就是字符串拼接功能</li>
-<li>两边如果都是数字，那么就是算术功能。</li>
-</ol>
-</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1= <span class="string">"10"</span>;</span><br><span class="line"><span class="keyword">var</span> s2 = <span class="number">5</span>;</span><br><span class="line"><span class="built_in">console</span>.log(s1+s2);<span class="comment">//105</span></span><br><span class="line"><span class="built_in">console</span>.log(s1-s2);<span class="comment">//5  隐式转换</span></span><br><span class="line"><span class="built_in">console</span>.log(s1+s2);<span class="comment">//50 同上</span></span><br></pre></td></tr></table></figure>
-<h4 id="Boolean类型"><a href="#Boolean类型" class="headerlink" title="Boolean类型"></a>Boolean类型</h4><ul>
-<li>Boolean字面量：  true和false，区分大小写</li>
-<li>计算机内部存储：true为1，false为0</li>
-</ul>
-<h4 id="Undefined和Null"><a href="#Undefined和Null" class="headerlink" title="Undefined和Null"></a>Undefined和Null</h4><ol>
-<li>undefined表示一个声明了没有赋值的变量，变量只声明的时候值默认是undefined</li>
-<li>null表示一个空，变量的值如果想为null，必须手动设置</li>
-<li>Undefined 这个值表示变量不含有值。<br>4.可以通过将变量的值设置为 null 来清空变量。</li>
-</ol>
-<h2 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h2><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cars=<span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">//也可以加参数给定长度</span></span><br><span class="line"><span class="comment">// 创建一个空数组</span></span><br><span class="line"><span class="keyword">var</span> arr1 = []; </span><br><span class="line">cars[<span class="number">0</span>]=<span class="string">"Saab"</span>;</span><br><span class="line">cars[<span class="number">1</span>]=<span class="string">"Volvo"</span>;</span><br><span class="line">cars[<span class="number">2</span>]=<span class="string">"BMW"</span>;</span><br><span class="line"><span class="number">2.</span>(condensed array):--&gt;<span class="keyword">var</span> cars=<span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"Saab"</span>,<span class="string">"Volvo"</span>,<span class="string">"BMW"</span>);</span><br><span class="line"><span class="number">3.</span> (literal array):--&gt;<span class="keyword">var</span> cars=[<span class="string">"Saab"</span>,<span class="string">"Volvo"</span>,<span class="string">"BMW"</span>];</span><br><span class="line"><span class="number">4.</span> 数组下标是基于零的，所以第一个项目是 [<span class="number">0</span>]，第二个是 [<span class="number">1</span>]，以此类推。</span><br><span class="line"><span class="number">5</span>、如果定义数组的长度而没有定义值，则值默认为<span class="literal">undefined</span></span><br><span class="line"><span class="number">6</span>、数组可以存各种很多类型，包括对象，数组。</span><br><span class="line"><span class="number">7</span>、可以cars[cars.length] = <span class="string">'直接加元素'</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var person=&#123;firstname:&quot;John&quot;, lastname:&quot;Doe&quot;, id:5566&#125;;</span><br><span class="line">var person=&#123;</span><br><span class="line">firstname : &quot;John&quot;,</span><br><span class="line">lastname  : &quot;Doe&quot;,</span><br><span class="line">id        :  5566</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">对象属性有两种寻址方式：</span><br><span class="line">name=person.lastname;</span><br><span class="line">name=person[&quot;lastname&quot;];</span><br></pre></td></tr></table></figure></p>
-<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>函数就是包裹在花括号中的代码块，前面使用了关键词 function：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionname</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 执行代码</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">var1,var2</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">代码</span><br><span class="line">&#125;</span><br><span class="line">可以调用myFUnction(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)但是只会导入<span class="number">1</span>和<span class="number">2</span></span><br></pre></td></tr></table></figure></p>
-<p>当调用该函数时，会执行函数内的代码。<br>可以在某事件发生时直接调用函数（比如当用户点击按钮时），并且可由 JavaScript 在任何位置进行调用。<br>例子：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;点击这个按钮，来调用带参数的函数。&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">&lt;button onclick="myFunction('Harry Potter','Wizard')"&gt;点击这里&lt;/</span>button&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">name,job</span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">"Welcome "</span> + name + <span class="string">", the "</span> + job);</span><br><span class="line">&#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=<span class="string">"demo"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML=myFunction(<span class="number">4</span>,<span class="number">3</span>);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h4><blockquote>
-<p>匿名函数：没有名字的函数</p>
+<h2 id="条件结构"><a href="#条件结构" class="headerlink" title="条件结构"></a>条件结构</h2><h3 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="comment">/* 条件1 */</span>)&#123;</span><br><span class="line">  <span class="comment">// 成立执行语句</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="comment">/* 条件2 */</span>)&#123;</span><br><span class="line">  <span class="comment">// 成立执行语句</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="comment">/* 条件3 */</span>)&#123;</span><br><span class="line">  <span class="comment">// 成立执行语句</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// 最后默认执行语句</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h3><pre><code>表达式1 ? 表达式2 : 表达式3
+是对if……else语句的一种简化写法
+</code></pre><h3 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h3><p>语法格式:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (expression) &#123;</span><br><span class="line">  <span class="keyword">case</span> 常量<span class="number">1</span>:</span><br><span class="line">    语句;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> 常量<span class="number">2</span>:</span><br><span class="line">    语句;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> 常量<span class="number">3</span>:</span><br><span class="line">    语句;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  …</span><br><span class="line">  <span class="keyword">case</span> 常量n:</span><br><span class="line">    语句;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">default</span>:</span><br><span class="line">    语句;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<pre><code>break可以省略，如果省略，代码会继续执行下一个case
+switch 语句在比较值时使用的是全等操作符, 因此不会发生类型转换（例如，字符串&apos;10&apos; 不等于数值 10）**严格的模式。**
+</code></pre><h3 id="布尔类型的隐式转换"><a href="#布尔类型的隐式转换" class="headerlink" title="布尔类型的隐式转换"></a>布尔类型的隐式转换</h3><p>流程控制语句会把后面的值隐式转换成布尔类型</p>
+<pre><code>转换为true   非空字符串  非0数字  true 任何对象
+转换成false  空字符串  0  false  null  undefined
+</code></pre><p>案例</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> message;</span><br><span class="line"><span class="comment">// 会自动把message转换成false</span></span><br><span class="line"><span class="keyword">if</span> (message) &#123;     </span><br><span class="line">  <span class="comment">// todo...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h2><blockquote>
+<p>在javascript中，循环语句有三种，while、do..while、for循环。</p>
 </blockquote>
-<p>匿名函数如何使用：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">将匿名函数赋值给一个变量，这样就可以通过变量进行调用</span><br><span class="line">匿名函数自调用</span><br></pre></td></tr></table></figure>
-<p>关于自执行函数（匿名函数自调用）的作用：防止全局变量污染。</p>
-<h4 id="自调用函数"><a href="#自调用函数" class="headerlink" title="自调用函数"></a>自调用函数</h4><blockquote>
-<p>匿名函数不能通过直接调用来执行，因此可以通过匿名函数的自调用的方式来执行</p>
+<h3 id="while语句"><a href="#while语句" class="headerlink" title="while语句"></a>while语句</h3><p>基本语法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 当循环条件为true时，执行循环体，</span></span><br><span class="line"><span class="comment">// 当循环条件为false时，结束循环。</span></span><br><span class="line"><span class="keyword">while</span> (循环条件) &#123;</span><br><span class="line">  <span class="comment">//循环体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="do…while语句"><a href="#do…while语句" class="headerlink" title="do…while语句"></a>do…while语句</h3><blockquote>
+<p>do..while循环和while循环非常像，二者经常可以相互替代，但是do..while的特点是不管条件成不成立，都会执行一次。</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="number">123</span>);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-<h4 id="函数是一种数据类型"><a href="#函数是一种数据类型" class="headerlink" title="函数是一种数据类型"></a>函数是一种数据类型</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> fn);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>函数作为参数</li>
-</ul>
-<p>因为函数也是一种类型，可以把函数作为两一个函数的参数，在两一个函数中调用</p>
-<ul>
-<li>函数做为返回值</li>
-</ul>
-<p>因为函数是一种类型，所以可以把函数可以作为返回值从函数内部返回，这种用法在后面很常见。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(a+b);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="number">15</span>)();</span><br></pre></td></tr></table></figure>
-<h4 id="一些代码"><a href="#一些代码" class="headerlink" title="一些代码"></a>一些代码</h4><p>  //<br>    //    function f1() {<br>    //      console.log(“哈哈,我又变帅了”);<br>    //    }<br>    //    f1();//函数调用<br>    //    //如果一个函数能够调用:  函数的代码();<br>    //<br>    //    //函数表达式  相当于var num =10;<br>    //    var f2 = function () {<br>    //      console.log(“哈哈,真的好帅哦”);<br>    //    };<br>    //    //匿名函数不能直接调用<br>    //    f2();<br>​            f2 = function () {  //相当于num =20；<br>​    //      console.log(“哈哈”);<br>​    //    };<br>             f2();<br>    //    var f1=function(){console.log(“阿涅哈斯诶呦”);};<br>​    //    f1();</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//函数的自调用,没有名字,调用---声明的同时,直接调用</span><br><span class="line">//一次性的--------</span><br><span class="line">//    (function()&#123;console.log(&quot;阿涅哈斯诶呦&quot;);&#125;)();</span><br><span class="line">//    (function()&#123;console.log(&quot;嘎嘎&quot;)&#125;)();</span><br></pre></td></tr></table></figure>
-<p>​    </p>
-<h4 id="函数作为参数调用、返回值"><a href="#函数作为参数调用、返回值" class="headerlink" title="函数作为参数调用、返回值"></a>函数作为参数调用、返回值</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">函数作为参数调用</span><br><span class="line"><span class="comment">//    function f1(fn) &#123;</span></span><br><span class="line"><span class="comment">//      fn();//函数调用---说明fn这个变量中存储的是一个函数</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//    function f2() &#123;</span></span><br><span class="line"><span class="comment">//      console.log("哦,这也可以");</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//    f1(f2);</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//结论:函数是可以作为返回值使用的:</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"f1函数调用了"</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"这是一个函数"</span>);</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> ff=f1();<span class="comment">//调用</span></span><br><span class="line">    <span class="comment">//ff就是一个函数了</span></span><br><span class="line">    ff();</span><br></pre></td></tr></table></figure>
-<h2 id="arguments的使用"><a href="#arguments的使用" class="headerlink" title="arguments的使用"></a>arguments的使用</h2><blockquote>
-<p>JavaScript中，arguments对象是比较特别的一个对象，实际上是当前函数的一个内置属性。也就是说所有函数都内置了一个arguments对象，arguments对象中存储了传递的所有的实参。arguments是一个伪数组，因此及可以进行遍历<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">arguments</span>.length);</span><br><span class="line">&#125;</span><br><span class="line">f1(<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>)  --&gt;<span class="number">4</span></span><br></pre></td></tr></table></figure></p>
+<p>基础语法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">  <span class="comment">// 循环体;</span></span><br><span class="line">&#125; <span class="keyword">while</span> (循环条件);</span><br></pre></td></tr></table></figure>
+<h3 id="for语句"><a href="#for语句" class="headerlink" title="for语句"></a>for语句</h3><blockquote>
+<p> while和do…while一般用来解决无法确认次数的循环。for循环一般在循环次数确定的时候比较方便</p>
 </blockquote>
-<h2 id="声明变量类型"><a href="#声明变量类型" class="headerlink" title="声明变量类型"></a>声明变量类型</h2><p>当您声明新变量时，可以使用关键词 “new” 来声明其类型：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> carname=<span class="keyword">new</span> <span class="built_in">String</span>;</span><br><span class="line"><span class="keyword">var</span> x=      <span class="keyword">new</span> <span class="built_in">Number</span>;</span><br><span class="line"><span class="keyword">var</span> y=      <span class="keyword">new</span> <span class="built_in">Boolean</span>;</span><br><span class="line"><span class="keyword">var</span> cars=   <span class="keyword">new</span> <span class="built_in">Array</span>;</span><br><span class="line"><span class="keyword">var</span> person= <span class="keyword">new</span> <span class="built_in">Object</span>;</span><br></pre></td></tr></table></figure></p>
-<h2 id="检测数据类型：typeof-与-instanceof"><a href="#检测数据类型：typeof-与-instanceof" class="headerlink" title="检测数据类型：typeof 与 instanceof"></a>检测数据类型：typeof 与 instanceof</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> age);  <span class="comment">// 'number'</span></span><br></pre></td></tr></table></figure>
-<p>typeof “John”                 // 返回 string<br>typeof 3.14                   // 返回 number<br>typeof NaN                    // 返回 number<br>typeof false                  // 返回 boolean<br>typeof [1,2,3,4]              // 返回 object<br>typeof {name:’John’, age:34}  // 返回 object<br>typeof new Date()             // 返回 object<br>typeof function () {}         // 返回 function<br>typeof myCar                  // 返回 undefined (如果 myCar 没有声明)<br>typeof null                   // 返回 object</p>
-<p>我们可以使用 typeof 来获取一个变量是否存在，如 <strong>if(typeof a!=”undefined”){}</strong>，而不要去使用 if(a) 因为如果 a 不存在（未声明）则会出错。</p>
-<p>正因为 typeof 遇到 null,数组,对象时都会返回 object 类型，所以当我们要判断一个对象是否是数组时。</p>
-<p>或者判断某个变量是否是某个对象的实例则要选择使用另一个关键语法 <strong>instanceof</strong></p>
-<p><strong>instanceof</strong></p>
-<p>可通过 instanceof 操作符来判断对象的具体类型，语法格式:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var result = objectName instanceof objectType/Object</span><br></pre></td></tr></table></figure>
-<p>返回布尔值，如果是指定类型返回 true，否则返回 false：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arr <span class="keyword">instanceof</span> <span class="built_in">Array</span></span><br><span class="line"><span class="built_in">RegExp</span>正则表达式,<span class="built_in">String</span>字符串对象</span><br></pre></td></tr></table></figure>
-<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><p>如何使用谷歌浏览器，快速的查看数据类型？</p>
-<p>字符串的颜色是黑色的，数值类型是蓝色的，布尔类型也是蓝色的，undefined和null是灰色的</p>
-<h3 id="转换成字符串类型"><a href="#转换成字符串类型" class="headerlink" title="转换成字符串类型"></a>转换成字符串类型</h3><ul>
-<li><p>toString()</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">转不了null和undefined</span><br><span class="line">var num = 5;</span><br><span class="line">console.log(num.toString());</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>String()</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String()函数存在的意义：有些值没有toString()，这个时候可以使用String()。比如：undefined和null</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>拼接字符串方式</p>
-<p>num  +  “”，当 + 两边一个操作符是字符串类型，一个操作符是其它类型的时候，会先把其它类型转换成字符串再进行字符串拼接，返回字符串</p>
-</li>
+<p>for循环语法：9*9乘法表</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// for循环的表达式之间用的是;号分隔的，千万不要写成,</span></span><br><span class="line"><span class="keyword">for</span> (初始化表达式<span class="number">1</span>; 判断表达式<span class="number">2</span>; 自增表达式<span class="number">3</span>) &#123;</span><br><span class="line">  <span class="comment">// 循环体4</span></span><br><span class="line">&#125;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        table,th,td &#123;</span><br><span class="line">        border : <span class="number">1</span>px solid black;</span><br><span class="line">        border-collapse: collapse;</span><br><span class="line">    &#125;&lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">var str = '';</span></span><br><span class="line"><span class="regexp">document.write("&lt;table&gt;");</span></span><br><span class="line"><span class="regexp">for (var i = 1; i &lt;= 9; i++) &#123;</span></span><br><span class="line"><span class="regexp">    document.write("&lt;tr&gt;");</span></span><br><span class="line"><span class="regexp">    for (var j = 1; j &lt;=i; j++) &#123;</span></span><br><span class="line"><span class="regexp">        document.write("&lt;td&gt;"+(str = i + ' * ' + j + ' = ' + i * j + '\t')+"&lt;/</span>td&gt;<span class="string">");</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">//    str += '\n';</span></span><br><span class="line"><span class="string">    document.write("</span>&lt;<span class="regexp">/tr&gt;");</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">document.write("&lt;/</span>table&gt;<span class="string">");</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/post-img2/20190521-02.png" alt></p>
+<h3 id="continue和break"><a href="#continue和break" class="headerlink" title="continue和break"></a>continue和break</h3><blockquote>
+<p>break:立即跳出整个循环，即循环结束，开始执行循环后面的内容（直接跳到大括号）</p>
+<p>continue:立即跳出当前循环，继续下一次循环（跳到i++的地方）</p>
+</blockquote>
+<h3 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h3><ul>
+<li>过去调试JavaScript的方式<ul>
+<li>alert()</li>
+<li>console.log()</li>
 </ul>
-<h3 id="转换成数值类型"><a href="#转换成数值类型" class="headerlink" title="转换成数值类型"></a>转换成数值类型</h3><ul>
-<li><p>Number()</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Number()可以把任意值转换成数值，如果要转换的字符串中有一个不是数值的字符，返回NaN,比较严格</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>parseInt()</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="built_in">parseInt</span>(<span class="string">"12.3abc"</span>);  <span class="comment">// 返回12，如果第一个字符是数字会解析知道遇到非数字结束</span></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="built_in">parseInt</span>(<span class="string">"abc123"</span>);   <span class="comment">// 返回NaN，如果第一个字符不是数字或者符号就返回NaN</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>parseFloat()</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">parseFloat()把字符串转换成浮点数</span><br><span class="line">parseFloat()和parseInt非常相似，不同之处在与</span><br><span class="line">	parseFloat会解析第一个. 遇到第二个.或者非数字结束</span><br><span class="line">	如果解析的内容里只有整数，解析成整数</span><br><span class="line">	123.4.5  -》123.4</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>+，-0等运算</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'500'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(+str);		<span class="comment">// 取正</span></span><br><span class="line"><span class="built_in">console</span>.log(-str);		<span class="comment">// 取负</span></span><br><span class="line"><span class="built_in">console</span>.log(str - <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
-</li>
+<li>断点调试</li>
 </ul>
-<h3 id="转换成布尔类型"><a href="#转换成布尔类型" class="headerlink" title="转换成布尔类型"></a>转换成布尔类型</h3><ul>
-<li>Boolean()</li>
+<blockquote>
+<p>断点调试是指自己在程序的某一行设置一个断点，调试时，程序运行到这一行就会停住，然后你可以一步一步往下调试，调试过程中可以看各个变量当前的值，出错的话，调试到出错的代码行即显示错误，停下。</p>
+</blockquote>
+<ul>
+<li>调试步骤</li>
 </ul>
-<p><strong>0  空字符串 null undefined NaN 会转换成false </strong> 其它都会转换成true</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">浏览器中按F12--&gt;sources--&gt;找到需要调试的文件--&gt;在程序的某一行设置断点，然后再点刷新</span><br></pre></td></tr></table></figure>
+<ul>
+<li>调试中的相关操作</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Watch: 监视，通过watch可以监视变量的值的变化，非常的常用。</span><br><span class="line">F10: 程序单步执行，让程序一行一行的执行，这个时候，观察watch中变量的值的变化。</span><br><span class="line">F8：跳到下一个断点处，如果后面没有断点了，则程序执行结束。</span><br></pre></td></tr></table></figure>
+<p>tips: <strong><em>监视变量，不要监视表达式，因为监视了表达式，那么这个表达式也会执行。</em></strong></p>
+<h2 id="其他运算符"><a href="#其他运算符" class="headerlink" title="其他运算符"></a>其他运算符</h2><p>逗号什么的<br>参考：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators" target="_blank" rel="noopener">MDN表达式和运算符 </a></p>
 
       
 
@@ -375,7 +299,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/20/JavaScript基础（二）/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/21/JavaScript基础/JavaScript基础（四）/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -399,8 +323,8 @@
     </a>
   
   
-    <a href="/2019/05/20/JavaScript基础（一）/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaScript基础（一）</div>
+    <a href="/2019/05/20/JavaScript基础/JavaScript基础（三）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript基础（三）</div>
       <i class="icon-circle-right"></i>
     </a>
   
