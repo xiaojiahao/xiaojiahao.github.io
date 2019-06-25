@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 骁の博客</title>
+  <title>JavaScriptのBOM | 骁の博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="骁の博客">
-<meta property="og:url" content="http://yoursite.com/archives/page/4/index.html">
+  <meta name="description" content="window牛逼">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScriptのBOM">
+<meta property="og:url" content="http://yoursite.com/2019/06/25/JavaScriptのDOM/JavaScriptのBOM/index.html">
 <meta property="og:site_name" content="骁の博客">
-<meta property="og:description" content="前端开发">
+<meta property="og:description" content="window牛逼">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-25T16:33:50.258Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="骁の博客">
-<meta name="twitter:description" content="前端开发">
+<meta name="twitter:title" content="JavaScriptのBOM">
+<meta name="twitter:description" content="window牛逼">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -142,482 +144,244 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-  
+<article id="post-JavaScriptのDOM/JavaScriptのBOM" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScriptのBOM
+    </h1>
+  
+
+        
+        <a href="/2019/06/25/JavaScriptのDOM/JavaScriptのBOM/" class="archive-article-date">
+  	<time datetime="2019-06-24T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-25</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>window牛逼</p>
+<a id="more"></a>
+<h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><h3 id="BOM的概念"><a href="#BOM的概念" class="headerlink" title="BOM的概念"></a>BOM的概念</h3><p>BOM(Browser Object Model) 是指浏览器对象模型，浏览器对象模型提供了独立于内容的、可以与浏览器窗口进行互动的对象结构。BOM由多个对象组成，其中代表浏览器窗口的Window对象是BOM的顶层对象，其他对象都是该对象的子对象。</p>
+<p>我们在浏览器中的一些操作都可以使用BOM的方式进行编程处理，</p>
+<p>比如：刷新浏览器、后退、前进、在浏览器中输入URL等</p>
+<h3 id="BOM的顶级对象window"><a href="#BOM的顶级对象window" class="headerlink" title="BOM的顶级对象window"></a>BOM的顶级对象window</h3><p>window是浏览器的顶级对象，当调用window下的属性和方法时，可以省略window<br>注意：window下一个特殊的属性 window.name</p>
+<p>console.log(window.name) = 空 ;</p>
+<p>console.log(window.sksjkj)= undefinded;</p>
+<p>top=window;</p>
+<h3 id="对话框"><a href="#对话框" class="headerlink" title="对话框"></a>对话框</h3><ul>
+<li><p>alert()</p>
+</li>
+<li><p>prompt()</p>
+<p>弹框输入框</p>
+</li>
+<li><p>confirm()</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = window.confirm(message);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>message 是要在对话框中显示的可选字符串。（你确定要退出吗）</li>
+<li>result 是一个布尔值，表示是选择确定还是取消 (true表示OK)。</li>
+</ul>
+</li>
+</ul>
+<h3 id="页面加载事件"><a href="#页面加载事件" class="headerlink" title="页面加载事件"></a>页面加载事件</h3><ul>
+<li>onload    //重点 ， 当页面加载完成执行</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 当页面完全加载所有内容（包括图像、脚本文件、CSS 文件等）执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>onunload    //谷歌无效，页面关闭后才触发的事件</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onunload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 当用户退出页面时执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>onbeforeunload    //谷歌无效，页面关闭之前触发的</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onbeforeunload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 当用户退出页面时执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h3><h4 id="setTimeout-和clearTimeout"><a href="#setTimeout-和clearTimeout" class="headerlink" title="setTimeout()和clearTimeout()"></a>setTimeout()和clearTimeout()</h4><p>在指定的毫秒数到达之后执行指定的函数，只执行一次</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个定时器，1000毫秒后执行，返回定时器的标示</span></span><br><span class="line"><span class="keyword">var</span> timerId = setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Hello World'</span>);</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取消定时器的执行</span></span><br><span class="line">clearTimeout(timerId);</span><br></pre></td></tr></table></figure>
+<h4 id="setInterval-和clearInterval"><a href="#setInterval-和clearInterval" class="headerlink" title="setInterval()和clearInterval()"></a>setInterval()和clearInterval()</h4><p>案例参考<a href="http://xiaojiahao.club/2019/06/22/JavaScript%E3%81%AEDOM/JavaScript%E3%81%AEDOM%EF%BC%88%E9%9A%8F%E6%9C%BA%E7%82%B9%E5%90%8D%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%EF%BC%89/" target="_blank" rel="noopener">随机点名功能实现</a></p>
+<p>定时调用的函数，可以按照给定的时间(单位毫秒)周期调用函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个定时器，每隔1秒调用一次</span></span><br><span class="line"><span class="keyword">var</span> timerId = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">  <span class="built_in">console</span>.log(date.toLocaleTimeString());</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取消定时器的执行</span></span><br><span class="line">clearInterval(timerId);</span><br></pre></td></tr></table></figure>
+<h3 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a>location对象</h3><p>location对象是window对象下的一个属性，时候的时候可以省略window对象</p>
+<p>location可以获取或者设置浏览器地址栏的URL</p>
+<h4 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h4><p>统一资源定位符 (Uniform Resource Locator, URL)</p>
+<ul>
+<li>URL的组成</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">scheme://host:port/path?query#fragment</span><br><span class="line">scheme:通信协议</span><br><span class="line">	常用的http,ftp,maito等</span><br><span class="line">host:主机</span><br><span class="line">	服务器(计算机)域名系统 (DNS) 主机名或 IP 地址。</span><br><span class="line">port:端口号</span><br><span class="line">	整数，可选，省略时使用方案的默认端口，如http的默认端口为80。</span><br><span class="line">path:路径</span><br><span class="line">	由零或多个&apos;/&apos;符号隔开的字符串，一般用来表示主机上的一个目录或文件地址。</span><br><span class="line">query:查询</span><br><span class="line">	可选，用于给动态网页传递参数，可有多个参数，用&apos;&amp;&apos;符号隔开，每个参数的名和值用&apos;=&apos;符号隔开。例如：name=zs</span><br><span class="line">fragment:信息片断</span><br><span class="line">	字符串，锚点.</span><br></pre></td></tr></table></figure>
+<h4 id="location有哪些成员？"><a href="#location有哪些成员？" class="headerlink" title="location有哪些成员？"></a>location有哪些成员？</h4><ul>
+<li><p>使用chrome的控制台查看</p>
+</li>
+<li><p>查MDN</p>
+<p><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener">MDN</a></p>
+</li>
+<li><p>成员</p>
+<ul>
+<li><p>assign()/reload()/replace()</p>
+</li>
+<li><p>hash/host/hostname/search/href……</p>
+</li>
+<li><p>location.href=”<a href="http://www.jd.com&quot;;//属性-----------------&gt;必须记住" target="_blank" rel="noopener">http://www.jd.com&quot;;//属性-----------------&gt;必须记住</a></p>
+<p>location.assign(“<a href="http://www.jd.com&quot;);//方法" target="_blank" rel="noopener">http://www.jd.com&quot;);//方法</a></p>
+<p>location.reload();//重新加载–刷新</p>
+<p>location.replace(“<a href="http://www.jd.com&quot;);//没有历史记录,不能后退返回原地址" target="_blank" rel="noopener">http://www.jd.com&quot;);//没有历史记录,不能后退返回原地址</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><p>解析URL中的query，并返回对象的形式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getQuery</span>(<span class="params">queryStr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> query = &#123;&#125;;</span><br><span class="line">  <span class="keyword">if</span> (queryStr.indexOf(<span class="string">'?'</span>) &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> index = queryStr.indexOf(<span class="string">'?'</span>);</span><br><span class="line">    queryStr = queryStr.substr(index + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">var</span> array = queryStr.split(<span class="string">'&amp;'</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">      <span class="keyword">var</span> tmpArr = array[i].split(<span class="string">'='</span>);</span><br><span class="line">      <span class="keyword">if</span> (tmpArr.length === <span class="number">2</span>) &#123;</span><br><span class="line">        query[tmpArr[<span class="number">0</span>]] = tmpArr[<span class="number">1</span>];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> query;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(getQuery(location.search));</span><br><span class="line"><span class="built_in">console</span>.log(getQuery(location.href));</span><br></pre></td></tr></table></figure>
+<h3 id="history对象"><a href="#history对象" class="headerlink" title="history对象"></a>history对象</h3><ul>
+<li><p>back()</p>
+</li>
+<li><p>forward()</p>
+</li>
+<li><p>go()</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//跳转的</span></span><br><span class="line">my$(<span class="string">"btn1"</span>).onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">window</span>.location.href = <span class="string">"15test.html"</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//前进</span></span><br><span class="line">my$(<span class="string">"btn2"</span>).onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">window</span>.history.forward();</span><br><span class="line">&#125;;</span><br><span class="line">  <span class="comment">//后退</span></span><br><span class="line">my$(<span class="string">"btn"</span>).onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">window</span>.history.back();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="navigator对象"><a href="#navigator对象" class="headerlink" title="navigator对象"></a>navigator对象</h3><ul>
+<li><p>userAgent<br>console.log(window.navigator.userAgent);<br>通过userAgent可以判断用户浏览器的类型<br>Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36</p>
+</li>
+<li><p>platform</p>
+<p>通过platform可以判断浏览器所在的系统平台类型.<br>Win32</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/15/谷歌脚本/谷歌脚本のJSON Viewer/" class="archive-article-date">
-  	<time datetime="2019-05-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/15/谷歌脚本/谷歌脚本のJSON Viewer/">谷歌脚本のJSON Viewer</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">谷歌脚本</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/工具//" class="article-tag-list-link color3">工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/25/JavaScriptのDOM/JavaScriptのBOM/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/14/随笔/读书/" class="archive-article-date">
-  	<time datetime="2019-05-13T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-14</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/06/25/JavaScriptのDOM/JavaScriptのDOM总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScriptのDOM总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/14/随笔/读书/">书屋</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#BOM"><span class="toc-number">1.</span> <span class="toc-text">BOM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BOM的概念"><span class="toc-number">1.1.</span> <span class="toc-text">BOM的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BOM的顶级对象window"><span class="toc-number">1.2.</span> <span class="toc-text">BOM的顶级对象window</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对话框"><span class="toc-number">1.3.</span> <span class="toc-text">对话框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#页面加载事件"><span class="toc-number">1.4.</span> <span class="toc-text">页面加载事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定时器"><span class="toc-number">1.5.</span> <span class="toc-text">定时器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#setTimeout-和clearTimeout"><span class="toc-number">1.5.1.</span> <span class="toc-text">setTimeout()和clearTimeout()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#setInterval-和clearInterval"><span class="toc-number">1.5.2.</span> <span class="toc-text">setInterval()和clearInterval()</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#location对象"><span class="toc-number">1.6.</span> <span class="toc-text">location对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#URL"><span class="toc-number">1.6.1.</span> <span class="toc-text">URL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#location有哪些成员？"><span class="toc-number">1.6.2.</span> <span class="toc-text">location有哪些成员？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#案例"><span class="toc-number">1.6.3.</span> <span class="toc-text">案例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#history对象"><span class="toc-number">1.7.</span> <span class="toc-text">history对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#navigator对象"><span class="toc-number">1.8.</span> <span class="toc-text">navigator对象</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/14/CSS/一些CSS笔记/" class="archive-article-date">
-  	<time datetime="2019-05-13T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/14/CSS/一些CSS笔记/">CSS的一些感触</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/13/CSS/CSSの背景/" class="archive-article-date">
-  	<time datetime="2019-05-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/13/CSS/CSSの背景/">CSSの背景</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/11/CSS/CSSの书写规范/" class="archive-article-date">
-  	<time datetime="2019-05-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/11/CSS/CSSの书写规范/">CSSの书写规范</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/11/随笔/The sources of my pressure/" class="archive-article-date">
-  	<time datetime="2019-05-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/11/随笔/The sources of my pressure/">The sources of my pressure</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/09/CSS/CSSの特性/" class="archive-article-date">
-  	<time datetime="2019-05-09T11:07:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/09/CSS/CSSの特性/">CSSの特性</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/09/CSS/CSSの标签显示模式/" class="archive-article-date">
-  	<time datetime="2019-05-09T10:56:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/09/CSS/CSSの标签显示模式/">CSSの标签显示模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/09/CSS/CSSの字体/" class="archive-article-date">
-  	<time datetime="2019-05-09T06:11:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/09/CSS/CSSの字体/">CSSの字体</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/09/软件/VSCode的安装和一些设置/" class="archive-article-date">
-  	<time datetime="2019-05-09T06:11:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/09/软件/VSCode的安装和一些设置/">VSCode的安装和一些设置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/工具//" class="article-tag-list-link color3">工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/3/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/5/">Next &raquo;</a>
-    </nav>
   
+
+  
+
+  
+
 
 
           </div>
@@ -640,8 +404,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

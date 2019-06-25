@@ -18,7 +18,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/post-img2/20190605-01.png">
 <meta property="og:image" content="http://yoursite.com/post-img2/20190605-02.png">
-<meta property="og:updated_time" content="2019-06-25T12:38:46.683Z">
+<meta property="og:updated_time" content="2019-06-25T12:56:17.749Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScriptのDOM（一）">
 <meta name="twitter:description" content="基本用法，点按钮改a,p属性,input单选，多选，菜单选择,按钮的排他功能，div标签内容">
@@ -185,49 +185,9 @@
 <li><code>window.content</code></li>
 <li><code>window.onload</code></li>
 <li><code>window.dump()</code></li>
-<li><p><code>window.scrollTo()</code></p>
-<p>/*</p>
-</li>
+<li><code>window.scrollTo()</code></li>
+<li>​    * JavaScript分三个部分:<br>​    * 1. ECMAScript标准—-JS基本的语法<br>​    * 2. DOM:Document Object Model 文档对象模型<br>​    * 3. BOM:浏览器对象模型<br>​    * DOM的作用:操作页面的元素<br>​    * DOM树:把html页面或者是xml文件看成是一个文档,文档就是一个对象,这个文档中所有的标签都是元素,元素也可以看成是对象,标签(元素,对象)有很多,还有嵌套的关系,组成的这种层次结构,可以模拟成树形结构图,简称:树状图 ,就是DOM树<br>​    * 获取元素:<br>​    * 2种方式:<br>​    * 根据id从整个的文档中获取元素—返回的是一个元素对象<br>​    * document.getElementById(“id属性的值”)<br>​    * 根据标签的名字获取元素—–返回的是元素对象组成的伪数组<br>​    * document.getElementsByTagName(“标签的名字”);<br>​    * 操作基本标签的属性<br>​    * src,title,alt,href,id属性<br>​    * 操作表单标签的属性<br>​    * name,value,type,checked,selected,disabled,readonly<br>​    * 元素的样式操作<br>​    * 对象.style.属性=值;<br>​    * 对象.className=值;<br>​    * 为元素添加事件的操作<br>​    * 事件:就是一件事,有事件源,触发和响应<br>​    <em><br>​    \</em> this关键字—-如果是在当前的元素的事件中使用this,那么this就是当前的对象<br>​    * 内置对象:系统自带的对象<br>​    * 自定义对象:自己写的对象<br>​    * 浏览器对象:<br>​    * DOM<br>​    * DOM对象:——-&gt;通过DOM方式获取的元素得到的对象<br>​    * 元素:element:页面中的标签<br>​    * 节点:Node:页面中所有的内容,标签,属性,文本<br>​    * 根元素:html标签<br>​    * 页面中的顶级对象—:document</li>
 </ul>
-<p>​    * JavaScript分三个部分:</p>
-<p>​    * 1. ECMAScript标准—-JS基本的语法</p>
-<p>​    * 2. DOM:Document Object Model 文档对象模型</p>
-<p>​    * 3. BOM:浏览器对象模型</p>
-<p>​    *</p>
-<p>​    * DOM的作用:操作页面的元素</p>
-<p>​    * DOM树:把html页面或者是xml文件看成是一个文档,文档就是一个对象,这个文档中所有的标签都是元素,元素也可以看成是对象,标签(元素,对象)有很多,还有嵌套的关系,组成的这种层次结构,可以模拟成树形结构图,简称:树状图 ,就是DOM树</p>
-<p>​    *</p>
-<p>​    * 获取元素:</p>
-<p>​    * 2种方式:</p>
-<p>​    * 根据id从整个的文档中获取元素—返回的是一个元素对象</p>
-<p>​    * document.getElementById(“id属性的值”)</p>
-<p>​    * 根据标签的名字获取元素—–返回的是元素对象组成的伪数组</p>
-<p>​    * document.getElementsByTagName(“标签的名字”);</p>
-<p>​    * 操作基本标签的属性</p>
-<p>​    * src,title,alt,href,id属性</p>
-<p>​    * 操作表单标签的属性</p>
-<p>​    * name,value,type,checked,selected,disabled,readonly</p>
-<p>​    * 元素的样式操作</p>
-<p>​    * 对象.style.属性=值;</p>
-<p>​    * 对象.className=值;</p>
-<p>​    *</p>
-<p>​    * 为元素添加事件的操作</p>
-<p>​    * 事件:就是一件事,有事件源,触发和响应</p>
-<p>​    *</p>
-<p>​    * this关键字—-如果是在当前的元素的事件中使用this,那么this就是当前的对象</p>
-<p>​    *</p>
-<p>​    *</p>
-<p>​    * 内置对象:系统自带的对象</p>
-<p>​    * 自定义对象:自己写的对象</p>
-<p>​    * 浏览器对象:</p>
-<p>​    * DOM</p>
-<p>​    * DOM对象:——-&gt;通过DOM方式获取的元素得到的对象</p>
-<p>​    *</p>
-<p>​    * 元素:element:页面中的标签</p>
-<p>​    * 节点:Node:页面中所有的内容,标签,属性,文本</p>
-<p>​    * 根元素:html标签</p>
-<p>​    * 页面中的顶级对象—:document</p>
-<p>​    * */</p>
 <h4 id="onclick"><a href="#onclick" class="headerlink" title="onclick"></a>onclick</h4><p>下面是引用方法，坑可以看<a href>JavaScriptの坑</a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">    &lt;input type=<span class="string">"button"</span> value=<span class="string">"biu"</span> onclick=<span class="string">"alert('嘤嘤嘤')"</span>&gt;<span class="comment">//有两个引号的话，两个引号要不同</span></span><br><span class="line">    --↓--规范些的写法</span><br><span class="line">        &lt;input type=<span class="string">"button"</span> value=<span class="string">"biu"</span> id=<span class="string">"btn"</span> /&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"btn"</span>).onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="string">"嘤嘤嘤"</span>);</span><br><span class="line">        &#125;;</span><br><span class="line">    &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">从文档中获取元素对象，然后添加方法；</span></span><br><span class="line"><span class="regexp">    function f1()&#123;</span></span><br><span class="line"><span class="regexp">        alert("sss");</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">    document.getElementById("btn").onclick=f1;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/要注意不能是f1()，是方法，不是执行。</span></span><br></pre></td></tr></table></figure></p>
 <h4 id="img"><a href="#img" class="headerlink" title="img"></a>img</h4><p>点击显示图片,修改图片大小，也可以改alt和title<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">"button"</span> value=<span class="string">"tu"</span> id=<span class="string">"a"</span>/&gt;</span><br><span class="line">&lt;img src=<span class="string">""</span> alt=<span class="string">""</span> id=<span class="string">"b"</span>&gt;</span><br><span class="line"> &lt;script&gt;</span><br><span class="line">     <span class="built_in">document</span>.getElementById(<span class="string">"a"</span>).onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">         <span class="keyword">var</span> j = <span class="built_in">document</span>.getElementById(<span class="string">"b"</span>);</span><br><span class="line">        j.src=<span class="string">'image/1.gif'</span>;</span><br><span class="line">        j.height = <span class="number">500</span>;<span class="comment">//不用加px</span></span><br><span class="line">     &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
 <h4 id="改p标签内容"><a href="#改p标签内容" class="headerlink" title="改p标签内容"></a>改p标签内容</h4><p><strong>成对的标签内的内容都可以用innerText标签改内容</strong></p>
@@ -347,11 +307,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/06/05/JavaScriptのDOM/JavaScriptのDOM（二）/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/06/05/JavaScriptのDOM/JavaScriptのDOM（三）/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          JavaScriptのDOM（二）
+          JavaScriptのDOM（三）
         
       </div>
     </a>
