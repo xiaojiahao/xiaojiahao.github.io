@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="骁の博客">
 <meta property="og:description" content="行外样式有些不能通过,style,获取">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-27T14:23:38.726Z">
+<meta property="og:updated_time" content="2019-06-30T16:08:28.270Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScriptの获取元素行外样式">
 <meta name="twitter:description" content="行外样式有些不能通过,style,获取">
@@ -170,14 +170,20 @@
 <ul>
 <li>内置style时</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"dv"</span> style=<span class="string">"left:30px"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="built_in">console</span>.log( my$(<span class="string">"dv"</span>).style.left) <span class="comment">//30px</span></span><br><span class="line"><span class="built_in">console</span>.log( my$(<span class="string">"dv"</span>).offsetLeft)<span class="comment">//30</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"dv"</span> style=<span class="string">"left:30px"</span>&gt;&lt;/div&gt;</span><br><span class="line"><span class="built_in">console</span>.log( my$(<span class="string">"dv"</span>).style.left) <span class="comment">//30px</span></span><br><span class="line"><span class="built_in">console</span>.log( my$(<span class="string">"dv"</span>).offsetLeft)<span class="comment">//30</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>外联时<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    div &#123;</span><br><span class="line">      left:<span class="number">30</span>px;</span><br><span class="line">    &#125;</span><br><span class="line">    &lt;div id=<span class="string">"dv"</span> &gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="built_in">console</span>.log( my$(<span class="string">"dv"</span>).style.left) <span class="comment">//返回空，因为优先级在行内</span></span><br><span class="line"><span class="built_in">console</span>.log( my$(<span class="string">"dv"</span>).offsetLeft)<span class="comment">// 30</span></span><br></pre></td></tr></table></figure>
+<li>外联时<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    div &#123;</span><br><span class="line">      left:<span class="number">30</span>px;</span><br><span class="line">    &#125;</span><br><span class="line">    &lt;div id=<span class="string">"dv"</span> &gt;&lt;/div&gt;</span><br><span class="line"><span class="built_in">console</span>.log( my$(<span class="string">"dv"</span>).style.left) <span class="comment">//返回空，因为优先级在行内</span></span><br><span class="line"><span class="built_in">console</span>.log( my$(<span class="string">"dv"</span>).offsetLeft)<span class="comment">// 30</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><strong>封装一个获取行外样式的函数(样式全写在style标签里，或者一个.css 文件里):</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">funtion getStyle(obj,name)&#123;</span><br><span class="line">    <span class="keyword">if</span>(obj.currentStyle)&#123;</span><br><span class="line">        <span class="comment">//IE</span></span><br><span class="line">        <span class="keyword">return</span> obj.currentStyle[name];</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//Chrom,FF</span></span><br><span class="line">        <span class="keyword">return</span> getComputedStyle(obj,<span class="literal">false</span>)[name];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">调用：getStyle(oDiv,<span class="string">'width'</span>);</span><br></pre></td></tr></table></figure></p>
-<p><strong>可能left比较特殊，对于行外样式的margin-left，我用.style.marginLeft获取到了</strong></p>
-<p><strong>offset只能获取top，left之类的</strong></p>
+<p><strong>封装一个获取行外样式的函数(样式全写在style标签里，或者一个.css 文件里):</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">funtion getStyle(obj,name)&#123;</span><br><span class="line">    <span class="keyword">if</span>(obj.currentStyle)&#123;</span><br><span class="line">        <span class="comment">//IE</span></span><br><span class="line">        <span class="keyword">return</span> obj.currentStyle[name];</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//Chrom,FF</span></span><br><span class="line">        <span class="keyword">return</span> getComputedStyle(obj,<span class="literal">false</span>)[name];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">调用：getStyle(oDiv,<span class="string">'width'</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>.style.left在style标签中设置的样式属性获取不到,style属性中设置的样式属性是可以获取到的</strong><br><strong>可能left比较特殊，对于行外样式的margin-left，我用.style.marginLeft获取到了</strong></p>
+<blockquote>
+<p>​    * offsetWidth:获取元素的宽</p>
+<p>​    * offsetHeight:获取元素的高</p>
+<p>​    * offsetLeft:获取元素距离左边位置的值  父元素margin+padding+border+自己margin  自己margin和left（脱离文档流）</p>
+<p>​    * offsetTop:获取元素距离上面位置的值</p>
+</blockquote>
 
       
 
@@ -272,11 +278,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/06/30/JavaScriptのDOM/JavaScriptの轮播图/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/06/27/JavaScriptのDOM/JavaScriptのDOM（块左右移动动画）/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          JavaScriptの轮播图
+          JavaScriptのDOM（块左右移动动画）
         
       </div>
     </a>

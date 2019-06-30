@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="骁の博客">
 <meta property="og:description" content="DOM的各类操作方法。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-25T12:07:55.970Z">
+<meta property="og:updated_time" content="2019-06-30T16:18:25.818Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScriptのDOM总结">
 <meta name="twitter:description" content="DOM的各类操作方法。">
@@ -175,7 +175,10 @@
 <li>对元素进行操作(设置其属性或调用其方法)</li>
 <li>事件(什么时机做相应的操作)</li>
 </ul>
-<h2 id="获取页面元素"><a href="#获取页面元素" class="headerlink" title="获取页面元素"></a>获取页面元素</h2><p><strong> 只有getElementById和querySelector(‘#text’)返回的是一个，其他返回的是伪数组。 </strong></p>
+<h2 id="获取页面元素"><a href="#获取页面元素" class="headerlink" title="获取页面元素"></a>获取页面元素</h2><p><strong>只有getElementById和querySelector(‘#text’)返回的是一个，其他返回的是伪数组。 </strong></p>
+<p>document.body –获取body里的标签内容</p>
+<p>document.title –获取title，可以修改</p>
+<p>document.documentElement –html</p>
 <h3 id="根据id获取元素"><a href="#根据id获取元素" class="headerlink" title="根据id获取元素"></a>根据id获取元素</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(<span class="string">'main'</span>);</span><br><span class="line"><span class="comment">// 获取到的数据类型 HTMLDivElement，对象都是有类型的</span></span><br><span class="line"><span class="comment">// HTMLDivElement &lt;-- HTMLElement &lt;-- Element  &lt;-- Node  &lt;-- EventTarget</span></span><br></pre></td></tr></table></figure>
 <p>注意：由于id名具有唯一性，部分浏览器支持直接使用id名访问元素，但不是标准方式，不推荐使用。</p>
 <h3 id="根据标签名获取元素"><a href="#根据标签名获取元素" class="headerlink" title="根据标签名获取元素"></a>根据标签名获取元素</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> divs = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'div'</span>);</span><br></pre></td></tr></table></figure>
@@ -308,11 +311,19 @@
 <li>获取鼠标在div内的坐标</li>
 </ul>
 <h3 id="常用的鼠标和键盘事件"><a href="#常用的鼠标和键盘事件" class="headerlink" title="常用的鼠标和键盘事件"></a>常用的鼠标和键盘事件</h3><ul>
-<li>onmouseup 鼠标按键放开时触发</li>
-<li>onmousedown 鼠标按键按下触发</li>
-<li>onmousemove 鼠标移动触发</li>
-<li>onkeyup 键盘按键按下触发</li>
-<li>onkeydown 键盘按键抬起触发</li>
+<li><p>onmouseup 鼠标按键放开时触发</p>
+</li>
+<li><p>onmousedown 鼠标按键按下触发</p>
+</li>
+<li><p>onmousemove 鼠标移动触发</p>
+<blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&gt;  &lt;style&gt;</span><br><span class="line">&gt;    img&#123;</span><br><span class="line">&gt;position: absolute;</span><br><span class="line">&gt;    &#125;</span><br><span class="line">&gt;  &lt;/style&gt;</span><br><span class="line">&gt;&lt;/head&gt;</span><br><span class="line">&gt;&lt;body&gt;</span><br><span class="line">&gt;&lt;img src="images/tianshi.gif" alt="" id="im"&gt;</span><br><span class="line">&gt;&lt;script src="common.js"&gt;&lt;/script&gt;</span><br><span class="line">&gt;&lt;script&gt;</span><br><span class="line">&gt;  //鼠标在页面中移动,图片跟着鼠标移动</span><br><span class="line">&gt;  document.onmousemove=function (e) &#123;</span><br><span class="line">&gt;    //鼠标的移动的横纵坐标</span><br><span class="line">&gt;    //可视区域的横坐标</span><br><span class="line">&gt;    //可视区域的纵坐标</span><br><span class="line">&gt;    my$("im").style.left=e.clientX+"px";</span><br><span class="line">&gt;    my$("im").style.top=e.clientY+"px";</span><br><span class="line">&gt;  &#125;;</span><br><span class="line">&gt;&lt;/script&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>onkeyup 键盘按键按下触发</p>
+</li>
+<li><p>onkeydown 键盘按键抬起触发</p>
+</li>
 </ul>
 
       
