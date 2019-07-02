@@ -6,20 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JavaScript基础（三） | 骁の博客</title>
+  <title>Archives: 2019/7 | 骁の博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="操作符">
-<meta name="keywords" content="JavaScript">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript基础（三）">
-<meta property="og:url" content="http://yoursite.com/2019/05/20/JavaScript基础/JavaScript基础（三）/index.html">
+  <meta name="description" content="前端开发">
+<meta property="og:type" content="website">
+<meta property="og:title" content="骁の博客">
+<meta property="og:url" content="http://yoursite.com/archives/2019/07/index.html">
 <meta property="og:site_name" content="骁の博客">
-<meta property="og:description" content="操作符">
+<meta property="og:description" content="前端开发">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-21T03:08:10.268Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript基础（三）">
-<meta name="twitter:description" content="操作符">
+<meta name="twitter:title" content="骁の博客">
+<meta name="twitter:description" content="前端开发">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -144,198 +142,59 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-JavaScript基础/JavaScript基础（三）" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 class="article-title" itemprop="name">
-      JavaScript基础（三）
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/07/01/生活/长跑の技巧/" class="archive-article-date">
+  	<time datetime="2019-06-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/07/01/生活/长跑の技巧/">长跑の技巧</a>
     </h1>
   
 
-        
-        <a href="/2019/05/20/JavaScript基础/JavaScript基础（三）/" class="archive-article-date">
-  	<time datetime="2019-05-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>操作符</p>
-<a id="more"></a>
-<p><strong>“5”==5  -》true 不检查类型 </strong></p>
-<p><strong>“5”===5  -》false  严格的，检查类型</strong></p>
-<h2 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h2><p>运算符  operator </p>
-<p>5 + 6   </p>
-<p>表达式  组成 操作数和操作符，会有一个结果</p>
-<h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ - * / %</span><br></pre></td></tr></table></figure>
-<h3 id="一元运算符"><a href="#一元运算符" class="headerlink" title="一元运算符"></a>一元运算符</h3><p>一元运算符：只有一个操作数的运算符</p>
-<p>5 + 6  两个操作数的运算符 二元运算符</p>
-<p>++  自身加1</p>
-<p>– 自身减1</p>
-<ul>
-<li><p>前置++</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</span><br><span class="line">++ num1; </span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">6</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num1 + ++ num2);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>后置++</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</span><br><span class="line">num1 ++;    </span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">6</span> </span><br><span class="line"><span class="built_in">console</span>.log(num1 + num2 ++);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>猜猜看</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="keyword">var</span> b = ++a + ++a; <span class="built_in">console</span>.log(b);    </span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="keyword">var</span> b = a++ + ++a; <span class="built_in">console</span>.log(b);    </span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="keyword">var</span> b = a++ + a++; <span class="built_in">console</span>.log(b);    </span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="keyword">var</span> b = ++a + a++; <span class="built_in">console</span>.log(b);</span><br></pre></td></tr></table></figure>
-<p><strong>总结</strong><br><strong>前置++：先加1，后参与运算</strong><br><strong>后置++：先参与运算，后加1</strong><br><strong>上面两个理解后，下面两个自通</strong><br><strong>前置–  ：先减1，后参与运算</strong><br><strong>后置–  ：先参与运算，后减1</strong><br>​</p>
-</li>
-</ul>
-<h3 id="逻辑运算符-布尔运算符"><a href="#逻辑运算符-布尔运算符" class="headerlink" title="逻辑运算符(布尔运算符)"></a>逻辑运算符(布尔运算符)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&amp;&amp; 与 两个操作数同时为true，结果为true，否则都是false</span><br><span class="line">|| 或 两个操作数有一个为true，结果为true，否则为false</span><br><span class="line">!  非  取反</span><br></pre></td></tr></table></figure>
-<h3 id="关系运算符-比较运算符"><a href="#关系运算符-比较运算符" class="headerlink" title="关系运算符(比较运算符)"></a>关系运算符(比较运算符)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;  &gt;  &gt;=  &lt;= == != === !==</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">==与===的区别：==只进行值得比较，===类型和值同时相等，则相等</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result = <span class="string">'55'</span> == <span class="number">55</span>;  	<span class="comment">// true</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="string">'55'</span> === <span class="number">55</span>; 	<span class="comment">// false 值相等，类型不相等</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="number">55</span> === <span class="number">55</span>; 	<span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><p>=   +=   -=   *=   /=   %=</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">例如：</span><br><span class="line"><span class="keyword">var</span> num = <span class="number">0</span>;</span><br><span class="line">num += <span class="number">5</span>;	<span class="comment">//相当于  num = num + 5;</span></span><br></pre></td></tr></table></figure>
-<h3 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">优先级从高到底</span><br><span class="line">	1. ()  优先级最高</span><br><span class="line">	2. 一元运算符  ++   --   !</span><br><span class="line">	3. 算数运算符  先*  /  %   后 +   -</span><br><span class="line">	4. 关系运算符  &gt;   &gt;=   &lt;   &lt;=</span><br><span class="line">	5. 相等运算符   ==   !=    ===    !==</span><br><span class="line">	6. 逻辑运算符 先&amp;&amp;   后||</span><br><span class="line">	7. 赋值运算符</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">4</span> &gt;= <span class="number">6</span> || <span class="string">'人'</span> != <span class="string">'阿凡达'</span> &amp;&amp; !(<span class="number">12</span> * <span class="number">2</span> == <span class="number">144</span>) &amp;&amp; <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</span><br><span class="line"><span class="number">5</span> == num / <span class="number">2</span> &amp;&amp; (<span class="number">2</span> + <span class="number">2</span> * num).toString() === <span class="string">'22'</span></span><br></pre></td></tr></table></figure>
-<p>## </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/基础语法//" class="article-tag-list-link color5">基础语法</a>
-        		</li>
-      		
-		</ul>
-	</div>
+          
 
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/20/JavaScript基础/JavaScript基础（三）/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/05/20/面试/FizzBuzz面试问题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          FizzBuzz面试问题
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/05/20/JavaScript基础/JavaScript基础（一）/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaScript基础（一）</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
-
+    
 
 
           </div>
@@ -358,8 +217,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
