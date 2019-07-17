@@ -317,7 +317,7 @@
 </li>
 <li><p>onmousemove 鼠标移动触发</p>
 <blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&gt;  &lt;style&gt;</span><br><span class="line">&gt;    img&#123;</span><br><span class="line">&gt;position: absolute;</span><br><span class="line">&gt;    &#125;</span><br><span class="line">&gt;  &lt;/style&gt;</span><br><span class="line">&gt;&lt;/head&gt;</span><br><span class="line">&gt;&lt;body&gt;</span><br><span class="line">&gt;&lt;img src="images/tianshi.gif" alt="" id="im"&gt;</span><br><span class="line">&gt;&lt;script src="common.js"&gt;&lt;/script&gt;</span><br><span class="line">&gt;&lt;script&gt;</span><br><span class="line">&gt;  //鼠标在页面中移动,图片跟着鼠标移动</span><br><span class="line">&gt;  document.onmousemove=function (e) &#123;</span><br><span class="line">&gt;    //鼠标的移动的横纵坐标</span><br><span class="line">&gt;    //可视区域的横坐标</span><br><span class="line">&gt;    //可视区域的纵坐标</span><br><span class="line">&gt;    my$("im").style.left=e.clientX+"px";</span><br><span class="line">&gt;    my$("im").style.top=e.clientY+"px";</span><br><span class="line">&gt;  &#125;;</span><br><span class="line">&gt;&lt;/script&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&gt;  <span class="xml"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span></span><br><span class="line"><span class="xml">&gt;    img&#123;</span></span><br><span class="line"><span class="xml">&gt;position: absolute;</span></span><br><span class="line"><span class="xml">&gt;    &#125;</span></span><br><span class="line"><span class="xml">&gt;  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span><br><span class="line">&gt;<span class="xml"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></span><br><span class="line">&gt;<span class="xml"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line">&gt;&lt;img src="images/tianshi.gif" alt="" id="im"&gt;</span><br><span class="line">&gt;&lt;script src="common.js"&gt;&lt;/script&gt;</span><br><span class="line">&gt;&lt;script&gt;</span><br><span class="line">&gt;  //鼠标在页面中移动,图片跟着鼠标移动</span><br><span class="line">&gt;  document.onmousemove=function (e) &#123;</span><br><span class="line">&gt;    //鼠标的移动的横纵坐标</span><br><span class="line">&gt;    //可视区域的横坐标</span><br><span class="line">&gt;    //可视区域的纵坐标</span><br><span class="line">&gt;    my$("im").style.left=e.clientX+"px";</span><br><span class="line">&gt;    my$("im").style.top=e.clientY+"px";</span><br><span class="line">&gt;  &#125;;</span><br><span class="line">&gt;&lt;/script&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>onkeyup 键盘按键按下触发</p>
@@ -435,18 +435,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/06/25/JavaScriptのDOM/JavaScriptのBOM/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/06/27/JavaScriptのDOM/JavaScriptのDOMdiv渐变色/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          JavaScriptのBOM
+          JavaScriptのDOM（div渐变色）
         
       </div>
     </a>
   
   
-    <a href="/2019/06/25/网络/大学八个计算机网络实验/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">计算机网络实验の网线制作</div>
+    <a href="/2019/06/25/JavaScriptのDOM/JavaScriptのBOM/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScriptのBOM</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -590,19 +590,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">教程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">web服务器</a>
+                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -610,11 +602,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">软件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -622,11 +610,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">谷歌脚本</a>
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+                <a href="javascript:void(0)" class="js-tag color5">谷歌脚本</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -634,15 +622,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
             
             <div class="clearfix"></div>
