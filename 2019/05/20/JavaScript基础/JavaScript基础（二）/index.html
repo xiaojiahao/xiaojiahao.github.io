@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JavaScript基础（二） | 骁の博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="值类型Number、String、Boolean、Undefined、Null、ES6的Symbol*  引用数据类型：对象(Object)、数组(Array)、函数(Function)">
+  <meta name="description" content="值类型Number、String、Boolean、Undefined、Null、ES6的Symbol 引用数据类型：对象(Object)、数组(Array)、函数(Function)">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript基础（二）">
 <meta property="og:url" content="http://yoursite.com/2019/05/20/JavaScript基础/JavaScript基础（二）/index.html">
 <meta property="og:site_name" content="骁の博客">
-<meta property="og:description" content="值类型Number、String、Boolean、Undefined、Null、ES6的Symbol*  引用数据类型：对象(Object)、数组(Array)、函数(Function)">
+<meta property="og:description" content="值类型Number、String、Boolean、Undefined、Null、ES6的Symbol 引用数据类型：对象(Object)、数组(Array)、函数(Function)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-24T15:25:59.161Z">
+<meta property="og:updated_time" content="2019-07-17T16:04:31.159Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript基础（二）">
-<meta name="twitter:description" content="值类型Number、String、Boolean、Undefined、Null、ES6的Symbol*  引用数据类型：对象(Object)、数组(Array)、函数(Function)">
+<meta name="twitter:description" content="值类型Number、String、Boolean、Undefined、Null、ES6的Symbol 引用数据类型：对象(Object)、数组(Array)、函数(Function)">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -164,7 +164,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>值类型Number、String、Boolean、Undefined、Null、ES6的Symbol* </p>
+        <p>值类型Number、String、Boolean、Undefined、Null、ES6的Symbol</p>
 <p>引用数据类型：对象(Object)、数组(Array)、函数(Function)</p>
 <a id="more"></a>
 <p><strong>var box = 12/0;  //Infinity </strong></p>
@@ -212,7 +212,7 @@
 </ol>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1= <span class="string">"10"</span>;</span><br><span class="line"><span class="keyword">var</span> s2 = <span class="number">5</span>;</span><br><span class="line"><span class="built_in">console</span>.log(s1+s2);<span class="comment">//105</span></span><br><span class="line"><span class="built_in">console</span>.log(s1-s2);<span class="comment">//5  隐式转换</span></span><br><span class="line"><span class="built_in">console</span>.log(s1+s2);<span class="comment">//50 同上</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1= <span class="string">"10"</span>;</span><br><span class="line"><span class="keyword">var</span> s2 = <span class="number">5</span>;</span><br><span class="line"><span class="built_in">console</span>.log(s1+s2);<span class="comment">//105</span></span><br><span class="line"><span class="built_in">console</span>.log(s1-s2);<span class="comment">//5  隐式转换</span></span><br><span class="line"><span class="built_in">console</span>.log(s1*s2);<span class="comment">//50 同上</span></span><br></pre></td></tr></table></figure>
 <h4 id="Boolean类型"><a href="#Boolean类型" class="headerlink" title="Boolean类型"></a>Boolean类型</h4><ul>
 <li>Boolean字面量：  true和false，区分大小写</li>
 <li>计算机内部存储：true为1，false为0</li>
@@ -226,7 +226,7 @@
 <h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var person=&#123;firstname:&quot;John&quot;, lastname:&quot;Doe&quot;, id:5566&#125;;</span><br><span class="line">var person=&#123;</span><br><span class="line">firstname : &quot;John&quot;,</span><br><span class="line">lastname  : &quot;Doe&quot;,</span><br><span class="line">id        :  5566</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">对象属性有两种寻址方式：</span><br><span class="line">name=person.lastname;</span><br><span class="line">name=person[&quot;lastname&quot;];</span><br></pre></td></tr></table></figure></p>
 <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>函数就是包裹在花括号中的代码块，前面使用了关键词 function：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionname</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 执行代码</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">var1,var2</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">代码</span><br><span class="line">&#125;</span><br><span class="line">可以调用myFUnction(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)但是只会导入<span class="number">1</span>和<span class="number">2</span></span><br></pre></td></tr></table></figure></p>
 <p>当调用该函数时，会执行函数内的代码。<br>可以在某事件发生时直接调用函数（比如当用户点击按钮时），并且可由 JavaScript 在任何位置进行调用。<br>例子：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;点击这个按钮，来调用带参数的函数。&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">&lt;button onclick="myFunction('Harry Potter','Wizard')"&gt;点击这里&lt;/</span>button&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">name,job</span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">"Welcome "</span> + name + <span class="string">", the "</span> + job);</span><br><span class="line">&#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=<span class="string">"demo"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML=myFunction(<span class="number">4</span>,<span class="number">3</span>);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=<span class="string">"demo"</span>&gt;&lt;/p&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML=myFunction(<span class="number">4</span>,<span class="number">3</span>);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h4><blockquote>
 <p>匿名函数：没有名字的函数</p>
 </blockquote>
@@ -390,18 +390,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/21/算法/排序算法/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/20/JavaScript基础/JavaScript基础（三）/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          排序算法
+          JavaScript基础（三）
         
       </div>
     </a>
   
   
-    <a href="/2019/05/20/网络/Nginx/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Nginx</div>
+    <a href="/2019/05/16/网络/JavaのSocket编程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaのSocket编程</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -420,6 +420,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据类型"><span class="toc-number">1.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#简单数据类型"><span class="toc-number">1.1.</span> <span class="toc-text">简单数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Number类型"><span class="toc-number">1.1.1.</span> <span class="toc-text">Number类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#String类型"><span class="toc-number">1.1.2.</span> <span class="toc-text">String类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Boolean类型"><span class="toc-number">1.1.3.</span> <span class="toc-text">Boolean类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Undefined和Null"><span class="toc-number">1.1.4.</span> <span class="toc-text">Undefined和Null</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用数据类型"><span class="toc-number">2.</span> <span class="toc-text">引用数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数组"><span class="toc-number">2.1.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象"><span class="toc-number">2.2.</span> <span class="toc-text">对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数"><span class="toc-number">2.3.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#匿名函数"><span class="toc-number">2.3.1.</span> <span class="toc-text">匿名函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#自调用函数"><span class="toc-number">2.3.2.</span> <span class="toc-text">自调用函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数是一种数据类型"><span class="toc-number">2.3.3.</span> <span class="toc-text">函数是一种数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#一些代码"><span class="toc-number">2.3.4.</span> <span class="toc-text">一些代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数作为参数调用、返回值"><span class="toc-number">2.3.5.</span> <span class="toc-text">函数作为参数调用、返回值</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arguments的使用"><span class="toc-number">3.</span> <span class="toc-text">arguments的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#声明变量类型"><span class="toc-number">4.</span> <span class="toc-text">声明变量类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#检测数据类型：typeof-与-instanceof"><span class="toc-number">5.</span> <span class="toc-text">检测数据类型：typeof 与 instanceof</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据类型转换"><span class="toc-number">6.</span> <span class="toc-text">数据类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#转换成字符串类型"><span class="toc-number">6.1.</span> <span class="toc-text">转换成字符串类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#转换成数值类型"><span class="toc-number">6.2.</span> <span class="toc-text">转换成数值类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#转换成布尔类型"><span class="toc-number">6.3.</span> <span class="toc-text">转换成布尔类型</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -573,6 +586,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">框架</a>
               </li>
             
             <div class="clearfix"></div>
