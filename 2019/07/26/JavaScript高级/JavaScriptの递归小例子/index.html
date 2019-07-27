@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JavaScriptの递归小例子 | 骁の博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前n个数和123456789 函数的声明function getSum(x) &amp;#123;  if(x==1)&amp;#123;    return 1;  &amp;#125;  return x+getSum(x-1);&amp;#125;//函数的调用console.log(getSum(5)); 求一个数字各个位数上的数字的和12345678 function getEverySum(x) &amp;#123;">
+  <meta name="description" content="四">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScriptの递归小例子">
 <meta property="og:url" content="http://yoursite.com/2019/07/26/JavaScript高级/JavaScriptの递归小例子/index.html">
 <meta property="og:site_name" content="骁の博客">
-<meta property="og:description" content="前n个数和123456789 函数的声明function getSum(x) &amp;#123;  if(x==1)&amp;#123;    return 1;  &amp;#125;  return x+getSum(x-1);&amp;#125;//函数的调用console.log(getSum(5)); 求一个数字各个位数上的数字的和12345678 function getEverySum(x) &amp;#123;">
+<meta property="og:description" content="四">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-26T08:20:29.505Z">
+<meta property="og:updated_time" content="2019-07-27T15:22:32.319Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScriptの递归小例子">
-<meta name="twitter:description" content="前n个数和123456789 函数的声明function getSum(x) &amp;#123;  if(x==1)&amp;#123;    return 1;  &amp;#125;  return x+getSum(x-1);&amp;#125;//函数的调用console.log(getSum(5)); 求一个数字各个位数上的数字的和12345678 function getEverySum(x) &amp;#123;">
+<meta name="twitter:description" content="四">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -164,7 +164,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
+        <p>四</p>
+<a id="more"></a>
 <h2 id="前n个数和"><a href="#前n个数和" class="headerlink" title="前n个数和"></a>前n个数和</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> 函数的声明</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSum</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(x==<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> x+getSum(x<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函数的调用</span></span><br><span class="line"><span class="built_in">console</span>.log(getSum(<span class="number">5</span>));</span><br></pre></td></tr></table></figure>
 <h2 id="求一个数字各个位数上的数字的和"><a href="#求一个数字各个位数上的数字的和" class="headerlink" title="求一个数字各个位数上的数字的和"></a>求一个数字各个位数上的数字的和</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">getEverySum</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">if</span>(x&lt;<span class="number">10</span>)&#123;</span><br><span class="line">     <span class="keyword">return</span> x;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">//获取的是这个数字的个位数+除最后的一位的数</span></span><br><span class="line">   <span class="keyword">return</span> x%<span class="number">10</span>+getEverySum(<span class="built_in">parseInt</span>(x/<span class="number">10</span>));</span><br><span class="line"> &#125;</span><br><span class="line"><span class="built_in">console</span>.log(getEverySum(<span class="number">1364</span>));</span><br></pre></td></tr></table></figure>
 <h2 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFib</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(x==<span class="number">1</span>||x==<span class="number">2</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> getFib(x<span class="number">-1</span>)+getFib(x<span class="number">-2</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(getFib(<span class="number">12</span>));</span><br></pre></td></tr></table></figure>
@@ -264,7 +265,7 @@
   
   
     <a href="/2019/07/26/JavaScript高级/JavaScriptの深浅拷贝/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaScriptの</div>
+      <div class="article-nav-title">JavaScriptの深浅拷贝</div>
       <i class="icon-circle-right"></i>
     </a>
   

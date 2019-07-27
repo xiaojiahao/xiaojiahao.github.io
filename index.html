@@ -696,11 +696,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h2 id="前n个数和"><a href="#前n个数和" class="headerlink" title="前n个数和"></a>前n个数和</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> 函数的声明</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSum</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(x==<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> x+getSum(x<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//函数的调用</span></span><br><span class="line"><span class="built_in">console</span>.log(getSum(<span class="number">5</span>));</span><br></pre></td></tr></table></figure>
-<h2 id="求一个数字各个位数上的数字的和"><a href="#求一个数字各个位数上的数字的和" class="headerlink" title="求一个数字各个位数上的数字的和"></a>求一个数字各个位数上的数字的和</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">getEverySum</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">if</span>(x&lt;<span class="number">10</span>)&#123;</span><br><span class="line">     <span class="keyword">return</span> x;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">//获取的是这个数字的个位数+除最后的一位的数</span></span><br><span class="line">   <span class="keyword">return</span> x%<span class="number">10</span>+getEverySum(<span class="built_in">parseInt</span>(x/<span class="number">10</span>));</span><br><span class="line"> &#125;</span><br><span class="line"><span class="built_in">console</span>.log(getEverySum(<span class="number">1364</span>));</span><br></pre></td></tr></table></figure>
-<h2 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFib</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(x==<span class="number">1</span>||x==<span class="number">2</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> getFib(x<span class="number">-1</span>)+getFib(x<span class="number">-2</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(getFib(<span class="number">12</span>));</span><br></pre></td></tr></table></figure>
-
+        <p>四</p>
+        
       
 
       
@@ -773,7 +770,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/26/JavaScript高级/JavaScriptの深浅拷贝/">JavaScriptの</a>
+      <a class="article-title" href="/2019/07/26/JavaScript高级/JavaScriptの深浅拷贝/">JavaScriptの深浅拷贝</a>
     </h1>
   
 
