@@ -16,10 +16,12 @@
 <meta property="og:site_name" content="骁の博客">
 <meta property="og:description" content="干巴爹">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-25T14:59:09.904Z">
+<meta property="og:image" content="http://yoursite.com/post-img2/20190808-03.PNG">
+<meta property="og:updated_time" content="2019-08-08T08:30:03.797Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSSの字体">
 <meta name="twitter:description" content="干巴爹">
+<meta name="twitter:image" content="http://yoursite.com/post-img2/20190808-03.PNG">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -166,6 +168,7 @@
       
         <p>干巴爹</p>
 <a id="more"></a>
+<p><img src="/post-img2/20190808-03.PNG" alt></p>
 <h1 id="CSS字体样式属性"><a href="#CSS字体样式属性" class="headerlink" title="CSS字体样式属性"></a>CSS字体样式属性</h1><h2 id="font-size-字号大小"><a href="#font-size-字号大小" class="headerlink" title="font-size:字号大小"></a>font-size:字号大小</h2><p>相对长度单位比较常用，推荐使用像素单位px</p>
 <h2 id="font-family-字体"><a href="#font-family-字体" class="headerlink" title="font-family:字体"></a>font-family:字体</h2><p>font-family属性用于设置字体。网页中常用的字体有宋体、微软雅黑、黑体等，例如将网页中所有段落文本的字体设置为微软雅黑，可以使用如下CSS样式代码：</p>
 <p>p{ font-family:”微软雅黑”;}</p>
@@ -190,14 +193,50 @@
 <p>小技巧： </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">平时我们很少给文字加斜体，反而喜欢给斜体标签（em，i）改为普通模式。</span><br></pre></td></tr></table></figure>
 <h2 id="font-综合设置字体样式-重点"><a href="#font-综合设置字体样式-重点" class="headerlink" title="font:综合设置字体样式 (重点)"></a>font:综合设置字体样式 (重点)</h2><p>font属性用于对字体样式进行综合设置，其基本语法格式如下：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">选择器&#123;<span class="attribute">font</span>: font-style  font-weight  font-size/line-height  font-family;&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">使用font属性时，必须按上面语法格式中的顺序书写，不能更换顺序，各个属性以空格隔开。</span><br><span class="line"></span><br><span class="line">注意：其中不需要设置的属性可以省略（取默认值），但必须保留font-size和font-family属性，否则font属性将不起作用。</span><br></pre></td></tr></table></figure>
+<p><code>选择器{font: font-style  font-weight  font-size/line-height  font-family;}</code></p>
+<p>使用font属性时，必须按上面语法格式中的顺序书写，不能更换顺序，各个属性以空格隔开。</p>
+<p>注意：其中不需要设置的属性可以省略（取默认值），但<strong>必须保留font-size和font-family属性</strong>，否则font属性将不起作用。</p>
+<h2 id="font-height"><a href="#font-height" class="headerlink" title="font-height"></a>font-height</h2><p>px,em 也可以倍数number，如1.5</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">font:12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;</span><br></pre></td></tr></table></figure>
+<p>12px的字体大小，1.5*12px的行高，字体family</p>
 <h2 id="文字间距"><a href="#文字间距" class="headerlink" title="文字间距"></a>文字间距</h2><p>letter-spacing 与 word-spacing：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">    letter-spacing:<span class="number">30</span>px;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">&lt;h1&gt;letter spacing&lt;<span class="regexp">/h1&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>letter-spacing 这个样式使用在英文单词时，是设置字母与字母之间的间距。</p>
 <p>如果想设置英文单词之间的间距，可以使用 word-spacing 来实现。如下代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">    word-spacing:<span class="number">30</span>px;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">&lt;h1&gt;word spacing&lt;<span class="regexp">/h1&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>汉字的间隔调节也是用<code>letter-spacing</code> 来实现的。</p>
 <p>因为中文段落里字与字之间没有空格，因而 word-spacing 通常起不到调整间距的作用。</p>
 <h2 id="字体阴影"><a href="#字体阴影" class="headerlink" title="字体阴影"></a>字体阴影</h2><p> text-shadow: 7px 4px #eee;相当于一份一模一样的复制一份，所以要调背景颜色。</p>
+<h1 id="字体图标"><a href="#字体图标" class="headerlink" title="字体图标"></a>字体图标</h1><p>可以做出跟图片一样可以做的事情,改变透明度、旋转度，等..<br>但是本质其实是文字，可以很随意的改变颜色、产生阴影、透明效果等等…<br>本身体积更小，但携带的信息并没有削减。<br>几乎支持所有的浏览器<br>移动端设备必备良药…</p>
+<h3 id="设计字体图标"><a href="#设计字体图标" class="headerlink" title="设计字体图标"></a>设计字体图标</h3><p>假如图标是我们公司单独设计，那就需要第一步了，这个属于UI设计人员的工作， 他们在 illustrator 或 Sketch 这类矢量图形软件里创建 icon图标，  之后保存为svg格式，然后给我们前端人员就好了。</p>
+<h3 id="上传生成字体包"><a href="#上传生成字体包" class="headerlink" title="上传生成字体包"></a>上传生成字体包</h3><p>   当UI设计人员给我们svg文件的时候，我们需要转换成我们页面能使用的字体文件， 而且需要生成的是兼容性的适合各个浏览器的。 import avg文件</p>
+<p>​    推荐网站： <a href="http://icomoon.io" target="_blank" rel="noopener">http://icomoon.io</a></p>
+<p><strong>icomoon字库</strong></p>
+<p>IcoMoon成立于2011年，推出的第一个自定义图标字体生成器，它允许用户选择他们所需要的图标，使它们成一字型。 内容种类繁多，非常全面，唯一的遗憾是国外服务器，打开网速较慢。</p>
+<p>   推荐网站： <a href="http://www.iconfont.cn/" target="_blank" rel="noopener">http://www.iconfont.cn/</a></p>
+<p><strong>阿里icon font字库</strong></p>
+<p><a href="http://www.iconfont.cn/" target="_blank" rel="noopener">http://www.iconfont.cn/</a></p>
+<p>这个是阿里妈妈M2UX的一个icon font字体图标字库，包含了淘宝图标库和阿里妈妈图标库。可以使用AI制作图标上传生成。 一个字，免费，免费！！</p>
+<p><strong>fontello</strong></p>
+<p><a href="http://fontello.com/" target="_blank" rel="noopener">http://fontello.com/</a></p>
+<p>在线定制你自己的icon font字体图标字库，也可以直接从GitHub下载整个图标集，该项目也是开源的。</p>
+<p><strong>Font-Awesome</strong></p>
+<p><a href="http://fortawesome.github.io/Font-Awesome/" target="_blank" rel="noopener">http://fortawesome.github.io/Font-Awesome/</a></p>
+<p>这是我最喜欢的字库之一了，更新比较快。目前已经有369个图标了。</p>
+<p><strong>Glyphicon Halflings</strong></p>
+<p><a href="http://glyphicons.com/" target="_blank" rel="noopener">http://glyphicons.com/</a></p>
+<p>这个字体图标可以在Bootstrap下免费使用。自带了200多个图标。</p>
+<p><strong>Icons8</strong></p>
+<p><a href="https://icons8.com/" target="_blank" rel="noopener">https://icons8.com/</a></p>
+<p>提供PNG免费下载，像素大能到500PX</p>
+<h3 id="下载兼容字体包"><a href="#下载兼容字体包" class="headerlink" title="下载兼容字体包"></a>下载兼容字体包</h3><p>刚才上传完毕， 网站会给我们把UI做的svg图片转换为我们的字体格式， 然后下载下来就好了</p>
+<p>想网上找几个图标使用，以上2步可以直接省略了</p>
+<h3 id="字体引入到HTML"><a href="#字体引入到HTML" class="headerlink" title="字体引入到HTML"></a>字体引入到HTML</h3><p>得到压缩包之后，最后一步，是最重要的一步了， 就是字体文件已经有了，我们需要引入到我们页面中。</p>
+<ol>
+<li>首先把 eot,svg,ttf,woff4个文件放入到 fonts文件夹里面。 通俗的做法</li>
+</ol>
+<h5 id="第一步：在样式里面声明字体：-告诉别人我们自己定义的字体"><a href="#第一步：在样式里面声明字体：-告诉别人我们自己定义的字体" class="headerlink" title="第一步：在样式里面声明字体： 告诉别人我们自己定义的字体"></a>第一步：在样式里面声明字体： 告诉别人我们自己定义的字体</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">font-face</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">'icomoon'</span>;</span><br><span class="line">  <span class="attribute">src</span>:  <span class="built_in">url</span>(<span class="string">'fonts/icomoon.eot?7kkyc2'</span>);</span><br><span class="line">  <span class="attribute">src</span>:  <span class="built_in">url</span>(<span class="string">'fonts/icomoon.eot?7kkyc2#iefix'</span>) <span class="built_in">format</span>(<span class="string">'embedded-opentype'</span>),</span><br><span class="line">    <span class="built_in">url</span>(<span class="string">'fonts/icomoon.ttf?7kkyc2'</span>) <span class="built_in">format</span>(<span class="string">'truetype'</span>),</span><br><span class="line">    <span class="built_in">url</span>(<span class="string">'fonts/icomoon.woff?7kkyc2'</span>) <span class="built_in">format</span>(<span class="string">'woff'</span>),</span><br><span class="line">    <span class="built_in">url</span>(<span class="string">'fonts/icomoon.svg?7kkyc2#icomoon'</span>) <span class="built_in">format</span>(<span class="string">'svg'</span>);</span><br><span class="line">  <span class="attribute">font-weight</span>: normal;</span><br><span class="line">  <span class="attribute">font-style</span>: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="第二步：给盒子使用字体"><a href="#第二步：给盒子使用字体" class="headerlink" title="第二步：给盒子使用字体"></a>第二步：给盒子使用字体</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">span</span> &#123;</span><br><span class="line">		<span class="attribute">font-family</span>: <span class="string">"icomoon"</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="第三步：盒子里面添加结构"><a href="#第三步：盒子里面添加结构" class="headerlink" title="第三步：盒子里面添加结构"></a>第三步：盒子里面添加结构</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">span</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">		 <span class="attribute">content</span>: <span class="string">"\e900"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">或者  </span><br><span class="line">&lt;span&gt;&lt;/span&gt;  /*小手机是在字体网站下载的压缩包所解压出来的demo.html中得到*/</span><br></pre></td></tr></table></figure>
+<h3 id="追加新图标到原来库里面"><a href="#追加新图标到原来库里面" class="headerlink" title="追加新图标到原来库里面"></a>追加新图标到原来库里面</h3><p>把压缩包里面的selection.json 从新上传，然后，选中自己想要新的图标，重新下载压缩包，替换原来文件即可。</p>
 
       
 
@@ -292,11 +331,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/09/CSS/CSSの一个普通导航栏/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/09/软件/pySpark安装/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          CSSの一个普通导航栏
+          pySpark的安装
         
       </div>
     </a>
@@ -479,6 +518,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
             
             <div class="clearfix"></div>

@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://yoursite.com/post-img2/20190515-01.png">
 <meta property="og:image" content="http://yoursite.com/post-img2/20190515-02.png">
 <meta property="og:image" content="http://yoursite.com/post-img2/20190515-03.png">
-<meta property="og:updated_time" content="2019-05-15T15:43:52.389Z">
+<meta property="og:updated_time" content="2019-08-06T09:36:37.074Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSSの盒子边框、边距、阴影">
 <meta name="twitter:description" content="重点">
@@ -221,7 +221,7 @@
 <p>border-collapse:collapse; 表示边框合并在一起。</p>
 <h3 id="圆角边框-CSS3"><a href="#圆角边框-CSS3" class="headerlink" title="圆角边框(CSS3)"></a>圆角边框(CSS3)</h3><p>从此以后，我们的世界不只有矩形。radius 半径（距离）</p>
 <p>语法格式：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">border-radius</span>: 左上角  右上角  右下角  左下角;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">border-radius</span>: 左上角  右上角  右下角  左下角; 50%；</span><br></pre></td></tr></table></figure>
 <p><img src="/post-img2/20190515-01.png" alt="圆角"></p>
 <p><img src="/post-img2/20190515-02.png" alt="圆角"></p>
 <h2 id="内边距（padding）"><a href="#内边距（padding）" class="headerlink" title="内边距（padding）"></a>内边距（padding）</h2><p>padding属性用于设置内边距。  是指 边框与内容之间的距离。</p>
@@ -323,7 +323,7 @@
 <li>前两个属性是必须写的。其余的可以省略。</li>
 <li>外阴影 (outset) 但是不能写    默认      想要内阴影  inset </li>
 </ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">			<span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">			<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">			<span class="attribute">border</span>: <span class="number">10px</span> solid red;</span><br><span class="line">			<span class="comment">/* box-shadow: 5px 5px 3px 4px rgba(0, 0, 0, .4);  */</span></span><br><span class="line">			<span class="comment">/* box-shadow:水平位置 垂直位置 模糊距离 阴影尺寸（影子大小） 阴影颜色  内/外阴影； */</span></span><br><span class="line">			<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">15px</span> <span class="number">30px</span>  <span class="built_in">rgba</span>(0, 0, 0, .4);</span><br><span class="line">			</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">			<span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">			<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">			<span class="attribute">border</span>: <span class="number">10px</span> solid red;</span><br><span class="line">			<span class="comment">/* box-shadow: 5px 5px 3px 4px rgba(0, 0, 0, .4);  */</span></span><br><span class="line">			<span class="comment">/* box-shadow:水平位置 垂直位置 模糊距离 阴影尺寸（影子大小） 阴影颜色 透明度； */</span></span><br><span class="line">			<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">15px</span> <span class="number">30px</span>  <span class="built_in">rgba</span>(0, 0, 0, .1);</span><br><span class="line">			</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="/post-img2/20190515-03.png" alt="阴影"></p>
 
       
@@ -419,18 +419,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/15/谷歌脚本/谷歌脚本のJSON Viewer/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/15/CSS/CSSの整体布局/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          谷歌脚本のJSON Viewer
+          CSSの整体布局
         
       </div>
     </a>
   
   
-    <a href="/2019/05/14/随笔/读书/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">书屋</div>
+    <a href="/2019/05/14/CSS/一些CSS笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS的一些感触</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -606,6 +606,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
             
             <div class="clearfix"></div>

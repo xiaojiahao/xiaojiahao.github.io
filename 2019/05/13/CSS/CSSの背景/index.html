@@ -18,7 +18,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/post-img2/20190513-1.png">
 <meta property="og:image" content="http://yoursite.com/post-img2/20190513-2.png">
-<meta property="og:updated_time" content="2019-05-15T15:43:06.979Z">
+<meta property="og:updated_time" content="2019-08-05T11:35:49.480Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSSの背景">
 <meta name="twitter:description" content="早早起来学习~">
@@ -205,7 +205,7 @@
 </table>
 <h2 id="王者荣耀导航栏设计（背景颜色）"><a href="#王者荣耀导航栏设计（背景颜色）" class="headerlink" title="王者荣耀导航栏设计（背景颜色）"></a>王者荣耀导航栏设计（背景颜色）</h2><p><img src="/post-img2/20190513-1.png" alt="导航栏"></p>
 <p><img src="/post-img2/20190513-2.png" alt="导航栏"></p>
-<h2 id="背景图片-image"><a href="#背景图片-image" class="headerlink" title="背景图片(image)"></a>背景图片(image)</h2><p>语法： </p>
+<h2 id="背景图片-image"><a href="#背景图片-image" class="headerlink" title="背景图片(image)"></a>背景图片(image)</h2><p>语法： <a href="http://xiaojiahao.club/2019/07/18/CSS/CSS%E3%81%AEborder-image" target="_blank" rel="noopener">http://xiaojiahao.club/2019/07/18/CSS/CSS%E3%81%AEborder-image</a></p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image : none | url (url)</span><br></pre></td></tr></table></figure>
 <p>参数： </p>
 <p>none : 　无背景图（默认的）<br>url : 　使用绝对或相对地址指定背景图像 </p>
@@ -249,7 +249,6 @@
 <p> 注意：  背景半透明是指盒子背景半透明， 盒子里面的内容不收影响。</p>
 <h2 id="导航栏案例"><a href="#导航栏案例" class="headerlink" title="导航栏案例"></a>导航栏案例</h2><p><strong>使用技巧</strong>：在一行内的盒子内，我们设定行高等于盒子的高度，就可以使文字垂直居中。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">		body &#123;</span></span><br><span class="line"><span class="css">			<span class="selector-tag">background-color</span>: <span class="selector-id">#000</span>;</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="undefined">		a &#123;</span></span><br><span class="line"><span class="undefined">			width: 200px;</span></span><br><span class="line"><span class="undefined">			height: 50px;</span></span><br><span class="line"><span class="css">			<span class="comment">/* background-color: orange; */</span></span></span><br><span class="line"><span class="css">			<span class="selector-tag">display</span>: <span class="selector-tag">inline-block</span>;  <span class="comment">/* 把a 行内元素转换为行内块元素 */</span></span></span><br><span class="line"><span class="css">			<span class="selector-tag">text-align</span>: <span class="selector-tag">center</span>;  <span class="comment">/* 文字水平居中 */</span></span></span><br><span class="line"><span class="css">			<span class="selector-tag">line-height</span>: 50<span class="selector-tag">px</span>;  <span class="comment">/* 我们设定行高等于盒子的高度，就可以使文字垂直居中 */</span></span></span><br><span class="line"><span class="css">			<span class="selector-tag">color</span>: <span class="selector-id">#fff</span>;</span></span><br><span class="line"><span class="undefined">			font-size: 22px;</span></span><br><span class="line"><span class="css">			<span class="selector-tag">text-decoration</span>: <span class="selector-tag">none</span>;  <span class="comment">/* 取消下划线 文本装饰 */</span></span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;  <span class="comment">/* 鼠标经过 给我们的链接添加背景图片*/</span></span></span><br><span class="line"><span class="undefined">			background: url(images/h.png) no-repeat; </span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="undefined">        </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>专区说明<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>申请资格<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>兑换奖励<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>下载游戏<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p># </p>
 
       
 
@@ -344,18 +343,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/14/CSS/一些CSS笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/14/随笔/读书/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          CSS的一些感触
+          书屋
         
       </div>
     </a>
   
   
-    <a href="/2019/05/11/随笔/The sources of my pressure/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">The sources of my pressure</div>
+    <a href="/2019/05/11/CSS/CSSの书写规范/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSSの书写规范</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -531,6 +530,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
             
             <div class="clearfix"></div>
