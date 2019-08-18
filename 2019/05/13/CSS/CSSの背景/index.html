@@ -16,13 +16,14 @@
 <meta property="og:site_name" content="骁の博客">
 <meta property="og:description" content="早早起来学习~">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/post-img2/20190816-02.PNG">
 <meta property="og:image" content="http://yoursite.com/post-img2/20190513-1.png">
 <meta property="og:image" content="http://yoursite.com/post-img2/20190513-2.png">
-<meta property="og:updated_time" content="2019-08-05T11:35:49.480Z">
+<meta property="og:updated_time" content="2019-08-16T16:02:45.122Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSSの背景">
 <meta name="twitter:description" content="早早起来学习~">
-<meta name="twitter:image" content="http://yoursite.com/post-img2/20190513-1.png">
+<meta name="twitter:image" content="http://yoursite.com/post-img2/20190816-02.PNG">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -203,8 +204,34 @@
 </tr>
 </tbody>
 </table>
-<h2 id="王者荣耀导航栏设计（背景颜色）"><a href="#王者荣耀导航栏设计（背景颜色）" class="headerlink" title="王者荣耀导航栏设计（背景颜色）"></a>王者荣耀导航栏设计（背景颜色）</h2><p><img src="/post-img2/20190513-1.png" alt="导航栏"></p>
-<p><img src="/post-img2/20190513-2.png" alt="导航栏"></p>
+<ul>
+<li><a href="http://css.doyoe.com/properties/backgrounds/background-clip.htm" target="_blank" rel="noopener">background-clip</a> 改背景裁剪位置 border-box | padding-box | content-box | text</li>
+<li><strong>background-size</strong> 改背景大小</li>
+</ul>
+<h2 id="背景缩放大小-CSS3"><a href="#背景缩放大小-CSS3" class="headerlink" title="背景缩放大小(CSS3)"></a>背景缩放大小(CSS3)</h2><p><a href="http://css.doyoe.com/properties/backgrounds/background-size.htm" target="_blank" rel="noopener">http://css.doyoe.com/properties/backgrounds/background-size.htm</a></p>
+<p>通过background-size设置背景图片的尺寸，就像我们设置img的尺寸一样，在移动Web开发中做屏幕适配应用非常广泛。</p>
+<p>其参数设置如下：</p>
+<p>a) 可以设置长度单位(px)或百分比，设置百分比时，参照盒子的宽高,</p>
+<p>b) 设置为cover时，会自动调整缩放比例，保证图片始终填充满背景区域，如有溢出部分则会被隐藏。我们平时用的cover 最多</p>
+<p>c) 设置为contain会自动调整缩放比例，保证图片始终完整显示在背景区域。将背景图像等比缩放到宽度或高度与容器的宽度或高度相等，背景图像始终被包含在容器内。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">background-image: url('images/gyt.jpg');</span><br><span class="line">			<span class="selector-tag">background-size</span>: 300<span class="selector-tag">px</span> 100<span class="selector-tag">px</span>;</span><br><span class="line">			<span class="comment">/* background-size: contain;</span></span><br><span class="line"><span class="comment">只有300px，则表示300px auto; */</span></span><br><span class="line">			<span class="comment">/* background-size: cover; 将背景高度设置为盒子高度*/</span></span><br></pre></td></tr></table></figure>
+<h3 id="关于携程网截取精灵图"><a href="#关于携程网截取精灵图" class="headerlink" title="关于携程网截取精灵图"></a>关于携程网截取精灵图</h3><p>目标精灵图比所要的大两倍。精灵图宽度为208，需要缩小，所以size为精灵图宽一半，再进行position定位 。</p>
+<p>定义宽高-background-size等比缩小-计算原图缩小后的position</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.row</span> <span class="selector-tag">i</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">43px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">43px</span>;</span><br><span class="line">	<span class="attribute">margin</span>: -<span class="number">5px</span> auto <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">url</span>(images/ctrip.png) no-repeat <span class="number">0</span> -<span class="number">127px</span>;</span><br><span class="line">	<span class="attribute">-webkit-background-size</span>: <span class="number">104px</span>;  <span class="comment">/* 前缀 */</span></span><br><span class="line">	<span class="attribute">-moz-background-size</span>: <span class="number">104px</span>;  <span class="comment">/* 前缀 火狐 */</span></span><br><span class="line">	<span class="attribute">-ms-background-size</span>: <span class="number">104px</span>;  <span class="comment">/* 前缀 ie */</span></span><br><span class="line">	<span class="attribute">-o-background-size</span>: <span class="number">104px</span>;  <span class="comment">/* 前缀 ie */</span></span><br><span class="line">	<span class="attribute">background-size</span>: <span class="number">104px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="背景渐变"><a href="#背景渐变" class="headerlink" title="背景渐变"></a>背景渐变</h2><p>在线性渐变过程中，颜色沿着一条直线过渡：从左侧到右侧、从右侧到左侧、从顶部到底部、从底部到顶部或着沿任何任意轴。如果你曾使用过制作图件，比如说Photoshop，你对线性渐变并不会陌生。</p>
+<p>兼容性问题很严重，我们这里之讲解线性渐变</p>
+<p>语法格式： </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background</span><span class="selector-pseudo">:-webkit-linear-gradient(</span>渐变的起始位置， 起始颜色， 结束颜色)；</span><br><span class="line"><span class="comment">/*background: -webkit-linear-gradient(top, red, green);*/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background</span><span class="selector-pseudo">:-webkit-linear-gradient(</span>渐变的起始位置， 颜色 位置， 颜色位置....)；</span><br><span class="line"><span class="selector-tag">background</span>: <span class="selector-tag">-webkit-linear-gradient</span>(<span class="selector-tag">top</span>, <span class="selector-tag">red</span> 0%, <span class="selector-tag">green</span> 50%, <span class="selector-tag">blue</span> 100%);</span><br></pre></td></tr></table></figure>
+<p><img src="/post-img2/20190816-02.PNG" alt="导航栏"></p>
+<h2 id="多背景-CSS3-泡泡特效"><a href="#多背景-CSS3-泡泡特效" class="headerlink" title="多背景(CSS3) -泡泡特效"></a>多背景(CSS3) -泡泡特效</h2><p>以逗号分隔可以设置多背景，可用于自适应布局  做法就是 用逗号隔开就好了。</p>
+<ul>
+<li>一个元素可以设置多重背景图像。 </li>
+<li>每组属性间使用逗号分隔。 </li>
+<li>如果设置的多重背景图之间存在着交集（即存在着重叠关系），前面的背景图会覆盖在后面的背景图之上。</li>
+<li>为了避免背景色将图像盖住，背景色通常都定义在最后一组上，</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">background:url(test1.jpg) no-repeat scroll 10px 20px/50px 60px  ,</span><br><span class="line">	   url(test1.jpg) no-repeat scroll 10px 20px/70px 90px ,</span><br><span class="line">	   url(test1.jpg) no-repeat scroll 10px 20px/110px 130px c #aaa;</span><br><span class="line"></span><br><span class="line">		background: url(images/paopao.png)  no-repeat top left, url(images/paopao.png) no-repeat right bottom;</span><br><span class="line">		<span class="selector-tag">background-color</span>: <span class="selector-tag">blue</span>;  <span class="comment">/*多背景颜色写到下面 防止被叠加*/</span></span><br><span class="line">		<span class="selector-tag">transition</span>: <span class="selector-tag">all</span> 3<span class="selector-tag">s</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">		<span class="attribute">background-position</span>: right bottom, top left; </span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="背景图片-image"><a href="#背景图片-image" class="headerlink" title="背景图片(image)"></a>背景图片(image)</h2><p>语法： <a href="http://xiaojiahao.club/2019/07/18/CSS/CSS%E3%81%AEborder-image" target="_blank" rel="noopener">http://xiaojiahao.club/2019/07/18/CSS/CSS%E3%81%AEborder-image</a></p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image : none | url (url)</span><br></pre></td></tr></table></figure>
 <p>参数： </p>
@@ -247,6 +274,8 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background</span>: <span class="selector-tag">rgba</span>(0,0,0,0<span class="selector-class">.3</span>); <span class="comment">/* #000 */</span></span><br></pre></td></tr></table></figure>
 <p> 最后一个参数是alpha 透明度  取值范围 0~1之间</p>
 <p> 注意：  背景半透明是指盒子背景半透明， 盒子里面的内容不收影响。</p>
+<h2 id="王者荣耀导航栏设计（背景颜色）"><a href="#王者荣耀导航栏设计（背景颜色）" class="headerlink" title="王者荣耀导航栏设计（背景颜色）"></a>王者荣耀导航栏设计（背景颜色）</h2><p><img src="/post-img2/20190513-1.png" alt="导航栏"></p>
+<p><img src="/post-img2/20190513-2.png" alt="导航栏"></p>
 <h2 id="导航栏案例"><a href="#导航栏案例" class="headerlink" title="导航栏案例"></a>导航栏案例</h2><p><strong>使用技巧</strong>：在一行内的盒子内，我们设定行高等于盒子的高度，就可以使文字垂直居中。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">		body &#123;</span></span><br><span class="line"><span class="css">			<span class="selector-tag">background-color</span>: <span class="selector-id">#000</span>;</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="undefined">		a &#123;</span></span><br><span class="line"><span class="undefined">			width: 200px;</span></span><br><span class="line"><span class="undefined">			height: 50px;</span></span><br><span class="line"><span class="css">			<span class="comment">/* background-color: orange; */</span></span></span><br><span class="line"><span class="css">			<span class="selector-tag">display</span>: <span class="selector-tag">inline-block</span>;  <span class="comment">/* 把a 行内元素转换为行内块元素 */</span></span></span><br><span class="line"><span class="css">			<span class="selector-tag">text-align</span>: <span class="selector-tag">center</span>;  <span class="comment">/* 文字水平居中 */</span></span></span><br><span class="line"><span class="css">			<span class="selector-tag">line-height</span>: 50<span class="selector-tag">px</span>;  <span class="comment">/* 我们设定行高等于盒子的高度，就可以使文字垂直居中 */</span></span></span><br><span class="line"><span class="css">			<span class="selector-tag">color</span>: <span class="selector-id">#fff</span>;</span></span><br><span class="line"><span class="undefined">			font-size: 22px;</span></span><br><span class="line"><span class="css">			<span class="selector-tag">text-decoration</span>: <span class="selector-tag">none</span>;  <span class="comment">/* 取消下划线 文本装饰 */</span></span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;  <span class="comment">/* 鼠标经过 给我们的链接添加背景图片*/</span></span></span><br><span class="line"><span class="undefined">			background: url(images/h.png) no-repeat; </span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="undefined">        </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>专区说明<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>申请资格<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>兑换奖励<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>下载游戏<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -343,18 +372,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/14/随笔/读书/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/14/CSS/一些CSS笔记/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          书屋
+          CSS的一些感触
         
       </div>
     </a>
   
   
-    <a href="/2019/05/11/CSS/CSSの书写规范/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CSSの书写规范</div>
+    <a href="/2019/05/11/随笔/The sources of my pressure/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">The sources of my pressure</div>
       <i class="icon-circle-right"></i>
     </a>
   
