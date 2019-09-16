@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="骁の博客">
 <meta property="og:description" content="捋一捋！">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-17T15:53:02.047Z">
+<meta property="og:updated_time" content="2019-09-12T08:46:33.546Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSSの选择器">
 <meta name="twitter:description" content="捋一捋！">
@@ -221,7 +221,7 @@
 <p>之所以被称为伪元素，是因为他们不是真正的页面元素，html没有对应的元素，但是其所有用法和表现行为与真正的页面元素一样，可以对其使用诸如页面元素一样的css样式，表面上看上去貌似是页面的某些元素来展现，实际上是css样式展现的行为，因此被称为伪元素。是伪元素在html代码机构中的展现，可以看出无法伪元素的结构无法审查</p>
 <h3 id="目标伪类选择器-CSS3"><a href="#目标伪类选择器-CSS3" class="headerlink" title="目标伪类选择器(CSS3)"></a>目标伪类选择器(CSS3)</h3><p> :target目标伪类选择器 :选择器可用于选取当前活动的目标元素</p>
 <p>#news:target 选择当前活动的 #news 元素。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:target</span> &#123;</span><br><span class="line">		<span class="attribute">color</span>: red;</span><br><span class="line">		<span class="attribute">font-size</span>: <span class="number">30px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:target</span> &#123;</span><br><span class="line">		<span class="attribute">color</span>: red;</span><br><span class="line">		<span class="attribute">font-size</span>: <span class="number">30px</span>;</span><br><span class="line">&#125;</span><br><span class="line">&lt;p&gt;&lt;a href="#news1"&gt;跳转至内容 1&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">&lt;p&gt;&lt;a href="#news2"&gt;跳转至内容 2&lt;/a&gt;&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;请点击上面的链接，:target 选择器会突出显示当前活动的 HTML 锚。&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p id="news1"&gt;&lt;b&gt;内容 1...&lt;/b&gt;&lt;/p&gt;</span><br><span class="line">&lt;p id="news2"&gt;&lt;b&gt;内容 2...&lt;/b&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
 <p>input:enabled 选择每个启用的 <input> 元素。</p>
 <p>input:checked 选择每个被选中的 <input> 元素。</p>
 <p>::selection 选择被用户选取的元素部分。</p>
