@@ -6,26 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>关于NVM安装和使用 | 骁の博客</title>
+  <title>Dart基础（五） | 骁の博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="nodejs 版本管理">
-<meta name="keywords" content="nodejs">
+  <meta name="description" content="泛型、系统库、自定义库、第三方库，异步async，await，库的as，懒加载">
+<meta name="keywords" content="Flutter">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于NVM安装和使用">
-<meta property="og:url" content="http://yoursite.com/2019/07/07/Vue/关于NVM安装和使用/index.html">
+<meta property="og:title" content="Dart基础（五）">
+<meta property="og:url" content="http://yoursite.com/2019/10/09/Flutter/Dart基础（五）/index.html">
 <meta property="og:site_name" content="骁の博客">
-<meta property="og:description" content="nodejs 版本管理">
+<meta property="og:description" content="泛型、系统库、自定义库、第三方库，异步async，await，库的as，懒加载">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/07/07/Vue/关于NVM安装和使用/post-img2/20190707-02.png">
-<meta property="og:image" content="http://yoursite.com/post-img2/20190707-03.png">
-<meta property="og:image" content="http://yoursite.com/post-img2/20190707-04.png">
-<meta property="og:image" content="http://yoursite.com/post-img2/20190707-05.png">
-<meta property="og:image" content="http://yoursite.com/post-img2/20190707-06.png">
-<meta property="og:updated_time" content="2019-07-07T06:44:39.232Z">
+<meta property="og:updated_time" content="2019-10-09T15:50:29.090Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于NVM安装和使用">
-<meta name="twitter:description" content="nodejs 版本管理">
-<meta name="twitter:image" content="http://yoursite.com/2019/07/07/Vue/关于NVM安装和使用/post-img2/20190707-02.png">
+<meta name="twitter:title" content="Dart基础（五）">
+<meta name="twitter:description" content="泛型、系统库、自定义库、第三方库，异步async，await，库的as，懒加载">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -150,70 +144,83 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-Vue/关于NVM安装和使用" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-Flutter/Dart基础（五）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      关于NVM安装和使用
+      Dart基础（五）
     </h1>
   
 
         
-        <a href="/2019/07/07/Vue/关于NVM安装和使用/" class="archive-article-date">
-  	<time datetime="2019-07-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-07</time>
+        <a href="/2019/10/09/Flutter/Dart基础（五）/" class="archive-article-date">
+  	<time datetime="2019-10-08T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>nodejs 版本管理</p>
+        <p>泛型、系统库、自定义库、第三方库，异步async，await，库的as，懒加载</p>
 <a id="more"></a>
-<h2 id="一-下载"><a href="#一-下载" class="headerlink" title="一:下载"></a>一:下载</h2><p><a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank" rel="noopener">github上下载最新版本</a></p>
-<p>点击下面不是<a href="https://github.com/coreybutler/nvm-windows/releases/tag/1.1.7" target="_blank" rel="noopener">Maintenance Release</a>的来下载</p>
-<p><img src="post-img2/20190707-02.png" alt></p>
-<p>点开Assets，下载nvm-setup.zip：这是一个安装包，下载之后点击安装，无需配置就可以使用，方便。</p>
-<p>参考<a href="https://blog.csdn.net/qq_32682137/article/details/82684898" target="_blank" rel="noopener">Windows下安装及使用NVM</a></p>
-<p><img src="/post-img2/20190707-03.png" alt></p>
-<p>路径也懒得改了</p>
-<p>疯狂跳出nodejs有几个版本我有了，要不要让他来控制。。yes</p>
-<h2 id="二：安装"><a href="#二：安装" class="headerlink" title="二：安装"></a>二：安装</h2><p>在C:\Users\xiao\AppData\Roaming\nvm下打开git，输入npm。</p>
-<p>看看安装好了没</p>
-<h2 id="三：修改"><a href="#三：修改" class="headerlink" title="三：修改"></a>三：修改</h2><p>修改settings.txt,这一步主要是将npm镜像改为淘宝的镜像，可以提高下载速度。</p>
-<p><strong>到时候要使用是cnpm install这样子</strong></p>
-<p>在你安装的目录下找到settings.txt文件，打开后加上<br>node_mirror: <a href="https://npm.taobao.org/mirrors/node/" target="_blank" rel="noopener">https://npm.taobao.org/mirrors/node/</a><br>npm_mirror: <a href="https://npm.taobao.org/mirrors/npm/" target="_blank" rel="noopener">https://npm.taobao.org/mirrors/npm/</a></p>
-<p><img src="/post-img2/20190707-04.png" alt></p>
-<h2 id="四：使用"><a href="#四：使用" class="headerlink" title="四：使用"></a>四：使用</h2><p>常用的：</p>
-<ul>
-<li>使用<code>nvm list</code>查看目前已经安装的版本</li>
-<li><code>nvm list available</code> 显示可下载版本的部分列表</li>
-<li><code>nvm install 版本号</code> 安装指定的版本的nodejs</li>
-<li><code>nvm use 版本号</code> 使用指定版本的nodejs</li>
-</ul>
-<p>nvm arch [32|64]： 显示node是运行在32位还是64位模式。指定32或64来覆盖默认体系结构。<br>-nvm install <version> [arch]：该可以是node.js版本或最新稳定版本latest。（可选[arch]）指定安装32位或64位版本（默认为系统arch）。设置[arch]为all以安装32和64位版本。在命令后面添加–insecure，可以绕过远端下载服务器的SSL验证。<br>nvm list [available]：列出已经安装的node.js版本。可选的available，显示可下载版本的部分列表。这个命令可以简写为nvm ls [available]。<br>nvm on： 启用node.js版本管理。<br>nvm off： 禁用node.js版本管理(不卸载任何东西)<br>nvm proxy [url]： 设置用于下载的代理。留[url]空白，以查看当前的代理。设置[url]为none删除代理。<br>nvm node_mirror [url]：设置node镜像，默认为<a href="https://nodejs.org/dist/.。可以设置为淘宝的镜像https://npm.taobao.org/mirrors/node/" target="_blank" rel="noopener">https://nodejs.org/dist/.。可以设置为淘宝的镜像https://npm.taobao.org/mirrors/node/</a><br>nvm npm_mirror [url]：设置npm镜像，默认为<a href="https://github.com/npm/npm/archive/。可以设置为淘宝的镜像https://npm.taobao.org/mirrors/npm/" target="_blank" rel="noopener">https://github.com/npm/npm/archive/。可以设置为淘宝的镜像https://npm.taobao.org/mirrors/npm/</a><br>nvm uninstall <version>： 卸载指定版本的nodejs。<br>nvm use [version] [arch]： 切换到使用指定的nodejs版本。可以指定32/64位[arch]。<br>-nvm use <arch>：将继续使用所选版本，但根据提供的值切换到32/64位模式<br>nvm root [path]： 设置 nvm 存储node.js不同版本的目录 ,如果未设置，将使用当前目录。<br>-nvm version： 显示当前运行的nvm版本，可以简写为nvm v<br>首先，使用nvm list查看目前已经安装的版本</arch></version></version></p>
-<h2 id="五：配置环境变量"><a href="#五：配置环境变量" class="headerlink" title="五：配置环境变量"></a>五：配置环境变量</h2><p>一直去nvm安装目录才能打开也不是个办法</p>
-<p>配置环境变量 window+r : sysdm.cpl </p>
-<p>高级–》环境变量</p>
-<ul>
-<li>NVM_HOMEset当前nvm.exe所在的目录</li>
-<li>NVM_SYMLINK node快捷方式所在的目录</li>
-</ul>
-<p>PATH 后新增%NVM_HOME%;%NVM_SYMLINK%</p>
-<p>不过我的好像不用设。。自动设了。</p>
-<p>我利用安装nvm打开的git窗口运行nvm结果没有这个命令</p>
-<p>但是关掉，随意在一个地方打开git窗口运行nvm成功。</p>
-<p><img src="/post-img2/20190707-05.png" alt></p>
-<p>参考：</p>
-<p><a href="https://blog.csdn.net/qwdafedv/article/details/55802747" target="_blank" rel="noopener">NVM，Windows下环境配置</a></p>
-<p>[<a href="https://www.cnblogs.com/peng-zhao/p/10919967.html" target="_blank" rel="noopener">nvm环境配置</a>]</p>
-<h2 id="六：坑"><a href="#六：坑" class="headerlink" title="六：坑"></a>六：坑</h2><p>注意NVM_SYMLINK node快捷方式所在的目录，他默认是c盘的program file里的nodejs，我之前不是放那里的，这里要设置到自己之前安装node的路径</p>
-<p><img src="/post-img2/20190707-06.png" alt></p>
-<p>很无奈，nvm不认可这个node，只能自己再次安装</p>
-<p>然后呢，我的hexo不能用了。。应该是nodejs全局环境变量被这个nvm吃了</p>
-<p>手动在系统变量path里加入hexo路径。。很无奈</p>
+<h2 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h2><p>通俗理解：泛型就是解决 类 接口 方法的复用性、以及对不特定数据类型的支持(类型校验)</p>
+<p>返回指定类型</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  <span class="built_in">String</span> getData(<span class="built_in">String</span> value)&#123;</span><br><span class="line">      <span class="keyword">return</span> value;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">//同时返回 string类型 和number类型       不指定类型可以解决这个问题</span></span><br><span class="line">  <span class="comment">// getData(value)&#123;</span></span><br><span class="line">  <span class="comment">//     return value;</span></span><br><span class="line">  <span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
+<p>泛型实现传入什么 返回什么。</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">T getData&lt;T&gt;(T value)&#123; <span class="comment">//个人理解：第一个指定返回，第二个指定输入，第三个检查参数类型</span></span><br><span class="line">    <span class="keyword">return</span> value;</span><br><span class="line">&#125;<span class="comment">//会对返回值进行检查</span></span><br><span class="line"></span><br><span class="line">getData&lt;T&gt;(T value)&#123;</span><br><span class="line">    <span class="keyword">return</span> value;</span><br><span class="line">&#125;<span class="comment">//不会检查返回值</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">print</span>(getData&lt;<span class="built_in">int</span>&gt;(<span class="number">12</span>));</span><br></pre></td></tr></table></figure>
+<h2 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h2><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">List</span> a = <span class="keyword">new</span> <span class="built_in">List</span>();</span><br><span class="line">list.add(<span class="number">1</span>);</span><br><span class="line">lsit(<span class="string">"xx"</span>);<span class="comment">//都可以</span></span><br><span class="line"><span class="built_in">List</span> a = <span class="keyword">new</span> <span class="built_in">List</span>&lt;<span class="built_in">int</span>&gt;();<span class="comment">//传入只能int类型</span></span><br><span class="line"></span><br><span class="line">一般写法</span><br><span class="line">     <span class="class"><span class="keyword">class</span> <span class="title">PrintClass</span>&lt;<span class="title">T</span>&gt;</span>&#123;</span><br><span class="line">      <span class="built_in">List</span> list=<span class="keyword">new</span> <span class="built_in">List</span>&lt;T&gt;();</span><br><span class="line">      <span class="keyword">void</span> add(T value)&#123;</span><br><span class="line">          <span class="keyword">this</span>.list.add(value);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">void</span> printInfo()&#123;          </span><br><span class="line">          <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.list.length;i++)&#123;</span><br><span class="line">            <span class="built_in">print</span>(<span class="keyword">this</span>.list[i]);</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line"> &#125;</span><br><span class="line">main()&#123;</span><br><span class="line">  PrintClass p=<span class="keyword">new</span> PrintClass&lt;<span class="built_in">int</span>&gt;();<span class="comment">//也可以改成String等，通过这里指定</span></span><br><span class="line">  p.add(<span class="number">12</span>);</span><br><span class="line">   p.add(<span class="number">23</span>);</span><br><span class="line">  p.printInfo();</span><br></pre></td></tr></table></figure>
+<p> }</p>
+<h2 id="泛型接口"><a href="#泛型接口" class="headerlink" title="泛型接口"></a>泛型接口</h2><blockquote>
+<p>​    实现数据缓存的功能：有文件缓存、和内存缓存。内存缓存和文件缓存按照接口约束实现。</p>
+<p>​    1、定义一个泛型接口 约束实现它的子类必须有getByKey(key) 和 setByKey(key,value)</p>
+<p>​    2、要求setByKey的时候的value的类型和实例化子类的时候指定的类型一致</p>
+</blockquote>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Cache</span>&lt;<span class="title">T</span>&gt;</span>&#123;</span><br><span class="line">  getByKey(<span class="built_in">String</span> key);</span><br><span class="line">  <span class="keyword">void</span> setByKey(<span class="built_in">String</span> key, T value);</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FlieCache</span>&lt;<span class="title">T</span>&gt; <span class="keyword">implements</span> <span class="title">Cache</span>&lt;<span class="title">T</span>&gt;</span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MemoryCache</span>&lt;<span class="title">T</span>&gt; <span class="keyword">implements</span> <span class="title">Cache</span>&lt;<span class="title">T</span>&gt;</span>&#123;</span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  getByKey(<span class="built_in">String</span> key) &#123;   </span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  <span class="keyword">void</span> setByKey(<span class="built_in">String</span> key, T value) &#123;</span><br><span class="line">       <span class="built_in">print</span>(<span class="string">"我是内存缓存 把key=<span class="subst">$&#123;key&#125;</span>  value=<span class="subst">$&#123;value&#125;</span> -写入到了内存中"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">void</span> main()&#123;</span><br><span class="line">    <span class="comment">// MemoryCache m=new MemoryCache&lt;String&gt;();</span></span><br><span class="line">    <span class="comment">//  m.setByKey('index', '首页数据');</span></span><br><span class="line"></span><br><span class="line">     MemoryCache m=<span class="keyword">new</span> MemoryCache&lt;<span class="built_in">Map</span>&gt;();</span><br><span class="line">     m.setByKey(<span class="string">'index'</span>, &#123;<span class="string">"name"</span>:<span class="string">"张三"</span>,<span class="string">"age"</span>:<span class="number">20</span>&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="库"><a href="#库" class="headerlink" title="库"></a>库</h2><p>Dart中的库主要有三种：</p>
+<p>​    1、我们自定义的库     </p>
+<p>​          import ‘lib/xxx.dart’;</p>
+<p>​    2、系统内置库       </p>
+<p>​          import ‘dart:math’;        max(2,3)这种</p>
+<p>​          import ‘dart:io’;     http之类的</p>
+<p>​          import ‘dart:convert’;    解析json的</p>
+<p>​    3、Pub包管理系统中的库  </p>
+<p>​        <a href="https://pub.dev/packages" target="_blank" rel="noopener">https://pub.dev/packages</a></p>
+<p>​        <a href="https://pub.flutter-io.cn/packages" target="_blank" rel="noopener">https://pub.flutter-io.cn/packages</a></p>
+<p>​        <a href="https://pub.dartlang.org/flutter/" target="_blank" rel="noopener">https://pub.dartlang.org/flutter/</a></p>
+<p>​        1、需要在自己想项目根目录新建一个pubspec.yaml</p>
+<p>​        2、在pubspec.yaml文件 然后配置名称 、描述、依赖等信息</p>
+<p>​        3、然后运行 pub get 获取包下载到本地  </p>
+<p>​        4、项目中引入库 import ‘package:http/http.dart’ as http; 看文档使用</p>
+<h2 id="async和await"><a href="#async和await" class="headerlink" title="async和await"></a>async和await</h2><blockquote>
+<p>​    只有async方法才能使用await关键字调用方法</p>
+<p>​    如果调用别的async方法必须使用await关键字</p>
+<p>async是让方法变成异步。</p>
+<p>await是等待异步方法执行完成。</p>
+</blockquote>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> main() <span class="keyword">async</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> result = <span class="keyword">await</span> testAsync();</span><br><span class="line">  <span class="built_in">print</span>(result);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//异步方法</span></span><br><span class="line">testAsync() <span class="keyword">async</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">'Hello async'</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//只有await的可以调用async方法，要用await必须让自己的方法加async</span></span><br></pre></td></tr></table></figure>
+<h2 id="关于as重命名"><a href="#关于as重命名" class="headerlink" title="关于as重命名"></a>关于as重命名</h2><p>可以用来改名,亦可以用来分辨</p>
+<p><code>import &#39;lib/Person2.dart&#39; as lib;</code></p>
+<p><code>import &#39;lib/Person1.dart&#39;;</code></p>
+<p><code>Person p1=new Person(&#39;张三&#39;, 20);</code>//这两个都有person类，可以用来分别</p>
+<p><code>lib.Person p2=new lib.Person(&#39;李四&#39;, 20);</code> //可以用<code>lib.</code> 来引用</p>
+<h2 id="部分导入"><a href="#部分导入" class="headerlink" title="部分导入"></a>部分导入</h2><p>​     模式一：只导入需要的部分，使用show关键字，如下例子所示：</p>
+<p>​      import ‘package:lib1/lib1.dart’ show foo;</p>
+<p>​     模式二：隐藏不需要的部分，使用hide关键字，如下例子所示：</p>
+<p>​      import ‘package:lib2/lib2.dart’ hide foo;     </p>
+<h2 id="库的拆片part和export"><a href="#库的拆片part和export" class="headerlink" title="库的拆片part和export"></a>库的拆片part和export</h2><p>id库中有些part的部分库是拆分出来的，也有export导出的。</p>
+<h2 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h2><p>延迟加载</p>
+<p>​    也称为懒加载，可以在需要的时候再进行加载。</p>
+<p>​    懒加载的最大好处是可以减少APP的启动时间。</p>
+<p>​    懒加载使用deferred as关键字来指定，如下例子所示：</p>
+<p>​    import ‘package:deferred/hello.dart’ deferred as hello;</p>
+<p>​    当需要使用的时候，需要使用loadLibrary()方法来加载：</p>
+<p>​    greet() async {</p>
+<p>​      await hello.loadLibrary();</p>
+<p>​      hello.printGreeting();</p>
+<p>​    }</p>
 
       
 
@@ -227,24 +234,13 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">nodejs</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Flutter</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -294,7 +290,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/07/Vue/关于NVM安装和使用/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/09/Flutter/Dart基础（五）/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -308,18 +304,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/07/17/Vue/VS code快速创建vue模板/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          VS code快速创建vue模板
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/07/07/Vue/慕课网の3小时速成 Vue2.x 核心技术/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">慕课网の3小时速成 Vue2.x 核心技术</div>
+    <a href="/2019/10/07/Flutter/Dart基础（四）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Dart基础（四）</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -338,6 +325,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#泛型方法"><span class="toc-number">1.</span> <span class="toc-text">泛型方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#泛型类"><span class="toc-number">2.</span> <span class="toc-text">泛型类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#泛型接口"><span class="toc-number">3.</span> <span class="toc-text">泛型接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#库"><span class="toc-number">4.</span> <span class="toc-text">库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#async和await"><span class="toc-number">5.</span> <span class="toc-text">async和await</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于as重命名"><span class="toc-number">6.</span> <span class="toc-text">关于as重命名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部分导入"><span class="toc-number">7.</span> <span class="toc-text">部分导入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#库的拆片part和export"><span class="toc-number">8.</span> <span class="toc-text">库的拆片part和export</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#懒加载"><span class="toc-number">9.</span> <span class="toc-text">懒加载</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
