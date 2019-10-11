@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="骁の博客">
 <meta property="og:description" content="安装、">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-03T11:35:28.697Z">
+<meta property="og:updated_time" content="2019-10-09T16:24:39.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dart要点">
 <meta name="twitter:description" content="安装、">
@@ -167,6 +167,38 @@
         <p>安装、</p>
 <a id="more"></a>
 <p>1.没有初始化的变量自动获取一个默认值为 <code>null</code>。</p>
+<p>运行的错误1：</p>
+<ul>
+<li>Error running Gradle:<br>ProcessException: Process “C:\Users\xiao\Desktop\Dart\myapp\android\gradlew.bat” exited abnormally:</li>
+</ul>
+<blockquote>
+<p>Configure project :app<br>Checking the license for package Android SDK Build-Tools 28.0.3 in C:\Users\xiao\AppData\Local\Android\sdk\licenses<br>Warning: License for package Android SDK Build-Tools 28.0.3 not accepted.<br>Checking the license for package Android SDK Platform 28 in C:\Users\xiao\AppData\Local\Android\sdk\licenses<br>Warning: License for package Android SDK Platform 28 not accepted.</p>
+</blockquote>
+<p>FAILURE: Build failed with an exception.</p>
+<ul>
+<li><p>Where:<br>Build file ‘C:\Users\xiao\Desktop\Dart\myapp\android\build.gradle’ line: 24</p>
+</li>
+<li><p>What went wrong:<br>A problem occurred evaluating root project ‘android’.</p>
+<blockquote>
+<p>A problem occurred configuring project ‘:app’.<br>Failed to install the following Android SDK packages as some licences have not been accepted.</p>
+<pre><code>   build-tools;28.0.3 Android SDK Build-Tools 28.0.3
+   platforms;android-28 Android SDK Platform 28
+To build this project, accept the SDK license agreements and install the missing components using the Android Studio SDK Manager.
+Alternatively, to transfer the license agreements from one workstation to another, see
+http://d.android.com/r/studio-ui/export-licenses.html
+</code></pre></blockquote>
+<p>   Using Android SDK: C:\Users\xiao\AppData\Local\Android\sdk</p>
+</li>
+<li><p>Try:<br>Run with –stacktrace option to get the stack trace. Run with –info or –debug option to get more log output. Run with –scan to get full<br>insights.</p>
+</li>
+<li><p>Get more help at <a href="https://help.gradle.org" target="_blank" rel="noopener">https://help.gradle.org</a></p>
+</li>
+</ul>
+<p>BUILD FAILED in 4s<br>  Command: C:\Users\xiao\Desktop\Dart\myapp\android\gradlew.bat app:properties</p>
+<p>Please review your Gradle project setup in the android/ folder.</p>
+<p>解决：翻墙原因</p>
+<p><a href="https://blog.csdn.net/weixin_42288182/article/details/95985530" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42288182/article/details/95985530</a></p>
+<p>flutter doctor解决大部分问题</p>
 
       
 
@@ -250,18 +282,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/03/Flutter/Dart基础（一）/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/10/07/Flutter/Dart基础（三）/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Dart基础（一）
+          Dart基础（三）
         
       </div>
     </a>
   
   
-    <a href="/2019/09/27/Flutter/QQTIM/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Flutter（一）</div>
+    <a href="/2019/10/03/Flutter/Dart基础（二）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Dart基础（二）</div>
       <i class="icon-circle-right"></i>
     </a>
   
