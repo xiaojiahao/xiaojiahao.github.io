@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Flutter（六） | 骁の博客</title>
+  <title>Flutter（六）路由 | 骁の博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="路由">
 <meta name="keywords" content="Flutter">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Flutter（六）">
+<meta property="og:title" content="Flutter（六）路由">
 <meta property="og:url" content="http://yoursite.com/2019/10/20/Flutter/Flutter（六）/index.html">
 <meta property="og:site_name" content="骁の博客">
 <meta property="og:description" content="路由">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-20T16:13:59.449Z">
+<meta property="og:updated_time" content="2019-10-27T11:56:39.253Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Flutter（六）">
+<meta name="twitter:title" content="Flutter（六）路由">
 <meta name="twitter:description" content="路由">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
@@ -151,7 +151,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Flutter（六）
+      Flutter（六）路由
     </h1>
   
 
@@ -175,6 +175,12 @@
 <p>主文件</p>
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'package:flutter/material.dart'</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'routes/Routes.dart'</span>;</span><br><span class="line"><span class="keyword">void</span> main() =&gt; runApp(MyApp());</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyApp</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span> </span>&#123;  </span><br><span class="line">  <span class="meta">@override</span>  </span><br><span class="line">Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> MaterialApp(</span><br><span class="line">      <span class="comment">// home:Tabs(),</span></span><br><span class="line">       initialRoute: <span class="string">'/'</span>,      </span><br><span class="line">       onGenerateRoute: onGenerateRoute</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="路由传Map值"><a href="#路由传Map值" class="headerlink" title="路由传Map值"></a>路由传Map值</h2><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">  设置命名/也可以不设，</span><br><span class="line"><span class="keyword">final</span> routes = &#123;</span><br><span class="line">    <span class="string">'/'</span>: (contxt) =&gt; Tabs(),</span><br><span class="line">    <span class="string">'/search'</span>: (contxt) =&gt; SearchPage(),</span><br><span class="line">    <span class="string">'/form'</span>: (context, &#123;arguments&#125;) =&gt; FormPage(arguments: arguments),</span><br><span class="line">  &#125;;</span><br><span class="line"> onGenerateRoute: (RouteSettings settings) &#123;</span><br><span class="line">          <span class="comment">// 统一处理</span></span><br><span class="line">          <span class="keyword">final</span> <span class="built_in">String</span> name = settings.name;</span><br><span class="line">          <span class="keyword">final</span> <span class="built_in">Function</span> pageContentBuilder = <span class="keyword">this</span>.routes[。。。</span><br><span class="line">                                                          </span><br><span class="line">跳转传值</span><br><span class="line">   RaisedButton(</span><br><span class="line">            child: Text(<span class="string">"跳转到表单演示页面"</span>),</span><br><span class="line">            onPressed: ()&#123;</span><br><span class="line">              Navigator.pushNamed(context, <span class="string">'/form'</span>,arguments: &#123;</span><br><span class="line">                <span class="string">"id"</span>:<span class="number">20</span></span><br><span class="line">              &#125;);                </span><br><span class="line">            &#125;,</span><br><span class="line">            color: Theme.of(context).accentColor,</span><br><span class="line">            textTheme: ButtonTextTheme.primary</span><br><span class="line">)</span><br><span class="line">                                                          </span><br><span class="line">接收参数</span><br><span class="line"><span class="keyword">import</span> <span class="string">'package:flutter/material.dart'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FormPage</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span> </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> <span class="built_in">Map</span> arguments;</span><br><span class="line">  FormPage(&#123;<span class="keyword">this</span>.arguments&#125;);</span><br><span class="line"> </span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> Scaffold(</span><br><span class="line">      appBar: AppBar(</span><br><span class="line">        title: Text(<span class="string">"搜索"</span>),</span><br><span class="line">      ),</span><br><span class="line">      body:Text(<span class="string">"我是一个表单页面 <span class="subst">$&#123;arguments != <span class="keyword">null</span> ? arguments[<span class="string">'id'</span>] : <span class="string">'0'</span>&#125;</span>"</span>)</span><br><span class="line"></span><br><span class="line">    );</span><br></pre></td></tr></table></figure>
+<h2 id="路由替换"><a href="#路由替换" class="headerlink" title="路由替换"></a>路由替换</h2><p>从 registerFirst 页面通过pushReplacementNamed 跳转到了 registerSecond 页面</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Navigator.of(context).pushReplacementNamed(<span class="string">'/registerSecond'</span>);</span><br></pre></td></tr></table></figure>
+<p>个人理解是实现本身无路由的跳转，如果是push，本身是页面，替换则表示自己不是页面的意思吧。用路由替换相当于自身是弹框~这样想比较好吧？如果按返回则回到最初的样子。</p>
+<h2 id="Flutter-返回到根路由"><a href="#Flutter-返回到根路由" class="headerlink" title="Flutter 返回到根路由"></a>Flutter 返回到根路由</h2><p>这里用了花里胡哨的方法</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Navigator.of(context).pushAndRemoveUntil(</span><br><span class="line">	<span class="keyword">new</span> MaterialPageRoute(builder: (context) =&gt; <span class="keyword">new</span> Tabs(index:<span class="number">1</span>)), (route) =&gt; route == <span class="keyword">null</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>本人的话估计是用路由跳转，这里用的是构造函数传值</p>
 
       
 
@@ -262,7 +268,7 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Flutter（五）
+          Flutter（五）导航
         
       </div>
     </a>
@@ -296,7 +302,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#跳转方法"><span class="toc-number">1.</span> <span class="toc-text">跳转方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传值"><span class="toc-number">2.</span> <span class="toc-text">传值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命名路由"><span class="toc-number">3.</span> <span class="toc-text">命名路由</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#分离成一个文件"><span class="toc-number">3.1.</span> <span class="toc-text">分离成一个文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路由传Map值"><span class="toc-number">4.</span> <span class="toc-text">路由传Map值</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#跳转方法"><span class="toc-number">1.</span> <span class="toc-text">跳转方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#传值"><span class="toc-number">2.</span> <span class="toc-text">传值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命名路由"><span class="toc-number">3.</span> <span class="toc-text">命名路由</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#分离成一个文件"><span class="toc-number">3.1.</span> <span class="toc-text">分离成一个文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路由传Map值"><span class="toc-number">4.</span> <span class="toc-text">路由传Map值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路由替换"><span class="toc-number">5.</span> <span class="toc-text">路由替换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flutter-返回到根路由"><span class="toc-number">6.</span> <span class="toc-text">Flutter 返回到根路由</span></a></li></ol>
                     </div>
                 </span>
             </div>

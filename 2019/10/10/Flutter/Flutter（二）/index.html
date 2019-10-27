@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Flutter（二） | 骁の博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="图片引入">
+  <meta name="description" content="图片引入、按钮组件">
 <meta name="keywords" content="Flutter">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Flutter（二）">
 <meta property="og:url" content="http://yoursite.com/2019/10/10/Flutter/Flutter（二）/index.html">
 <meta property="og:site_name" content="骁の博客">
-<meta property="og:description" content="图片引入">
+<meta property="og:description" content="图片引入、按钮组件">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-10T15:07:19.377Z">
+<meta property="og:updated_time" content="2019-10-27T16:01:19.045Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Flutter（二）">
-<meta name="twitter:description" content="图片引入">
+<meta name="twitter:description" content="图片引入、按钮组件">
   
     <link rel="alternative" href="/atom.xml" title="骁の博客" type="application/atom+xml">
   
@@ -164,7 +164,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>图片引入</p>
+        <p>图片引入、按钮组件</p>
 <a id="more"></a>
 <p>Image.asset， 本地图片<br>Image.network 远程图片</p>
 <p>可以独立成组件， Image.network( “xx”,color: Colors.red, ）</p>
@@ -188,6 +188,23 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">assets:</span></span><br><span class="line">	<span class="bullet">-</span> <span class="string">images/2.0x/a.jpg</span></span><br><span class="line">	<span class="bullet">-</span> <span class="string">images/3.0x/a.jpg</span></span><br></pre></td></tr></table></figure>
 <p>3.使用</p>
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">: Container(</span><br><span class="line">    child: Image.asset(<span class="string">"images/a.jpeg"</span>, </span><br><span class="line">                       fit:BoxFit.cover</span><br><span class="line">    ),</span><br><span class="line">    width: <span class="number">300.0</span>, </span><br><span class="line">    height: <span class="number">300.0</span>, </span><br><span class="line">    decoration: BoxDecoration(</span><br><span class="line">    color: Colors.yellow</span><br><span class="line">),)</span><br></pre></td></tr></table></figure>
+<h2 id="按钮组件"><a href="#按钮组件" class="headerlink" title="按钮组件"></a>按钮组件</h2><p>自适应居中最宽</p>
+<p><code>Row（main center children：Container（height：xx，child：Expanded</code></p>
+<p>RaisedButton 凸起按钮</p>
+<p>FlatButton 扁平化的按钮    和上面的很像，默认不一样而已</p>
+<p>OutLIineButton 线框按钮   背景颜色改不了</p>
+<p>IconButton 图标按钮      一般设在appBar的action里</p>
+<p>ButtonBar 按钮组</p>
+<p>FloatingActionButton 浮动按钮  右下角那个</p>
+<p>RaisedButton：</p>
+<p>可以用Container包裹着，设置宽高度的话相当于按钮的宽高，文字颜色背景颜色，阴影、</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">RaisedButton.icon(</span><br><span class="line">    icon:Icon(Icons.search),</span><br><span class="line">    label:Text(<span class="string">"x"</span>),</span><br><span class="line">    color</span><br><span class="line">    textColor</span><br><span class="line">    onPressed</span><br><span class="line">    splashColor 修改水波纹颜色</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>圆角可以用shape属性</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">shape:RoundedRectangleBoorder(</span><br><span class="line">    borderRadius:BorderRadius.circular(<span class="number">10</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>圆形</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">shape.CircleBorder(</span><br><span class="line">	side:BorderSize(</span><br><span class="line">    color:Colors.white</span><br><span class="line">    )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="RaisedButton自定义组件化"><a href="#RaisedButton自定义组件化" class="headerlink" title="RaisedButton自定义组件化"></a>RaisedButton自定义组件化</h2><p><code>MyButton(text:&quot;xx&quot;,width:30.0,pressed:(){})</code></p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyButton</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span></span>&#123;</span><br><span class="line">  <span class="keyword">final</span> <span class="built_in">double</span> width;</span><br><span class="line">  <span class="keyword">final</span> <span class="built_in">String</span> text;</span><br><span class="line">  <span class="keyword">const</span> MyButton(<span class="keyword">this</span>.text,&#123;<span class="keyword">this</span>.width=<span class="number">30.0</span>,<span class="keyword">this</span>.pressed=<span class="keyword">null</span>&#125;); </span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="comment">// <span class="doctag">TODO:</span> implement build</span></span><br><span class="line">    <span class="keyword">return</span> Container(</span><br><span class="line">        width:<span class="keyword">this</span>.width,</span><br><span class="line">      child: RaisedButton(</span><br><span class="line">          child: Text(<span class="keyword">this</span>.text),</span><br><span class="line">          textColor:Theme.of(context).accentColor,</span><br><span class="line">          onPressed: ( )&#123;        </span><br><span class="line">          &#125;</span><br><span class="line">   ) );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -309,7 +326,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#image-组件的常用属性"><span class="toc-number">1.</span> <span class="toc-text">image 组件的常用属性:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flutter-实现圆角以及实现圆形图片"><span class="toc-number">2.</span> <span class="toc-text">Flutter 实现圆角以及实现圆形图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用本地图片"><span class="toc-number">3.</span> <span class="toc-text">引用本地图片</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#image-组件的常用属性"><span class="toc-number">1.</span> <span class="toc-text">image 组件的常用属性:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flutter-实现圆角以及实现圆形图片"><span class="toc-number">2.</span> <span class="toc-text">Flutter 实现圆角以及实现圆形图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用本地图片"><span class="toc-number">3.</span> <span class="toc-text">引用本地图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#按钮组件"><span class="toc-number">4.</span> <span class="toc-text">按钮组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RaisedButton自定义组件化"><span class="toc-number">5.</span> <span class="toc-text">RaisedButton自定义组件化</span></a></li></ol>
                     </div>
                 </span>
             </div>
